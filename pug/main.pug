@@ -17,17 +17,17 @@ html(lang="ru")
 
             //- header
             header.header
-                .container
-                    //- top
-                    .header__top
 
+                //- top
+                .header__top
+                    .container
                         //- nav
                         .header__nav
                             nav.nav
                                 each val in nav
                                     if(val.sub)
                                         .nav__item.nav__item_sub
-                                            a(href=val.link).nav__link= val.title
+                                            a(href=val.link).nav__link.nav__link_sub= val.title
                                             .nav__sub
                                                 .subnav
                                                     each subval in val.sub
@@ -42,16 +42,212 @@ html(lang="ru")
                         //- cabinet
                         .header__cabinet
                             .cabinet-link
-                                +icon('001-twitter', 'cabinet-link__icon')
+                                +icon('cabinet', 'cabinet-link__svg')
+                                a(href='cabinet.html').cabinet-link__title Личный кабинет
+
+
+
+
+                //- middle
+                .header__middle
+                    .container
+                        .row
+                            //- logo
+                            a(href='/').header__logo
+                                +image('bg/logo.svg', 'Вкусита', 'logo')
+
+
+                            //- title
+                            .header__title Оптово - розничный интернет магазин орехов и сухофруктов
+
+                            //- contacts
+                            .header__contacts
+                                .tels
+                                    .tel
+                                        .tel__title тел.
+                                        a(href='+7(495)797-38-66').tel__link
+                                            | +7 (495)&nbsp;
+                                            span.tel__link_bold
+                                                | 797-38-66
+                                    .tel
+                                        .tel__title тел.
+                                        a(href='+7(926)180-32-98').tel__link
+                                            | +7 (926)&nbsp;
+                                            span.tel__link_bold
+                                                | 180-32-98
+
+
+
+
+
+                            //- call
+                            .header__call
+                                button(type='button').call-btn Заказать звонок
+                                .time пн-пт: с 09:00 до 18:00
+
+
+
+                            //- basket
+                            .header__basket
+                                a(href='cabinet.html').compare-link
+                                    +icon('compare', 'compare-link__svg')
+                                    .compare-link__num 4
+
+                                a(href='basket.html').basket-link
+                                    .basket-link__icon
+                                        .basket-link__icon-wrap
+                                            +icon('basket', 'basket-link__svg')
+                                            .compare-link__num 99
+                                    .basket-link__price
+                                        +icon('rubl', 'basket-link__price-type')
+                                        .basket-link__price-num 213 990
+
+
+
+
+                //- bottom
+                .header__bottom
+                    .container
+                        //- menu
+                        .header__menu
+                            .menu
+                                each i in menu
+                                    a(href=i.link).menu__item
+                                        +icon(i.svg,'menu__svg')
+                                        .menu__title= i.title
+
+                        //- search
+                        .header__search
+                            form(action='search.html' method='post').search
+                                .search__field
+                                    input(type='text' placeholder='Поиск товара по каталогу').search__input
+                                    button(type='button').search__clear
+                                        +icon('cancel', 'search__clear-svg')
+                                input(type='hidden' name='action' value='searchAjax')
+                                button(type='submit').search__submit
+                                    +icon('search', 'search__svg')
+                                .search__ajax
+                                    .search__wrap
+                                        .search__list
+                                            each i in [1,2,3,4,5,6]
+                                                a(href='product.html').search__item
+                                                    .row
+                                                        .search__item-img
+                                                            +image('content/search/img.jpg')
+                                                        .search__item-desc
+                                                            .search__item-title Миндаль голд сырой
+                                                            .search__item-price
+                                                                .price
+                                                                    span.price__val 105.00
+                                                                    span.price__type руб.
+                                                                .price.price_old
+                                                                    span.price__val 120.00
+                                                                    span.price__type руб.
+
+
 
 
             //- pages
             .page
-                .container
-                    block content
+                block content
 
             //- footer
             footer.footer
+                //- top
+                .footer__top
+                    .container
+                        .row
+                            //- left
+                            .footer__left
+                                a(href='/').footer__logo
+                                    +image('bg/logo_2.svg', 'Вкусита', 'logo')
+
+                                //- title
+                                .footer__title
+                                    |Оптово - розничный интернет
+                                    br
+                                    |магазин орехов и сухофруктов
+
+                                //- contacts
+                                .footer__tels
+                                    .tels
+                                        .tel
+                                            .tel__icon
+                                                +icon('phone', 'tel__svg')
+                                            a(href='+7(495)797-38-66').tel__link
+                                                | +7 (495)&nbsp;
+                                                span.tel__link_bold
+                                                    | 797-38-66
+                                        .tel
+                                            .tel__icon
+                                                +icon('phone', 'tel__svg')
+                                            a(href='+7(926)180-32-98').tel__link
+                                                | +7 (926)&nbsp;
+                                                span.tel__link_bold
+                                                    | 180-32-98
+
+
+
+
+
+
+                                //- email
+                                .footer__email
+                                    email
+                                        +icon('mail', 'email__svg')
+                                        a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
+
+
+                            //- middle
+                            .footer__middle
+                                .row
+                                    each col in footerMenu
+                                        .footer__col
+                                            a(href='about.html').footer__title= col.title
+                                            .footer__list
+                                                each i in col.list
+                                                    a(href=i.href).footer__item= i.name
+
+                            //- right
+                            .footer__right
+                                //- addr
+                                .footer__addr
+                                    .addr
+                                        +icon('pin', 'addr__svg')
+                                        a(href='/' target='_blank').addr__link
+                                            |г. Москва,
+                                            br
+                                            |Нижегородская улица,
+                                            br
+                                            |д. 29-33
+
+
+
+                                //- time
+                                .footer__work
+                                    .work
+                                        +icon('clock', 'work__svg')
+                                        .work__list
+                                            .work__item
+                                                .work__time
+                                                    | пн-пт:&nbsp
+                                                    span.work__time_time
+                                                        | с 09:00 до 18:00
+                                            .work__item
+                                                .work__time
+                                                    | сб-вс:&nbsp;
+                                                    span.work__time_time
+                                                        | выходной
+
+                //- bottom
+                .footer__bottom
+                    .container
+                        .footer__copy
+                            .copy © 2019 Все права защищены. ООО «Вкусита»
+                        .footer__vendor
+                            a(href='https://web-comp.ru/' target='_blank').vendor
+                                span.vendor__title Разработано:
+                                +image('bg/vendor.png', 'Web-comp', 'vendor__img')
 
     .debug
         div
@@ -80,4 +276,4 @@ html(lang="ru")
 
 
     script(src='js/vendor.min.js')
-    script(src='js/main.js')
+    script(src='js/main.min.js')

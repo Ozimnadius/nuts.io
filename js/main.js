@@ -1,0 +1,1 @@
+//@prepros-append pages/index.js

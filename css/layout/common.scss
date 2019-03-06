@@ -1,3 +1,89 @@
-.button {
+.tels {
 
+}
+
+.tel {
+  display: flex;
+  align-items: flex-end;
+  color: $white;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__svg {
+    width: rem(15px);
+    height: rem(15px);
+    fill: rgba($white,.5);
+  }
+
+  &__title {
+    opacity: .5;
+    padding-bottom: rem(12px);
+  }
+
+  &__link {
+
+    &_bold {
+      font-weight: bold;
+    }
+  }
+}
+
+.email {
+  display: flex;
+  align-items: center;
+
+  &__svg {
+    width: rem(15px);
+    height: rem(13px);
+    fill: rgba($white,.5);
+    margin-right: 10px;
+  }
+
+  &__link {
+    color: $bg;
+    text-decoration: underline;
+  }
+}
+
+.addr{
+  display: flex;
+
+  &__svg{
+    margin-top: 5px;
+    width: rem(17px);
+    height: rem(17px);
+    fill: $bg;
+    margin-right: 10px;
+  }
+  &__link {
+    color: $white;
+    font-size: rem(18px);
+  }
+}
+
+.work{
+  display: flex;
+
+
+  &__item {
+
+  }
+
+  &__svg{
+    width: rem(19px);
+    height: rem(19px);
+    fill: $bg;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  &__time {
+    font-size: 18px;
+    color: $white;
+    &_time {
+      color: $bg;
+    }
+  }
 }

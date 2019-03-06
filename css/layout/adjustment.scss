@@ -24,6 +24,7 @@ body {
   background: $bg;
   font-family: $font;
   color: $text;
+  font-weight: 400;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
@@ -36,7 +37,7 @@ body {
   overflow: hidden;
 }
 
-.main {
+.page {
   flex-grow: 1;
 }
 
@@ -63,4 +64,19 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   max-width: 100%;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  font: inherit;
+  line-height: inherit;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
 }

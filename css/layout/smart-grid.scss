@@ -6,7 +6,7 @@ $break_md: 991.99px;
 $break_sm: 767.99px;
 $break_xs: 575.99px;
 
-$offset: 30px;
+$offset: 20px;
 $offset_lg: $offset;
 $offset_md: $offset;
 $offset_sm: $offset;
@@ -18,11 +18,11 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 15px;
-$fields_lg: 15px;
-$fields_md: 15px;
-$fields_sm: 15px;
-$fields_xs: 15px;
+$fields: 10px;
+$fields_lg: 10px;
+$fields_md: 10px;
+$fields_sm: 10px;
+$fields_xs: 10px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
