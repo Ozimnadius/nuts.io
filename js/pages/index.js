@@ -44,4 +44,16 @@ $(function () {
         ajax.removeClass('active');
     });
 
+    let ispecsSwithes = document.querySelector('.ispecs__sws-list');
+    if (ispecsSwithes) {
+
+        let switches = new Switches({
+            sws: '.ispecs__sws-list',
+            sw: '.ispecs__sw',
+            line: '.ispecs__subline',
+            tab: '.ispecs__tab',
+            autoWidth: true
+        }).init();
+    }
+
 });

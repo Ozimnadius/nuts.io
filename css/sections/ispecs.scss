@@ -1,0 +1,47 @@
+.ispecs {
+  background: url("../images/bg/ispecsBg.png") 0 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__sws {
+    position: relative;
+  }
+
+  &__sw {
+    color: $green;
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 25px 10px 25px;
+
+
+    &.active {
+      color: $orange;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    background-color: rgba($text, .2);
+  }
+
+  &__subline {
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: $orange;
+    transition: .4s;
+  }
+}

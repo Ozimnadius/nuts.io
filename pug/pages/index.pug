@@ -41,7 +41,8 @@ block content
                                             p Компания ООО "Трансфрут" - современное российское предприятие, предлагающее потребителю широкую линейку орехов, сухофруктов, сладостей под собственной маркой «ВКУСИТА».
                                             p Мы реализуем натуральные продукты высокого качества для здорового питания всей семьи.
 
-                                        a(href='company.html').about__link Подробнее о компании
+                                        a(href='company.html').about__link
+                                            .button Подробнее о компании
                                     .about__desc-right
                                         .about__list
                                             .about__item
@@ -111,6 +112,24 @@ block content
 
         //- specs
         section.main__specs
+            .ispecs
+                .container
+                    .ispecs__title.title Специальные предложения
+
+                    //- switches
+                    .ispecs__sws
+                        .ispecs__sws-list
+                            each i,x in ispecs
+                                button(type='button' class=i.active data-id=x+1).ispecs__sw= i.title
+                        .ispecs__line
+                            .ispecs__subline
+
+                    //- tabs
+                    .ispecs__tabs
+                        each i,x in ispecs
+                            div(data-id=x+1 class=i.active).ispecs__tab ashdkfjahsdkhsdkfhaskdfhakhsfkjsd
+
+
 
         //- partners
         section.main__partners
