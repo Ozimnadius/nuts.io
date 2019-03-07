@@ -88,6 +88,26 @@ block content
 
         //- catalog
         section.main__catalog
+            .icats
+                .container
+                    .icats__list
+                        .row
+                            each i,x in icats
+                                .icats__item
+                                    a(href='catalog.html').icat
+                                        .icat__link
+                                            .icat__link-title= i
+                                            +icon('arrw2', 'icat__link-svg')
+                                        .icat__image
+                                            img(src='images/bg/frame.png').icat__frame
+                                            div(style='background-image:url(images/content/main/icatalog/img'+x+'.jpg)').icat__image-img
+                                            img(src='images/content/main/icatalog/'+x+'.png').icat__image-img2
+                    a(href='catalog.html').icats__link
+                        .icats__link-title Перейти в каталог
+                        +icon('angle-rightt', 'icats__link-svg')
+
+
+
 
         //- specs
         section.main__specs
