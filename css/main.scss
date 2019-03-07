@@ -9,9 +9,12 @@ $orange: #f34d19;
 $orange2: #ff6536;
 $white: #ffffff;
 $grey: #6b6b6b;
+$green: #105946;
 
 //another
 $font-size: 16px;
+$btnW: 264px;
+$btnH: 54px;
 
 //layout
 /*-----------------SECTION-MIXINS--------------------*/
@@ -28,6 +31,10 @@ $font-size: 16px;
 //sections
 /*------------------------SECTION-HEADER----------------*/
 @import "sections/header";
+/*-----------------SECTION-BANNER--------------------*/
+@import "sections/banner";
+/*-----------------SECTION-ABOUT--------------------*/
+@import "sections/about";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

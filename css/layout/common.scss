@@ -87,3 +87,61 @@
     }
   }
 }
+
+.btn {
+  width: $btnW;
+  height: $btnH;
+  box-shadow: 0 3px 0 #c4461f;
+  border-radius: 4px;
+  background-color: $orange;
+  background-image: linear-gradient(to top, $orange 0%, $orange2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 0 0 transparent;
+    background-image: linear-gradient(to top, transparent 0%, transparent 100%);
+  }
+}
+
+.btn2 {
+  width: $btnW;
+  height: $btnH;
+  border-radius: 4px;
+  border: 1px solid rgba($white,.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+
+  &:hover {
+    border: 1px solid $orange;
+    .btn2__svg {
+      fill: $orange;
+    }
+    .btn2__title {
+      color: $orange;
+    }
+  }
+
+  &__svg {
+    width: rem(22px);
+    height: rem(22px);
+    fill: $bg;
+    margin-right: 10px;
+    transition: .3s;
+  }
+
+  &__title {
+    color: $bg;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+  }
+}

@@ -53,7 +53,11 @@ $vh: 1080;
     margin: 2.33em 0;
   }
   p {
-    margin: 1em 0;
+    margin:0 0 1.25em 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

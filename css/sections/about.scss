@@ -1,0 +1,131 @@
+.about{
+  padding: 80px 0;
+
+  >.container>.row {
+    align-items: flex-start;
+  }
+
+  &__left{
+    @include col;
+    @include size(14);
+  }
+
+  &__right{
+    @include col;
+    @include size(10);
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    &-img {
+      max-width: 482px;
+    }
+  }
+
+  &__desc {
+
+    &-left {
+      @include col;
+      @include size(10.5);
+    }
+
+    &-right{
+      @include col;
+      @include size(13.5);
+    }
+  }
+
+  &__content {
+    margin-bottom: 35px;
+    color: $green;
+
+    p{
+      color: inherit;
+    }
+  }
+
+  &__link {
+    max-width: $btnW;
+    height: $btnH;
+    border-radius: 4px;
+    border: 1px solid rgba($text,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: .3s;
+
+    &:hover {
+      border: 1px solid rgba($orange,1);
+      color: $orange;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 40px;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+
+    &:nth-child(odd) {
+      border-right: 1px solid rgba($white,.5);
+    }
+    &:nth-child(1),&:nth-child(2){
+      border-bottom: 1px solid rgba($white,.5);
+      padding-top: 0;
+    }
+    &:nth-child(3),&:nth-child(4){
+      padding-bottom: 0;
+    }
+
+    &-icon {
+      width: rem(79px);
+      height: rem(79px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      border: 1px solid #f27a55;
+      background-color: $bg;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    &-svg {
+      max-width: rem(47px);
+      max-height: rem(37px);
+      fill: $orange;
+    }
+
+    &-title {
+      text-align: center;
+      color: $green;
+      font-weight: 700;
+      line-height: rem(22px);
+      text-align: center;
+    }
+  }
+
+  &__image {
+    border-radius: 6px;
+    border: 1px solid #beb092;
+    padding: 10px;
+
+    &-wrap {
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    &-img {
+      display: block;
+    }
+  }
+
+}

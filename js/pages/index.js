@@ -1,7 +1,9 @@
 $(function () {
 
-    $('.search__input').on('input', function (e) {
-        let $this = $(this),
+    $('.search__input').on('input', $.debounce(sendAjax, 300));
+    $('.search__input').closest();
+    function sendAjax(){
+        let $this = $('.search__input'),
             val = $this.val(),
             form = $this.closest('.search'),
             rep = form.find('.search__ajax'),
@@ -27,7 +29,7 @@ $(function () {
         } else {
             rep.removeClass('active');
         }
-    });
+    }
 
     $('.search__clear').on('click', function (e) {
         let $this = $(this),

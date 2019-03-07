@@ -29,6 +29,7 @@ const moduleJS = [
 const vendorJs = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+    'js/vendors/jquery.debounce-1.0.5.js'
 ];
 
 

@@ -7,9 +7,84 @@ block content
     main.main
         //- banner
         section.main__banner
+            div(style='background-image:url(../images/bg/bannerBg.jpg)').banner
+                .container
+                    .banner__title Продажа орехов и сухофруктов премиум сегмент оптом и в розницу
+                    .banner__sub С доставкой по всей России и СНГ
+                    .banner__buttons
+                        .banner__button
+                            a(href='catalog.html').btn В каталог
+                        .banner__else или
+                        .banner__button
+                            a(href='#' download).btn2
+                                +icon('pdf', 'btn2__svg')
+                                .btn2__title Скачать прайс-лист
+
+
+
 
         //- about
         section.main__about
+            .about
+                .container
+                    .row
+                        //- left
+                        .about__left
+                            //- img
+                            .about__img
+                                img(src='images/content/main/about/logo.svg').about__img-img
+                            //- desc
+                            .about__desc
+                                .row
+                                    .about__desc-left
+                                        .about__content.content
+                                            p Компания ООО "Трансфрут" - современное российское предприятие, предлагающее потребителю широкую линейку орехов, сухофруктов, сладостей под собственной маркой «ВКУСИТА».
+                                            p Мы реализуем натуральные продукты высокого качества для здорового питания всей семьи.
+
+                                        a(href='company.html').about__link Подробнее о компании
+                                    .about__desc-right
+                                        .about__list
+                                            .about__item
+                                                .about__item-icon
+                                                    +icon('hands', 'about__item-svg')
+                                                .about__item-title
+                                                    |Ручная
+                                                    br
+                                                    |фасовка
+                                            .about__item
+                                                .about__item-icon
+                                                    +icon('packing', 'about__item-svg')
+                                                .about__item-title
+                                                    |Яркий дизайн
+                                                    br
+                                                    |упаковки
+                                            .about__item
+                                                .about__item-icon
+                                                    +icon('rublAbout', 'about__item-svg')
+                                                .about__item-title
+                                                    |Доступные цены,
+                                                    br
+                                                    |гибкая система
+                                                    br
+                                                    |скидок
+                                            .about__item
+                                                .about__item-icon
+                                                    +icon('delivery', 'about__item-svg')
+                                                .about__item-title
+                                                    |Доставка
+                                                    br
+                                                    |по всей Росиии
+                                                    br
+                                                    |и СНГ
+
+
+
+
+                        //- right
+                        .about__right
+                            .about__image
+                                .about__image-wrap
+                                    img(src='images/content/main/about/img.jpg').about__image-img
 
         //- catalog
         section.main__catalog

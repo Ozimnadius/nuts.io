@@ -1,13 +1,17 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   &__top {
+    background: $bg;
     .container {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
-
   }
 
   &__middle {
