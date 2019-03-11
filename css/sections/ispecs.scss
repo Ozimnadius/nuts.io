@@ -1,6 +1,7 @@
 .ispecs {
   background: url("../images/bg/ispecsBg.png") 0 0;
   padding: 60px 0 380px 0;
+  position: relative;
 
   .container {
     display: flex;
@@ -119,6 +120,19 @@
   }
   &__next {
     left: calc(100% + 30px);
+  }
+
+  &:after{
+    padding-top: calc((582 / 2082) * 100%);
+    content: '';
+    background: url("/images/bg/composition.png") center 0 no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(60%);
+    left: 0;
+    right: 0;
   }
 }
 

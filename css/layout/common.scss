@@ -185,6 +185,10 @@
   font-size: 48px;
   font-weight: 400;
   line-height: lh(48px, 68px);
+
+  &_left {
+    text-align: left;
+  }
 }
 
 .arrow {

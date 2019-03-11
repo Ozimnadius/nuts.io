@@ -1,4 +1,5 @@
 //variables
+$vw: 1920;
 $vh: 1080;
 
 @function rem($size) {
@@ -19,6 +20,10 @@ $vh: 1080;
 @function lh($size1, $size2) {
   $lh: $size2 / $size1;
   @return $lh;
+}
+
+@function vw($size) {
+  @return $size/$vw *100*1vw;
 }
 
 @function vh($size) {

@@ -1,0 +1,47 @@
+.iparts {
+  padding-top: 150px;
+  padding-bottom: 80px;
+
+  &__left {
+    @include col;
+    @include size(12);
+  }
+
+  &__right {
+    @include col;
+    @include size(12);
+    padding-top: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: rgba($green,.8);
+    padding-right: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(100%/3);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid rgba($white,.5);
+
+    &:nth-child(1),&:nth-child(2),&:nth-child(3){
+      border-bottom: 1px solid rgba($white,.5);
+    }
+
+    &:nth-child(3n) {
+      border-right: none;
+    }
+  }
+}

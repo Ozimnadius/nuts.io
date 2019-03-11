@@ -133,7 +133,7 @@ block content
                                     .swiper-container.ispecs__container
                                         - var n = 0;
                                         .swiper-wrapper.ispecs__wrapper
-                                            while n < i.count+1
+                                            while n < i.count + 1
                                                 .swiper-slide
                                                     +item(n++)
                                         .swiper-pagination.ispecs__pag
@@ -153,6 +153,23 @@ block content
 
         //- partners
         section.main__partners
+            .iparts
+                .container
+                    .row
+                        //- left
+                        .iparts__left
+                            .iparts__title.title.title_left Партнеры
+                            .iparts__desc ООО "Трансфрут" современная и развивающая компания, которая работает со многими партнерами, которые также придерживаются аналогичных принципов ведения бизнеса. Но самое главное для нас то, что мы действительно любим свое дело и стараемся заниматься им в высшей степени профессионально!
+                        //- right
+                        .iparts__right
+                            .iparts__list
+                                each i in [1,2,3,4,5,6]
+                                    .iparts__item
+                                        img(src='images/content/main/iparts/'+i+'.png').iparts__item-img
+
+
+
+
 
         //- feed
         section.main__feed
