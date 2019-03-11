@@ -10,6 +10,7 @@ $orange2: #ff6536;
 $white: #ffffff;
 $grey: #6b6b6b;
 $green: #105946;
+$lightGreen: #17ae5e;
 
 //another
 $font-size: 16px;
@@ -44,6 +45,8 @@ $btnH: 54px;
 @import "sections/icatalog";
 /*-----------------SECTION-ISPECS--------------------*/
 @import "sections/ispecs";
+/*-----------------SECTION-ITEM--------------------*/
+@import "sections/item";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

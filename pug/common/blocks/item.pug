@@ -1,22 +1,7 @@
-mixin icon(iconName, iconClass)
-    svg(class=`${iconClass}`)
-        use(xlink:href=`images/icons/sprite.svg#${iconName}`)
+include ../_mixins
+include ../_settings
 
-mixin image(imagePath, imageAlt, imageClass)
-    img(src=`images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
-
-mixin price (value)
-    .price
-        span.price__val= value
-        span.price__type руб.
-
-mixin oldPrice (value)
-    .price.price_old
-        span.price__val= value
-        span.price__type руб.
-
-mixin item(id)
-    a(href='product.html' data-id=id).item
+    a(href='product.html').item
         .item__wrap
 
             //- top
@@ -54,9 +39,9 @@ mixin item(id)
                     .item__count-title Количество:
                     .item__count-input
                         form(action='#' method='post').count
-                            button(type='button').count__down
-                            input(type='text' name='count' value='1' readonly=true).count__input
                             button(type='button').count__up
+                            input(type='text' name='count' value='1').count__input
+                            button(type='button').count__down
 
                 //- buy
                 .item__buy
@@ -71,32 +56,6 @@ mixin item(id)
         .item__hidden
 
             .item__wrap
-
-                //- desc
-                .item__desc
-                    .item__desc-title Пищевая и энергетическая ценность продукта на 100 гр.
-                    .item__list
-                        .item__item
-                            .item__item-title Ккал
-                            .item__item-line
-                            .item__item-val 643
-                        .item__item
-                            .item__item-title Углеводы
-                            .item__item-line
-                            .item__item-val 19,9
-                        .item__item
-                            .item__item-title Жиры
-                            .item__item-line
-                            .item__item-val 53,3
-                        .item__item
-                            .item__item-title Белки
-                            .item__item-line
-                            .item__item-val 20,8
-                    .item__period
-                        | Срок годности:&nbsp;
-                        span.item__period_gold
-                            | 6 месяцев
-
 
                 //- top
                 .item__top
@@ -133,9 +92,9 @@ mixin item(id)
                         .item__count-title Количество:
                         .item__count-input
                             form(action='#' method='post').count
-                                button(type='button').count__down
-                                input(type='text' name='count' value='1' readonly=true).count__input
                                 button(type='button').count__up
+                                input(type='text' name='count' value='1').count__input
+                                button(type='button').count__down
 
                     //- buy
                     .item__buy

@@ -13,7 +13,8 @@ block content
                     .banner__sub С доставкой по всей России и СНГ
                     .banner__buttons
                         .banner__button
-                            a(href='catalog.html').btn В каталог
+                            a(href='catalog.html').btn
+                                .btn__title В каталог
                         .banner__else или
                         .banner__button
                             a(href='#' download).btn2
@@ -49,34 +50,34 @@ block content
                                                 .about__item-icon
                                                     +icon('hands', 'about__item-svg')
                                                 .about__item-title
-                                                    |Ручная
+                                                    | Ручная
                                                     br
-                                                    |фасовка
+                                                    | фасовка
                                             .about__item
                                                 .about__item-icon
                                                     +icon('packing', 'about__item-svg')
                                                 .about__item-title
-                                                    |Яркий дизайн
+                                                    | Яркий дизайн
                                                     br
-                                                    |упаковки
+                                                    | упаковки
                                             .about__item
                                                 .about__item-icon
                                                     +icon('rublAbout', 'about__item-svg')
                                                 .about__item-title
-                                                    |Доступные цены,
+                                                    | Доступные цены,
                                                     br
-                                                    |гибкая система
+                                                    | гибкая система
                                                     br
-                                                    |скидок
+                                                    | скидок
                                             .about__item
                                                 .about__item-icon
                                                     +icon('delivery', 'about__item-svg')
                                                 .about__item-title
-                                                    |Доставка
+                                                    | Доставка
                                                     br
-                                                    |по всей Росиии
+                                                    | по всей Росиии
                                                     br
-                                                    |и СНГ
+                                                    | и СНГ
 
 
 
@@ -101,8 +102,8 @@ block content
                                             +icon('arrw2', 'icat__link-svg')
                                         .icat__image
                                             img(src='images/bg/frame.png').icat__frame
-                                            div(style='background-image:url(images/content/main/icatalog/img'+x+'.jpg)').icat__image-img
-                                            img(src='images/content/main/icatalog/'+x+'.png').icat__image-img2
+                                            div(style='background-image:url(images/content/main/icatalog/img' + x + '.jpg)').icat__image-img
+                                            img(src='images/content/main/icatalog/' + x + '.png').icat__image-img2
                     a(href='catalog.html').icats__link
                         .icats__link-title Перейти в каталог
                         +icon('angle-rightt', 'icats__link-svg')
@@ -120,14 +121,33 @@ block content
                     .ispecs__sws
                         .ispecs__sws-list
                             each i,x in ispecs
-                                button(type='button' class=i.active data-id=x+1).ispecs__sw= i.title
+                                button(type='button' class=i.active data-id=x + 1).ispecs__sw= i.title
                         .ispecs__line
                             .ispecs__subline
 
                     //- tabs
                     .ispecs__tabs
                         each i,x in ispecs
-                            div(data-id=x+1 class=i.active).ispecs__tab ashdkfjahsdkhsdkfhaskdfhakhsfkjsd
+                            div(data-id=x + 1 class=i.active).ispecs__tab
+                                .ispecs__swiper
+                                    .swiper-container.ispecs__container
+                                        - var n = 0;
+                                        .swiper-wrapper.ispecs__wrapper
+                                            while n < i.count+1
+                                                .swiper-slide
+                                                    +item(n++)
+                                        .swiper-pagination.ispecs__pag
+                                    .ispecs__prev
+                                        button.arrow
+                                            +icon('arrw3', 'arrow__svg')
+                                    .ispecs__next
+                                        button.arrow.arrow_next
+                                            +icon('arrw3', 'arrow__svg')
+
+
+
+
+
 
 
 

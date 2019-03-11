@@ -1,5 +1,6 @@
 .ispecs {
   background: url("../images/bg/ispecsBg.png") 0 0;
+  padding: 60px 0 380px 0;
 
   .container {
     display: flex;
@@ -13,6 +14,7 @@
 
   &__sws {
     position: relative;
+    margin-bottom: 40px;
   }
 
   &__sw {
@@ -44,4 +46,79 @@
     background: $orange;
     transition: .4s;
   }
+
+  &__tabs {
+    width: 100%;
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__item {
+    @include col;
+    @include size(8);
+  }
+
+  &__wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__pag {
+    &.swiper-pagination {
+      position: static;
+    }
+
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba($text, .4);
+      margin: 0 7px !important;
+      background: none;
+      opacity: 1;
+      padding: 2px;
+    }
+
+    .swiper-pagination-bullet-active{
+      border: 1px solid $text;
+
+      &:after {
+        content: '';
+        display: block;
+        border-radius: 50%;
+        background-color: $text;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__prev,&__next {
+    position: absolute;
+    top: 50%;
+    margin-top: -70px;
+  }
+  &__prev {
+    right: calc(100% + 30px);
+  }
+  &__next {
+    left: calc(100% + 30px);
+  }
 }
+

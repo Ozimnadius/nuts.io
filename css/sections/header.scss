@@ -408,10 +408,17 @@
     cursor: pointer;
     margin-top: -10px;
 
+    &:hover {
+      .search__clear-svg {
+        fill: rgba($white,.6);
+      }
+    }
+
     &-svg {
       width: rem(18px);
       height: rem(18px);
-      fill: rgba($white,.3)
+      fill: rgba($white,.3);
+      transition: .3s;
     }
   }
 
