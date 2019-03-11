@@ -160,6 +160,8 @@ block content
                         .iparts__left
                             .iparts__title.title.title_left Партнеры
                             .iparts__desc ООО "Трансфрут" современная и развивающая компания, которая работает со многими партнерами, которые также придерживаются аналогичных принципов ведения бизнеса. Но самое главное для нас то, что мы действительно любим свое дело и стараемся заниматься им в высшей степени профессионально!
+                            .iparts__button
+                                a(href='about.html').button Подробнее о сотрудничестве
                         //- right
                         .iparts__right
                             .iparts__list
@@ -173,6 +175,31 @@ block content
 
         //- feed
         section.main__feed
+            .ifeed
+                .container
+                    .row
+                        form(action='#' method='post').ifeed__form
+                            .ifeed__title.title.title_gold Остались вопросы?
+                            .ifeed__subtitle.subtitle Оставте заявку и наш менеджер свяжеться с вами в ближайшее время
+                            .row.ifeed__fields
+                                .ifeed__field
+                                    input(type='text' placeholder='Ваши имя' name='name').ifeed__input.input.input_gold
+                                .ifeed__field
+                                    input(type='text' placeholder='Номер телефона' name='tel').ifeed__input.input.input_gold
+                            .ifeed__submit
+                                button(type='submit').btn
+                                    .btn__title Отправить
+                            .ifeed__fz
+                                .fz
+                                    label.fz__label
+                                        input(type='checkbox' name='fz' checked=true).fz__input
+                                        .fz__fake
+                                            +icon('check', 'fz__svg')
+                                        .fz__title Я даю согласие на обработку персональных данных
+
+
+
+
 
         //- reviews
         section.main__revs
