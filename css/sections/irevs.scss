@@ -1,0 +1,79 @@
+.irevs{
+  background: url("/images/bg/irevsBg.jpg") 0 bottom no-repeat;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  &__left {
+    @include col;
+    @include size(6);
+  }
+
+  &__right {
+    @include col;
+    @include size(18);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: rgba($green,.8);
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    width: 229px;
+    height: 54px;
+    display: block;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    padding: 0 30px;
+  }
+
+  &__prev {
+    margin-bottom: 15px;
+  }
+}
+
+.irev {
+  border-radius: 6px;
+  border: 1px solid rgba($text,.2);
+  padding: 10px;
+
+  &__wrapper {
+    background: $white url("../images/bg/ispecsBg.png") 0 0;
+    padding: 30px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__img {
+    width: 91px;
+    height: 91px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+
+  &__title {
+    color: $green;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  &__city {
+    color: rgba($green,.6);
+  }
+}

@@ -16,7 +16,7 @@ mixin oldPrice (value)
         span.price__type руб.
 
 mixin item(id)
-    a(href='product.html' data-id=id).item
+    a(href='product.html' data-id=id).item.buyItem
         .item__wrap
 
             //- top
@@ -32,7 +32,7 @@ mixin item(id)
 
                 //- img
                 .item__img
-                    img(src='images/content/products/product.png').item__img-img
+                    img(src='images/content/products/product.png').item__img-img.buyImg
 
             //- bottom
             .item__bottom

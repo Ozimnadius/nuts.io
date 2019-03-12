@@ -203,3 +203,44 @@ block content
 
         //- reviews
         section.main__revs
+            .irevs
+                .container
+                    .row
+                        .irevs__left
+                            .irevs__title.title.title_left Отзывы
+                            .irevs__desc Наши покупателия делятся своими впечатлениями о нашей продукции
+                            a(href='reviews.html').irevs__link
+                                .button Смотреть все отзывы
+
+                        .irevs__right
+                            .irevs__slider
+                                //- nav
+                                .irevs__nav
+                                    .irevs__prev
+                                        button.arrow.arrow_small
+                                            +icon('arrw3', 'arrow__svg')
+                                    .irevs__next
+                                        button.arrow.arrow_next.arrow_small
+                                            +icon('arrw3', 'arrow__svg')
+
+                                //- slider-container
+                                .swiper-container.irevs__container
+                                    .swiper-wrapper.irevs__wrapper
+                                        each i in [1,2,1,2,1]
+                                            .swiper-slide.irevs__slide
+                                                .irev
+                                                    .irev__wrapper
+                                                        //- top
+                                                        .irev__top
+                                                            .irev__img
+                                                                img(src='images/content/main/irevs/'+i+'.jpg')
+                                                            .irev__wrap
+                                                                .irev__title Петрова Ирина
+                                                                .irev__city г. Москва
+
+                                                        //- bottom
+                                                        .irev__bottom
+                                                            .irev__desc Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. С другой стороны дальнейшее развитие различных форм деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
+
+
+

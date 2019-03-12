@@ -1,5 +1,5 @@
 $(function () {
-    var ispecsSlider = new Swiper ('.ispecs__container', {
+    let ispecsSlider = new Swiper ('.ispecs__container', {
         slidesPerView: 4,
         slidesPerGroup: 4,
         spaceBetween: 20,
@@ -12,5 +12,15 @@ $(function () {
             clickable: true
         },
 
+    });
+
+    let irevsSlider = new Swiper ('.irevs__container', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.irevs__next .arrow',
+            prevEl: '.irevs__prev .arrow',
+        }
     });
 });

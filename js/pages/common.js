@@ -116,8 +116,8 @@ function animateToCart(item) {
 $('.buy').on('click', function (e) {
     e.preventDefault();
     let $this = $(this),
-        item = $this.closest('.item'),
+        item = $this.closest('.buyItem'),
         id = item.attr('data-id'),
-        img = item.find('.item__img-img');
+        img = item.find('.buyImg');
     animateToCart(img);
 });

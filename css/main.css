@@ -488,9 +488,20 @@ input, textarea {
   transition: .3s;
 }
 
+.arrow_small {
+  width: 44px;
+  height: 44px;
+}
+
+.arrow_small .arrow__svg {
+  width: 10px;
+  height: 16px;
+}
+
 .arrow:hover {
   -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #f27a55;
 }
 
@@ -2398,6 +2409,103 @@ input, textarea {
 
 .ifeed__submit {
   margin-bottom: 25px;
+}
+
+/*-----------------SECTION-IREVS--------------------*/
+.irevs {
+  background: url("/images/bg/irevsBg.jpg") 0 bottom no-repeat;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.irevs__left {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+}
+
+.irevs__right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(75% - 20px);
+}
+
+.irevs__title {
+  margin-bottom: 20px;
+}
+
+.irevs__desc {
+  color: rgba(16, 89, 70, 0.8);
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.irevs__link {
+  width: 229px;
+  height: 54px;
+  display: block;
+}
+
+.irevs__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.irevs__nav {
+  padding: 0 30px;
+}
+
+.irevs__prev {
+  margin-bottom: 15px;
+}
+
+.irev {
+  border-radius: 6px;
+  border: 1px solid rgba(12, 68, 53, 0.2);
+  padding: 10px;
+}
+
+.irev__wrapper {
+  background: #ffffff url("../images/bg/ispecsBg.png") 0 0;
+  padding: 30px;
+}
+
+.irev__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.irev__img {
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.irev__title {
+  color: #105946;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.irev__city {
+  color: rgba(16, 89, 70, 0.6);
 }
 
 /*------------------------SECTION-FOOTER---------------------*/
