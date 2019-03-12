@@ -113,7 +113,7 @@ function animateToCart(item) {
         });
 }
 
-$('.buy').on('click', function (e) {
+$('body').on('click','.buy', function (e) {
     e.preventDefault();
     let $this = $(this),
         item = $this.closest('.buyItem'),

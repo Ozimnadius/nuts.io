@@ -7,11 +7,13 @@ $(function () {
             type = $this.attr('data-type'),
             input = form.find('input[name=type]');
 
-        input.val(type);
+        if (input.val() != type) {
+            input.val(type);
 
-        let data = form.serialize();
+            let data = form.serialize();
 
-        sendAjax(form, data);
+            sendAjax(form, data);
+        }
     });
 
 
