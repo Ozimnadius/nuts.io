@@ -70,84 +70,85 @@ mixin item(id)
 
         .item__hidden
 
-            .item__wrap
+            .item__block
+                .item__wrap
 
-                //- desc
-                .item__desc
-                    .item__desc-title Пищевая и энергетическая ценность продукта на 100 гр.
-                    .item__list
-                        .item__item
-                            .item__item-title Ккал
-                            .item__item-line
-                            .item__item-val 643
-                        .item__item
-                            .item__item-title Углеводы
-                            .item__item-line
-                            .item__item-val 19,9
-                        .item__item
-                            .item__item-title Жиры
-                            .item__item-line
-                            .item__item-val 53,3
-                        .item__item
-                            .item__item-title Белки
-                            .item__item-line
-                            .item__item-val 20,8
-                    .item__period
-                        | Срок годности:&nbsp;
-                        span.item__period_gold
-                            | 6 месяцев
+                    //- desc
+                    .item__desc
+                        .item__desc-title Пищевая и энергетическая ценность продукта на 100 гр.
+                        .item__list
+                            .item__item
+                                .item__item-title Ккал
+                                .item__item-line
+                                .item__item-val 643
+                            .item__item
+                                .item__item-title Углеводы
+                                .item__item-line
+                                .item__item-val 19,9
+                            .item__item
+                                .item__item-title Жиры
+                                .item__item-line
+                                .item__item-val 53,3
+                            .item__item
+                                .item__item-title Белки
+                                .item__item-line
+                                .item__item-val 20,8
+                        .item__period
+                            | Срок годности:&nbsp;
+                            span.item__period_gold
+                                | 6 месяцев
 
 
-                //- top
-                .item__top
+                    //- top
+                    .item__top
 
-                    //- discount
-                    .item__discount 15%
+                        //- discount
+                        .item__discount 15%
 
-                    //- country
-                    .item__country
-                        img(src='images/bg/flag.png').item__country-img
-                        span.item__country-title Россия
+                        //- country
+                        .item__country
+                            img(src='images/bg/flag.png').item__country-img
+                            span.item__country-title Россия
 
-                    //- img
-                    .item__img
-                        img(src='images/content/products/product.png').item__img-img
+                        //- img
+                        .item__img
+                            img(src='images/content/products/product.png').item__img-img
 
-                //- bottom
-                .item__bottom
-                    //- title
-                    .item__title Миндаль голд сырой
+                    //- bottom
+                    .item__bottom
+                        //- title
+                        .item__title Миндаль голд сырой
 
-                    //- pricing
-                    .item__pricing
-                        +price('105.00')
-                        +oldPrice('120.00')
+                        //- pricing
+                        .item__pricing
+                            +price('105.00')
+                            +oldPrice('120.00')
 
-                    //- weight
-                    .item__weight
-                        .item__weight-title Вес:
-                        .item__weight-val 500 гр.
+                        //- weight
+                        .item__weight
+                            .item__weight-title Вес:
+                            .item__weight-val 500 гр.
 
-                    //- count
-                    .item__count
-                        .item__count-title Количество:
-                        .item__count-input
-                            form(action='#' method='post').count
-                                button(type='button').count__down
-                                input(type='text' name='count' value='1' readonly=true).count__input
-                                button(type='button').count__up
+                        //- count
+                        .item__count
+                            .item__count-title Количество:
+                            .item__count-input
+                                form(action='#' method='post').count
+                                    button(type='button').count__down
+                                    input(type='text' name='count' value='1' readonly=true).count__input
+                                    button(type='button').count__up
 
-                    //- buy
-                    .item__buy
-                        button(type='button').btn.buy
-                            +icon('basket', 'btn__svg')
-                            .btn__title В корзину
+                        //- buy
+                        .item__buy
+                            button(type='button').btn.buy
+                                +icon('basket', 'btn__svg')
+                                .btn__title В корзину
 
-                    //- fast
-                    button(type='button').item__fast Купить в один клик
+                        //- fast
+                        button(type='button').item__fast Купить в один клик
 
-            //- hidden
-            .item__compare
-                .item__compare-button
-                    +icon('compare', 'item__compare-svg')
-                    .item__compare-title Сравнить
+                //- hidden
+                .item__compare
+                    .item__compare-button
+                        +icon('compare', 'item__compare-svg')
+                        .item__compare-title Сравнить

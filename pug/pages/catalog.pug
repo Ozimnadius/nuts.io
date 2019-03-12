@@ -1,0 +1,106 @@
+extends ../main
+
+block variables
+    - var title = 'Каталог'
+    - var header = 'header_2'
+
+block content
+    main.catalog
+        //- bread
+        section.catalog__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    a(href='catalog.html').bread__item
+                        .bread__item-title Каталог
+                    span.bread__item
+                        .bread__item-title Орехи
+
+
+        //-main
+        section.catalog__main
+            .container
+                .catalog__title.title.title_left Орехи
+                .row
+                    //- left
+                    .catalog__left
+                        .catalog__cats
+                            .cats
+                                .cats__title Категории
+                                .cats__list
+                                    a(href='catalog.html').cats__item.active Орехи
+                                    a(href='catalog.html').cats__item Сухофрукты
+                                    a(href='catalog.html').cats__item Глазурь
+
+                        a(href='#' download=true).catalog__download
+                            .catalog__download-wrap
+                                .catalog_-download-img
+                                    img(src='images/content/catalog/download.png').catalog__download-pic
+                                +icon('download', 'catalog__download-svg')
+                                .catalog__download-title Скачать прайс-лист
+
+
+
+
+
+
+                    //- right
+                    .catalog__right
+                        form(action='#' method='post').catalog__main
+                            //- controls
+                            .catalog__controls
+                                //- select
+                                .catalog__select
+                                    .catalog__select-title Показать:
+                                    .catalog__select-select
+                                        select(data-placeholder='Выберите вариант').select
+                                            option(selected=true)
+                                            option(value='0') Все
+                                            option(value='1') Вариант1
+                                            option(value='2') Вариант2
+                                            option(value='3') Вариант3
+                                //- types
+                                .catalog__types
+                                    .types
+                                        button(type='button' data-type='tile').type.active
+                                            +icon('tile','type__svg')
+                                        button(type='button' data-type='list').type
+                                            +icon('list','type__svg')
+
+
+
+                            //- items
+                            .catalog__items
+                                .row
+                                    each i in [1,2,3,4,5,6,7,8,9]
+                                        .catalog__item
+                                            +item(i)
+                                //- pagination
+                                .catalog__pag
+                                    .pag
+                                        each i in [1,2,3,4,'...',54]
+                                            a(href='catalog.html' class=i == 2 ? 'active' : '').pag__link= i
+        //- recently
+        section.catalog__recently
+            .recently
+                .container
+                    //- title
+                    .recently__title.title.title_gold Недавно смотрели
+
+                    //- swiper
+                    .recently__swiper
+                        .swiper-container.recently__container
+                            - var n = 0;
+                            .swiper-wrapper.recently__wrapper
+                                while n < 12
+                                    .swiper-slide
+                                        +item(n++)
+
+                        .recently__prev
+                            button.arrow
+                                +icon('arrw3', 'arrow__svg')
+                        .recently__next
+                            button.arrow.arrow_next
+                                +icon('arrw3', 'arrow__svg')
+

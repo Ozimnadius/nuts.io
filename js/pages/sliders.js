@@ -23,4 +23,13 @@ $(function () {
             prevEl: '.irevs__prev .arrow',
         }
     });
+
+    let recentlySlider = new Swiper ('.recently__container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.recently__next .arrow',
+            prevEl: '.recently__prev .arrow',
+        }
+    });
 });

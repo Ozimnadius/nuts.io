@@ -205,7 +205,6 @@
   width: 59px;
   height: 59px;
   border: 1px solid #f27a55;
-  background-color: $bg;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -225,7 +224,7 @@
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(#eed5ba,1);
     border: 1px solid #f27a55;
   }
 
@@ -306,5 +305,34 @@
 
   &__title {
     color: $white;
+  }
+}
+
+.bread {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    color: $green;
+    font-size: 14px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    &-title {
+      text-decoration: underline;
+      margin-right: 10px;
+    }
+
+    &:after {
+      content: '/';
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &:after{
+        display: none;
+      }
+    }
   }
 }
