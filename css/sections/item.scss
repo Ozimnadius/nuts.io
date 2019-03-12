@@ -8,14 +8,17 @@
   z-index: 1;
   transition: .5s;
 
+
+
   &__block {
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    position: relative;
     transition: .5s;
   }
 
-  >.item__wrap{
+  > .item__wrap {
     opacity: 0;
   }
 
@@ -27,10 +30,11 @@
       box-shadow: 0 4px 17px rgba(0, 0, 0, 0.4);
     }
 
-    >.item__wrap {
+    > .item__wrap {
       opacity: 0;
     }
-    .item__hidden{
+
+    .item__hidden {
       opacity: 1;
       border: 1px solid $orange;
     }
@@ -44,9 +48,126 @@
       border-bottom-left-radius: 0;
     }
 
-    .item__compare{
+    .item__compare {
       height: 53px;
     }
+  }
+
+  &.list {
+    .item {
+      &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &__desc {
+        display: none;
+      }
+
+      &__top {
+        padding: 25px 20px 25px 70px;
+        width: 19%;
+        display: flex;
+        align-items: center;
+      }
+
+      &__country {
+        display: none;
+      }
+
+      &__img {
+        height: 76px;
+      }
+
+      &__bottom {
+        width: 81%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 0;
+      }
+
+      &__left, &__center, &__right {
+        width: initial;
+      }
+
+      &__left {
+        max-width: 210px;
+      }
+
+      &__title {
+        margin-bottom: 7px;
+      }
+
+      &__pricing {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 15px;
+      }
+
+      &__weight {
+        width: initial;
+        margin-bottom: 0;
+        justify-content: flex-start;
+
+        &-title {
+          margin-right: 8px;
+        }
+      }
+
+      &__count {
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__buy {
+        width: 221px;
+      }
+
+      &__fast {
+        margin-bottom: 0;
+      }
+
+      &__compare {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: auto;
+
+        &-button {
+          border-radius: 0 0 0 6px;
+          background-color: rgba(#e5eae8,.9);
+          padding: 5px 10px;
+          border: none;
+        }
+
+        &-svg {
+          width: rem(12px);
+          height: rem(12px);
+        }
+
+        &-title {
+          font-size: 14px;
+          line-height: 1;
+        }
+      }
+
+      &:hover {
+        .item__compare {
+          height: auto;
+        }
+      }
+
+    }
+
   }
 
   &__wrap {
@@ -138,6 +259,10 @@
     align-items: center;
   }
 
+  &__left {
+    width: 100%;
+  }
+
   &__title {
     text-align: center;
     font-size: 18px;
@@ -150,7 +275,7 @@
   }
 
   &__pricing {
-    width: 100%;
+    //width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,18 +300,31 @@
     }
   }
 
-  &__count {
+  &__center {
     width: 100%;
+  }
+
+  &__count {
+    //width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
   }
 
+
+  &__right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__buy {
     margin-bottom: 15px;
     width: 100%;
-    .btn{
+
+    .btn {
       max-width: 100%;
       width: 100%;
     }
@@ -227,7 +365,7 @@
     right: 0;
 
     border-radius: 6px;
-    border: 1px solid rgba($text,.2);
+    border: 1px solid rgba($text, .2);
     padding: 10px;
 
     transition: .3s;
@@ -240,7 +378,7 @@
 
 
     &-button {
-      border-top: 1px solid rgba($text,.1);
+      border-top: 1px solid rgba($text, .1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -275,17 +413,17 @@
     height: 220px;
     overflow-y: auto;
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       width: 4px;
     }
 
     &::-webkit-scrollbar-track {
-      background-color: rgba($orange,0);
+      background-color: rgba($orange, 0);
     }
 
     &::-webkit-scrollbar-thumb {
       border-radius: 4px;
-      background-color: rgba($orange,1);
+      background-color: rgba($orange, 1);
     }
 
     &-title {
@@ -322,7 +460,7 @@
       margin-bottom: 2px;
     }
 
-    &-val{
+    &-val {
       color: $bg;
       line-height: 1;
     }

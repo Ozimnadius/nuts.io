@@ -36,36 +36,39 @@ mixin item(id)
 
             //- bottom
             .item__bottom
-                //- title
-                .item__title Миндаль голд сырой
+                .item__left
+                    //- title
+                    .item__title Миндаль голд сырой
 
-                //- pricing
-                .item__pricing
-                    +price('105.00')
-                    +oldPrice('120.00')
+                    //- pricing
+                    .item__pricing
+                        +price('105.00')
+                        +oldPrice('120.00')
 
-                //- weight
-                .item__weight
-                    .item__weight-title Вес:
-                    .item__weight-val 500 гр.
+                    //- weight
+                    .item__weight
+                        .item__weight-title Вес:
+                        .item__weight-val 500 гр.
 
-                //- count
-                .item__count
-                    .item__count-title Количество:
-                    .item__count-input
-                        form(action='#' method='post').count
-                            button(type='button').count__down
-                            input(type='text' name='count' value='1' readonly=true).count__input
-                            button(type='button').count__up
+                .item__center
+                    //- count
+                    .item__count
+                        .item__count-title Количество:
+                        .item__count-input
+                            form(action='#' method='post').count
+                                button(type='button').count__down
+                                input(type='text' name='count' value='1' readonly=true).count__input
+                                button(type='button').count__up
 
-                //- buy
-                .item__buy
-                    button(type='button').btn.buy
-                        +icon('basket', 'btn__svg')
-                        .btn__title В корзину
+                .item__right
+                    //- buy
+                    .item__buy
+                        button(type='button').btn.buy
+                            +icon('basket', 'btn__svg')
+                            .btn__title В корзину
 
-                //- fast
-                button(type='button').item__fast Купить в один клик
+                    //- fast
+                    button(type='button').item__fast Купить в один клик
 
 
         .item__hidden
@@ -116,36 +119,39 @@ mixin item(id)
 
                     //- bottom
                     .item__bottom
-                        //- title
-                        .item__title Миндаль голд сырой
+                        .item__left
+                            //- title
+                            .item__title Миндаль голд сырой
 
-                        //- pricing
-                        .item__pricing
-                            +price('105.00')
-                            +oldPrice('120.00')
+                            //- pricing
+                            .item__pricing
+                                +price('105.00')
+                                +oldPrice('120.00')
 
-                        //- weight
-                        .item__weight
-                            .item__weight-title Вес:
-                            .item__weight-val 500 гр.
+                            //- weight
+                            .item__weight
+                                .item__weight-title Вес:
+                                .item__weight-val 500 гр.
 
-                        //- count
-                        .item__count
-                            .item__count-title Количество:
-                            .item__count-input
-                                form(action='#' method='post').count
-                                    button(type='button').count__down
-                                    input(type='text' name='count' value='1' readonly=true).count__input
-                                    button(type='button').count__up
+                        .item__center
+                            //- count
+                            .item__count
+                                .item__count-title Количество:
+                                .item__count-input
+                                    form(action='#' method='post').count
+                                        button(type='button').count__down
+                                        input(type='text' name='count' value='1' readonly=true).count__input
+                                        button(type='button').count__up
 
-                        //- buy
-                        .item__buy
-                            button(type='button').btn.buy
-                                +icon('basket', 'btn__svg')
-                                .btn__title В корзину
+                        .item__right
+                            //- buy
+                            .item__buy
+                                button(type='button').btn.buy
+                                    +icon('basket', 'btn__svg')
+                                    .btn__title В корзину
 
-                        //- fast
-                        button(type='button').item__fast Купить в один клик
+                            //- fast
+                            button(type='button').item__fast Купить в один клик
 
                 //- hidden
                 .item__compare

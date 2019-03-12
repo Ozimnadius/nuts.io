@@ -94,6 +94,10 @@
     @include col;
     @include size(8);
     margin-bottom: 20px;
+
+    &.list {
+      @include size(24);
+    }
   }
 
   &__pag {

@@ -48,6 +48,7 @@ block content
                     //- right
                     .catalog__right
                         form(action='#' method='post').catalog__main
+                            input(type='hidden' name='action' value='catalogAjax')
                             //- controls
                             .catalog__controls
                                 //- select
@@ -56,13 +57,14 @@ block content
                                     .catalog__select-select
                                         select(data-placeholder='Выберите вариант').select
                                             option(selected=true)
-                                            option(value='0') Все
-                                            option(value='1') Вариант1
-                                            option(value='2') Вариант2
-                                            option(value='3') Вариант3
+                                            option(value='Все') Все
+                                            option(value='Вариант1') Вариант1
+                                            option(value='Вариант2') Вариант2
+                                            option(value='Вариант3') Вариант3
                                 //- types
                                 .catalog__types
                                     .types
+                                        input(type='hidden' name='type' value='tile')
                                         button(type='button' data-type='tile').type.active
                                             +icon('tile','type__svg')
                                         button(type='button' data-type='list').type

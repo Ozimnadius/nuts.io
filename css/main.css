@@ -1919,6 +1919,7 @@ input, textarea {
   overflow: hidden;
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  position: relative;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
@@ -1958,6 +1959,144 @@ input, textarea {
 
 .item:hover .item__compare {
   height: 53px;
+}
+
+.item.list .item__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.item.list .item__desc {
+  display: none;
+}
+
+.item.list .item__top {
+  padding: 25px 20px 25px 70px;
+  width: 19%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.item.list .item__country {
+  display: none;
+}
+
+.item.list .item__img {
+  height: 76px;
+}
+
+.item.list .item__bottom {
+  width: 81%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.item.list .item__left, .item.list .item__center, .item.list .item__right {
+  width: initial;
+}
+
+.item.list .item__left {
+  max-width: 210px;
+}
+
+.item.list .item__title {
+  margin-bottom: 7px;
+}
+
+.item.list .item__pricing {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+.item.list .item__weight {
+  width: initial;
+  margin-bottom: 0;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.item.list .item__weight-title {
+  margin-right: 8px;
+}
+
+.item.list .item__count {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.item.list .item__count-title {
+  margin-bottom: 15px;
+}
+
+.item.list .item__buy {
+  width: 221px;
+}
+
+.item.list .item__fast {
+  margin-bottom: 0;
+}
+
+.item.list .item__compare {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: auto;
+}
+
+.item.list .item__compare-button {
+  border-radius: 0 0 0 6px;
+  background-color: rgba(229, 234, 232, 0.9);
+  padding: 5px 10px;
+  border: none;
+}
+
+.item.list .item__compare-svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.item.list .item__compare-title {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.item.list .item:hover .item__compare {
+  height: auto;
 }
 
 .item__wrap {
@@ -2068,6 +2207,10 @@ input, textarea {
   align-items: center;
 }
 
+.item__left {
+  width: 100%;
+}
+
 .item__title {
   text-align: center;
   font-size: 18px;
@@ -2082,7 +2225,6 @@ input, textarea {
 }
 
 .item__pricing {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2120,8 +2262,11 @@ input, textarea {
   color: #105946;
 }
 
-.item__count {
+.item__center {
   width: 100%;
+}
+
+.item__count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2132,6 +2277,20 @@ input, textarea {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.item__right {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .item__buy {
@@ -2709,6 +2868,10 @@ input, textarea {
   margin-right: 10px;
   width: calc(33.33333% - 20px);
   margin-bottom: 20px;
+}
+
+.catalog__item.list {
+  width: calc(100% - 20px);
 }
 
 .catalog__pag {
