@@ -180,7 +180,7 @@ block content
                                         //- right
                                         .revs__right
                                             form(action='#' method='post').revs__form
-                                                .revs__from-wrap
+                                                .revs__form-wrap
                                                     .revs__form-title Оставить отзыв
                                                     .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
                                                     .revs__form-fields
@@ -192,9 +192,10 @@ block content
                                                             textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
                                                     .revs__form-rating
                                                         .rating.rating_green
+                                                            .rating__title Ваша оценка
                                                             .rating__wrapper
                                                                 each i in [5,4,3,2,1]
-                                                                    input(type='radio' name='rating' value=i id='form-rating-' + i checked=i == 3 ? true : false).rating__input
+                                                                    input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
                                                                     label(for='form-rating-' + i).rating__star
                                                                         +icon('star', 'rating__star-svg')
                                                     .revs__form-button
