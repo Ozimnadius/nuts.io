@@ -1,5 +1,551 @@
-.product {
-  height: 100vh;
-  background: url("/images/bg/productBg.jpg") 0 bottom no-repeat;
-  background-size: cover;
+.pr {
+
+  &__main {
+    background: url("../images/bg/productBg.jpg") 0 0 no-repeat;
+    background-size: cover;
+    padding-top: 290px;
+    padding-bottom: 50px;
+  }
+
+  &__bread {
+    margin-bottom: 30px;
+  }
+
+  &__left,&__right {
+    @include col;
+    @include size(12);
+  }
+
+  &__left {
+    padding-right: 60px;
+  }
+
+  &__title {
+    color: $white;
+    font-family: "PT Serif";
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba($white,.2);
+  }
+
+  &__code {
+    opacity: 0.6;
+    color: rgba($white,.6);
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+
+    &-title {
+      color: rgba($white,.6);
+      margin-bottom: 10px;
+    }
+
+    &-block {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-item {
+      margin-right: 15px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      color: rgba($white,.6);
+      margin-right: 13px;
+    }
+  }
+
+  &__explore{
+    border-radius: 4px;
+    background-color: rgba($white,.1);
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &-title {
+      max-width: 252px;
+      color: rgba($white,.5);
+    }
+
+    &-button {
+      width: 156px;
+      height: 43px;
+    }
+  }
+
+  &__buy {
+    padding-top: 30px;
+    border-top: 1px solid rgba($white,.2);
+    margin-bottom: 30px;
+
+   &-button,&-download {
+     @include col;
+     @include size(12);
+   }
+    &-button {
+      @include size(11);
+      @include shift-right(1);
+    }
+  }
+
+  &__controls {
+
+  }
+
+  &__one,&__compare {
+    @include col;
+    @include size(12);
+  }
+
+  &__one {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .pr__one{
+        &-svg{
+          fill: $orange;
+        }
+        &-title {
+          color: $orange;
+        }
+      }
+    }
+
+    &-svg {
+      width: rem(15px);
+      height: rem(18px);
+      fill: $white;
+      margin-right: 15px;
+      transition: .3s;
+    }
+
+    &-title {
+      color: $white;
+      text-decoration: underline;
+      transition: .3s;
+    }
+  }
+
+  &__compare {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .pr__compare{
+        &-svg{
+          fill: $orange;
+        }
+        &-title {
+          color: $orange;
+        }
+      }
+    }
+
+    &-svg {
+      width: rem(15px);
+      height: rem(15px);
+      fill: $white;
+      margin-right: 15px;
+      transition: .3s;
+    }
+
+    &-title {
+      color: $white;
+      transition: .3s;
+    }
+  }
+
+  &__image {
+    @include col;
+    @include size(16);
+    position: relative;
+
+    &-wrap {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__discount {
+    width: 106px;
+    height: 106px;
+    background-color: $lightGreen;
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 20;
+    top: -20px;
+    left: 0;
+
+    &-wrap {
+      border: 1px solid $white;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-val {
+      color: $white;
+      font-size: 26px;
+    }
+  }
+
+  &__imgs {
+    @include col;
+    @include size(8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-av {
+
+    }
+
+    &-list {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__av {
+    display: flex;
+    align-items: center;
+    &-svg {
+      width: rem(18px);
+      height: rem(13px);
+      fill: $bg;
+      margin-right: rem(9px);
+    }
+    &-title {
+      color: $bg;
+    }
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid $bg;
+    background: rgba($white,0);
+    opacity: 0.5;
+    border-radius: 50%;
+    padding: 23px;
+    margin-bottom: 30px;
+
+    &.active {
+      background: rgba($white,.1);
+      opacity: 1;
+    }
+
+
+    &-img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+
+  &__desc {
+    background: url("../images/bg/ispecsBg.png") 0 0;
+    padding: 60px 0 70px 0;
+  }
+
+  &__sws {
+    position: relative;
+    margin-bottom: 40px;
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__sw {
+    color: $green;
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 25px 10px 25px;
+
+
+    &.active {
+      color: $orange;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    background-color: rgba($text, .2);
+  }
+
+  &__subline {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: $orange;
+    transition: .4s;
+  }
+
+  &__tabs {
+    width: 100%;
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+}
+
+.rating {
+
+  &__input {
+    display: none;
+
+    &:checked ~ .rating__star {
+      svg {
+        fill: $bg;
+      }
+    }
+  }
+
+  &__star {
+    padding: 0 2.5px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    svg {
+      fill: transparent;
+      stroke: $bg;
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover, &:hover ~ .rating__star {
+      svg {
+        fill: $bg;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &:hover .rating__star {
+      svg {
+        fill: transparent;
+        stroke: $bg;
+      }
+    }
+
+    &:hover .rating__star:hover,
+    &:hover .rating__star:hover ~ .rating__star {
+      svg {
+        fill: $bg;
+      }
+    }
+
+  }
+}
+
+.revs {
+
+  &__left{
+    @include col;
+    @include size(16);
+  }
+
+  &__right {
+    @include col;
+    @include size(8);
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+}
+
+.rev {
+
+  border-radius: 6px;
+  background-color: #f7f7f7;
+  padding: 25px 30px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba($text,.2);
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    &-svg {
+      width: rem(19px);
+      height: rem(19px);
+      fill: $text;
+      margin-right: 15px;
+    }
+
+    &-name {
+      font-weight: 700;
+    }
+  }
+
+  &__time {
+    color: rgba(#333333,.5);
+  }
+
+  &__middle {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: #333333;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      opacity: 0.5;
+      color: rgba(#333333,.5);
+      font-size: 14px;
+      margin-right: 18px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        fill: rgba(#333333,.5);
+      }
+    }
+
+    &-count {
+      color: #2aa633;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 7px;
+    }
+    &-svg {
+      width: rem(16px);
+      height: rem(15px);
+      fill: rgba(#333333,.3);
+      margin-bottom: rem(5px);
+      transition: .3s;
+    }
+  }
+
+  &__dislike {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        fill: rgba(#333333,.5);
+      }
+    }
+
+    &-count {
+      color: #cc2121;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 7px;
+    }
+    &-svg {
+      width: rem(16px);
+      height: rem(15px);
+      fill: rgba(#333333,.3);
+      margin-bottom: rem(-4px);
+    }
+  }
 }

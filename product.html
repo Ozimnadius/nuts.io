@@ -85,15 +85,15 @@
         <div class="header__bottom">
           <div class="container">
             <div class="header__menu">
-              <div class="menu"><a class="menu__item" href="/">
+              <div class="menu"><a class="menu__item" href="catalog.html">
                   <svg class="menu__svg">
                     <use xlink:href="images/icons/sprite.svg#nuts"></use>
                   </svg>
-                  <div class="menu__title">Орехи</div></a><a class="menu__item" href="/">
+                  <div class="menu__title">Орехи</div></a><a class="active menu__item" href="catalog.html">
                   <svg class="menu__svg">
                     <use xlink:href="images/icons/sprite.svg#fruits"></use>
                   </svg>
-                  <div class="menu__title">Сухофрукты</div></a><a class="menu__item" href="/">
+                  <div class="menu__title">Сухофрукты</div></a><a class="menu__item" href="catalog.html">
                   <svg class="menu__svg">
                     <use xlink:href="images/icons/sprite.svg#glaze"></use>
                   </svg>
@@ -194,37 +194,2117 @@
         </div>
       </header>
       <div class="page">
-        <main class="product"></main>
+        <main class="pr">
+          <section class="pr__main buyItem" data-id="1">
+            <div class="container">
+              <div class="pr__bread">
+                <div class="bread bread_pr"><a class="bread__item" href="/">
+                    <div class="bread__item-title">Главная</div></a><a class="bread__item" href="catalog.html">
+                    <div class="bread__item-title">Каталог</div></a><a class="bread__item" href="catalog.html">
+                    <div class="bread__item-title">Орехи</div></a><span class="bread__item">
+                    <div class="bread__item-title">Бразильский орех</div></span></div>
+              </div>
+              <div class="row">
+                <div class="pr__left">
+                  <div class="pr__title">Бразильский орех очищенный</div>
+                  <form class="pr__form" action="#" method="post">
+                    <div class="pr__sub">
+                      <div class="pr__code">Код товара: 100009</div>
+                      <div class="pr__rating">
+                        <div class="rating">
+                          <div class="rating__wrapper">
+                            <input class="rating__input" type="radio" name="rating" value="5" id="rating-5">
+                            <label class="rating__star" for="rating-5">
+                              <svg class="rating__star-svg">
+                                <use xlink:href="images/icons/sprite.svg#star"></use>
+                              </svg>
+                            </label>
+                            <input class="rating__input" type="radio" name="rating" value="4" id="rating-4">
+                            <label class="rating__star" for="rating-4">
+                              <svg class="rating__star-svg">
+                                <use xlink:href="images/icons/sprite.svg#star"></use>
+                              </svg>
+                            </label>
+                            <input class="rating__input" type="radio" name="rating" value="3" id="rating-3" checked>
+                            <label class="rating__star" for="rating-3">
+                              <svg class="rating__star-svg">
+                                <use xlink:href="images/icons/sprite.svg#star"></use>
+                              </svg>
+                            </label>
+                            <input class="rating__input" type="radio" name="rating" value="2" id="rating-2">
+                            <label class="rating__star" for="rating-2">
+                              <svg class="rating__star-svg">
+                                <use xlink:href="images/icons/sprite.svg#star"></use>
+                              </svg>
+                            </label>
+                            <input class="rating__input" type="radio" name="rating" value="1" id="rating-1">
+                            <label class="rating__star" for="rating-1">
+                              <svg class="rating__star-svg">
+                                <use xlink:href="images/icons/sprite.svg#star"></use>
+                              </svg>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pr__pricing">
+                      <div class="pr__price">
+                        <div class="pr__price-title">Цена за 500 гр.</div>
+                        <div class="pr__price-block">
+                          <div class="pr__price-item">
+                            <div class="price_pr price"><span class="price__val">1 250</span><span class="price__type">руб.</span></div>
+                          </div>
+                          <div class="pr__price-item">
+                            <div class="price_pr price price_old"><span class="price__val">1 400</span><span class="price__type">руб.</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pr__count">
+                        <div class="pr__count-title">Количество:</div>
+                        <div class="pr__count-count">
+                          <div class="count count_pr">
+                            <button class="count__down" type="button"></button>
+                            <input class="count__input" type="text" name="count" value="1" readonly>
+                            <button class="count__up" type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pr__explore">
+                      <div class="pr__explore-title">*На крупный опт от 100 кг, цена уточняется у менеджера</div>
+                      <button class="pr__explore-button" type="button">
+                        <div class="button button_pr">Узнать цену</div>
+                      </button>
+                    </div>
+                    <div class="pr__buy">
+                      <div class="row">
+                        <div class="pr__buy-button">
+                          <button class="btn buy" type="button">
+                            <svg class="btn__svg">
+                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                            </svg>
+                            <div class="btn__title">В корзину</div>
+                          </button>
+                        </div>
+                        <div class="pr__buy-download"><a class="btn2 btn2_pr" href="#" download>
+                            <svg class="btn2__svg">
+                              <use xlink:href="images/icons/sprite.svg#pdf"></use>
+                            </svg>
+                            <div class="btn2__title">Скачать прайс-лист</div></a></div>
+                      </div>
+                    </div>
+                    <div class="pr__controls">
+                      <div class="row">
+                        <button class="pr__one" type="button">
+                          <svg class="pr__one-svg">
+                            <use xlink:href="images/icons/sprite.svg#one"></use>
+                          </svg>
+                          <div class="pr__one-title">Купить в один клик</div>
+                        </button>
+                        <button class="pr__compare" type="button">
+                          <svg class="pr__compare-svg">
+                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                          </svg>
+                          <div class="pr__compare-title">Сравнить</div>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="pr__right">
+                  <div class="row">
+                    <div class="pr__image">
+                      <div class="proportion proportion_376x462"></div>
+                      <div class="pr__discount">
+                        <div class="pr__discount-wrap">
+                          <div class="pr__discount-val">-15%</div>
+                        </div>
+                      </div>
+                      <div class="pr__image-wrap"><img class="pr__image-img buyImg" src="images/content/products/0.png"></div>
+                    </div>
+                    <div class="pr__imgs">
+                      <div class="pr__imgs-av">
+                        <div class="pr__av">
+                          <svg class="pr__av-svg">
+                            <use xlink:href="images/icons/sprite.svg#check"></use>
+                          </svg>
+                          <div class="pr__av-title">Есть на складе</div>
+                        </div>
+                      </div>
+                      <div class="pr__imgs-list">
+                        <button class="active pr__img" type="button"><img class="pr__img-img" src="images/content/products/0.png"></button>
+                        <button class="pr__img" type="button"><img class="pr__img-img" src="images/content/products/1.png"></button>
+                        <button class="pr__img" type="button"><img class="pr__img-img" src="images/content/products/2.png"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="pr__desc">
+            <div class="container">
+              <div class="pr__sws">
+                <div class="pr__sws-list">
+                  <button class="active pr__sw" type="button" data-id="1">Описание</button>
+                  <button class="pr__sw" type="button" data-id="2">Отзывы</button>
+                </div>
+                <div class="pr__line">
+                  <div class="pr__subline"></div>
+                </div>
+              </div>
+              <div class="pr__tabs">
+                <div class="active pr__tab" data-id="1">
+                  <div class="pr__content">
+                    <div class="content">
+                      <h1>Заголовок H1.</h1>
+                      <h2>Заголовок H2.</h2>
+                      <h3>Заголовок H3.</h3>
+                      <h4>Заголовок H4.</h4>
+                      <p>Бразильские орехи, реализуемые компанией «Вкусита» отличаются свежестью, большим размером и стопроцентной натуральностью. При сборе и фасовке они не подвергаются обработке химикатами, их свежесть сохраняется благодаря надежным упаковкам и соблюдению норм хранения при транспортировке и на складе. Регулярные поставки орехов от проверенных производителей позволяют гарантировать постоянное наличие товара на складе и его свежесть.</p>
+                      <ul>
+                        <li>Клетчатка, содержащаяся в ядрах и красноватой тонкой кожице орехов, способствует мягкому естественному очищению организма от токсинов и лишней жидкости, а также улучшает процессы пищеварения;</li>
+                        <li>Всего 2-3 штуки позволяют восполнить суточную необходимость организма в селене, это ценное вещество участвует в производстве ферментов, клеточном и гормональном обмене;</li>
+                        <li>Антиоксидантные свойства орехов позволяют бороться со свободными радикалами и пагубными окислительными процессами в организме.</li>
+                      </ul><a href="/">Ссылка</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pr__tab" data-id="2">
+                  <div class="pr__revs">
+                    <div class="container">
+                      <div class="revs">
+                        <div class="row">
+                          <div class="revs__left">
+                            <div class="revs__list">
+                              <div class="revs__item">
+                                <div class="rev">
+                                  <div class="rev__top">
+                                    <div class="rev__user">
+                                                          <svg class="rev__user-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#cabinet"></use>
+                                                          </svg>
+                                      <div class="rev__user-name">Денис Еманов</div>
+                                    </div>
+                                    <div class="rev__time">denis_zz, 01 августа 2018</div>
+                                  </div>
+                                  <div class="rev__middle">
+                                    <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
+                                  </div>
+                                  <div class="rev__bottom">
+                                    <div class="rev__rating">
+                                      <div class="rating">
+                                        <div class="rating__wrapper">
+                                          <input class="rating__input" type="radio" name="rating1" value="5" id="1-rating-5">
+                                          <label class="rating__star" for="1-rating-5">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating1" value="4" id="1-rating-4">
+                                          <label class="rating__star" for="1-rating-4">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating1" value="3" checked id="1-rating-3">
+                                          <label class="rating__star" for="1-rating-3">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating1" value="2" id="1-rating-2">
+                                          <label class="rating__star" for="1-rating-2">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating1" value="1" id="1-rating-1">
+                                          <label class="rating__star" for="1-rating-1">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="rev__likes">
+                                      <div class="rev__likes-title">Отзыв полезен?</div>
+                                      <div class="rev__likes-list">
+                                        <div class="rev__like">
+                                          <div class="rev__like-count">1</div>
+                                                              <svg class="rev__like-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#like"></use>
+                                                              </svg>
+                                        </div>
+                                        <div class="rev__dislike">
+                                          <div class="rev__dislike-count">0</div>
+                                                              <svg class="rev__dislike-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#dislike"></use>
+                                                              </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="revs__item">
+                                <div class="rev">
+                                  <div class="rev__top">
+                                    <div class="rev__user">
+                                                          <svg class="rev__user-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#cabinet"></use>
+                                                          </svg>
+                                      <div class="rev__user-name">Денис Еманов</div>
+                                    </div>
+                                    <div class="rev__time">denis_zz, 01 августа 2018</div>
+                                  </div>
+                                  <div class="rev__middle">
+                                    <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
+                                  </div>
+                                  <div class="rev__bottom">
+                                    <div class="rev__rating">
+                                      <div class="rating">
+                                        <div class="rating__wrapper">
+                                          <input class="rating__input" type="radio" name="rating2" value="5" id="2-rating-5">
+                                          <label class="rating__star" for="2-rating-5">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating2" value="4" id="2-rating-4">
+                                          <label class="rating__star" for="2-rating-4">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating2" value="3" checked id="2-rating-3">
+                                          <label class="rating__star" for="2-rating-3">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating2" value="2" id="2-rating-2">
+                                          <label class="rating__star" for="2-rating-2">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating2" value="1" id="2-rating-1">
+                                          <label class="rating__star" for="2-rating-1">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="rev__likes">
+                                      <div class="rev__likes-title">Отзыв полезен?</div>
+                                      <div class="rev__likes-list">
+                                        <div class="rev__like">
+                                          <div class="rev__like-count">1</div>
+                                                              <svg class="rev__like-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#like"></use>
+                                                              </svg>
+                                        </div>
+                                        <div class="rev__dislike">
+                                          <div class="rev__dislike-count">0</div>
+                                                              <svg class="rev__dislike-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#dislike"></use>
+                                                              </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="revs__item">
+                                <div class="rev">
+                                  <div class="rev__top">
+                                    <div class="rev__user">
+                                                          <svg class="rev__user-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#cabinet"></use>
+                                                          </svg>
+                                      <div class="rev__user-name">Денис Еманов</div>
+                                    </div>
+                                    <div class="rev__time">denis_zz, 01 августа 2018</div>
+                                  </div>
+                                  <div class="rev__middle">
+                                    <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
+                                  </div>
+                                  <div class="rev__bottom">
+                                    <div class="rev__rating">
+                                      <div class="rating">
+                                        <div class="rating__wrapper">
+                                          <input class="rating__input" type="radio" name="rating3" value="5" id="3-rating-5">
+                                          <label class="rating__star" for="3-rating-5">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating3" value="4" id="3-rating-4">
+                                          <label class="rating__star" for="3-rating-4">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating3" value="3" checked id="3-rating-3">
+                                          <label class="rating__star" for="3-rating-3">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating3" value="2" id="3-rating-2">
+                                          <label class="rating__star" for="3-rating-2">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating3" value="1" id="3-rating-1">
+                                          <label class="rating__star" for="3-rating-1">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="rev__likes">
+                                      <div class="rev__likes-title">Отзыв полезен?</div>
+                                      <div class="rev__likes-list">
+                                        <div class="rev__like">
+                                          <div class="rev__like-count">1</div>
+                                                              <svg class="rev__like-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#like"></use>
+                                                              </svg>
+                                        </div>
+                                        <div class="rev__dislike">
+                                          <div class="rev__dislike-count">0</div>
+                                                              <svg class="rev__dislike-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#dislike"></use>
+                                                              </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="revs__item">
+                                <div class="rev">
+                                  <div class="rev__top">
+                                    <div class="rev__user">
+                                                          <svg class="rev__user-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#cabinet"></use>
+                                                          </svg>
+                                      <div class="rev__user-name">Денис Еманов</div>
+                                    </div>
+                                    <div class="rev__time">denis_zz, 01 августа 2018</div>
+                                  </div>
+                                  <div class="rev__middle">
+                                    <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
+                                  </div>
+                                  <div class="rev__bottom">
+                                    <div class="rev__rating">
+                                      <div class="rating">
+                                        <div class="rating__wrapper">
+                                          <input class="rating__input" type="radio" name="rating4" value="5" id="4-rating-5">
+                                          <label class="rating__star" for="4-rating-5">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating4" value="4" id="4-rating-4">
+                                          <label class="rating__star" for="4-rating-4">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating4" value="3" checked id="4-rating-3">
+                                          <label class="rating__star" for="4-rating-3">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating4" value="2" id="4-rating-2">
+                                          <label class="rating__star" for="4-rating-2">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                          <input class="rating__input" type="radio" name="rating4" value="1" id="4-rating-1">
+                                          <label class="rating__star" for="4-rating-1">
+                                                                <svg class="rating__star-svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                </svg>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="rev__likes">
+                                      <div class="rev__likes-title">Отзыв полезен?</div>
+                                      <div class="rev__likes-list">
+                                        <div class="rev__like">
+                                          <div class="rev__like-count">1</div>
+                                                              <svg class="rev__like-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#like"></use>
+                                                              </svg>
+                                        </div>
+                                        <div class="rev__dislike">
+                                          <div class="rev__dislike-count">0</div>
+                                                              <svg class="rev__dislike-svg">
+                                                                <use xlink:href="images/icons/sprite.svg#dislike"></use>
+                                                              </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="revs__pag">
+                              <div class="pag"><a class="pag__link" href="catalog.html">1</a><a class="active pag__link" href="catalog.html">2</a><a class="pag__link" href="catalog.html">3</a><a class="pag__link" href="catalog.html">4</a><a class="pag__link" href="catalog.html">...</a><a class="pag__link" href="catalog.html">54</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="revs__right">
+                            <form class="revs__form" action="#" method="post">
+                              <div class="revs__from-wrap">
+                                <div class="revs__form-title">Оставить отзыв</div>
+                                <div class="revs__form-subtitle">Все отзывы проходят модерацию, во избежания спама</div>
+                                <div class="revs__form-fields">
+                                  <div class="revs__form-field">
+                                    <input class="input" type="text" name="name" placeholder="Ваши имя">
+                                  </div>
+                                  <div class="revs__form-field">
+                                    <input class="input" type="email" name="email" placeholder="E-mail">
+                                  </div>
+                                  <div class="revs__form-field">
+                                    <textarea class="input input_area" name="comment" placeholder="Добавьте комментарий..."></textarea>
+                                  </div>
+                                </div>
+                                <div class="revs__form-rating">
+                                  <div class="rating rating_green">
+                                    <div class="rating__wrapper">
+                                      <input class="rating__input" type="radio" name="rating" value="5" id="form-rating-5">
+                                      <label class="rating__star" for="form-rating-5">
+                                                                      <svg class="rating__star-svg">
+                                                                        <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                      </svg>
+                                      </label>
+                                      <input class="rating__input" type="radio" name="rating" value="4" id="form-rating-4">
+                                      <label class="rating__star" for="form-rating-4">
+                                                                      <svg class="rating__star-svg">
+                                                                        <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                      </svg>
+                                      </label>
+                                      <input class="rating__input" type="radio" name="rating" value="3" id="form-rating-3" checked>
+                                      <label class="rating__star" for="form-rating-3">
+                                                                      <svg class="rating__star-svg">
+                                                                        <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                      </svg>
+                                      </label>
+                                      <input class="rating__input" type="radio" name="rating" value="2" id="form-rating-2">
+                                      <label class="rating__star" for="form-rating-2">
+                                                                      <svg class="rating__star-svg">
+                                                                        <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                      </svg>
+                                      </label>
+                                      <input class="rating__input" type="radio" name="rating" value="1" id="form-rating-1">
+                                      <label class="rating__star" for="form-rating-1">
+                                                                      <svg class="rating__star-svg">
+                                                                        <use xlink:href="images/icons/sprite.svg#star"></use>
+                                                                      </svg>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="revs__form-button">
+                                  <button class="btn">
+                                    <div class="btn__title">Отправить</div>
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="pr__recently">
+            <div class="recently">
+              <div class="container">
+                <div class="recently__title title title_gold">Недавно смотрели</div>
+                <div class="recently__swiper">
+                  <div class="swiper-container recently__container">
+                    <div class="swiper-wrapper recently__wrapper">
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="0">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="1">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="2">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="3">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="4">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="5">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="6">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="7">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="8">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="9">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="10">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                      <div class="swiper-slide"><a class="item buyItem" href="product.html" data-id="11">
+                                      <div class="item__wrap">
+                                        <div class="item__top">
+                                          <div class="item__discount">15%</div>
+                                          <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                          <div class="item__img"><img class="item__img-img buyImg" src="images/content/products/product.png"></div>
+                                        </div>
+                                        <div class="item__bottom">
+                                          <div class="item__left">
+                                            <div class="item__title">Миндаль голд сырой</div>
+                                            <div class="item__pricing">
+                                                          <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                          <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                            </div>
+                                            <div class="item__weight">
+                                              <div class="item__weight-title">Вес:</div>
+                                              <div class="item__weight-val">500 гр.</div>
+                                            </div>
+                                          </div>
+                                          <div class="item__center">
+                                            <div class="item__count">
+                                              <div class="item__count-title">Количество:</div>
+                                              <div class="item__count-input">
+                                                <form class="count" action="#" method="post">
+                                                  <button class="count__down" type="button"></button>
+                                                  <input class="count__input" type="text" name="count" value="1" readonly>
+                                                  <button class="count__up" type="button"></button>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__right">
+                                            <div class="item__buy">
+                                              <button class="btn buy" type="button">
+                                                            <svg class="btn__svg">
+                                                              <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                            </svg>
+                                                <div class="btn__title">В корзину</div>
+                                              </button>
+                                            </div>
+                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="item__hidden">
+                                        <div class="item__block">
+                                          <div class="item__wrap">
+                                            <div class="item__desc">
+                                              <div class="item__desc-title">Пищевая и энергетическая ценность продукта на 100 гр.</div>
+                                              <div class="item__list">
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Ккал</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">643</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Углеводы</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">19,9</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Жиры</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">53,3</div>
+                                                </div>
+                                                <div class="item__item">
+                                                  <div class="item__item-title">Белки</div>
+                                                  <div class="item__item-line"></div>
+                                                  <div class="item__item-val">20,8</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__period">Срок годности:&nbsp;<span class="item__period_gold">6 месяцев</span></div>
+                                            </div>
+                                            <div class="item__top">
+                                              <div class="item__discount">15%</div>
+                                              <div class="item__country"><img class="item__country-img" src="images/bg/flag.png"><span class="item__country-title">Россия</span></div>
+                                              <div class="item__img"><img class="item__img-img" src="images/content/products/product.png"></div>
+                                            </div>
+                                            <div class="item__bottom">
+                                              <div class="item__left">
+                                                <div class="item__title">Миндаль голд сырой</div>
+                                                <div class="item__pricing">
+                                                              <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
+                                                              <div class="price price_old"><span class="price__val">120.00</span><span class="price__type">руб.</span></div>
+                                                </div>
+                                                <div class="item__weight">
+                                                  <div class="item__weight-title">Вес:</div>
+                                                  <div class="item__weight-val">500 гр.</div>
+                                                </div>
+                                              </div>
+                                              <div class="item__center">
+                                                <div class="item__count">
+                                                  <div class="item__count-title">Количество:</div>
+                                                  <div class="item__count-input">
+                                                    <form class="count" action="#" method="post">
+                                                      <button class="count__down" type="button"></button>
+                                                      <input class="count__input" type="text" name="count" value="1" readonly>
+                                                      <button class="count__up" type="button"></button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="item__right">
+                                                <div class="item__buy">
+                                                  <button class="btn buy" type="button">
+                                                                <svg class="btn__svg">
+                                                                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                                                                </svg>
+                                                    <div class="btn__title">В корзину</div>
+                                                  </button>
+                                                </div>
+                                                <button class="item__fast" type="button">Купить в один клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="item__compare">
+                                            <div class="item__compare-button">
+                                                          <svg class="item__compare-svg">
+                                                            <use xlink:href="images/icons/sprite.svg#compare"></use>
+                                                          </svg>
+                                              <div class="item__compare-title">Сравнить</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="recently__prev">
+                    <button class="arrow">
+                                  <svg class="arrow__svg">
+                                    <use xlink:href="images/icons/sprite.svg#arrw3"></use>
+                                  </svg>
+                    </button>
+                  </div>
+                  <div class="recently__next">
+                    <button class="arrow arrow_next">
+                                  <svg class="arrow__svg">
+                                    <use xlink:href="images/icons/sprite.svg#arrw3"></use>
+                                  </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
       <footer class="footer">
         <div class="footer__top">
           <div class="container">
             <div class="row">
-              <div class="footer__left"><a class="footer__logo" href="/"><img class="logo" src="images/bg/logo_2.svg" alt="Вкусита"/></a>
+              <div class="footer__left"><a class="footer__logo" href="/"><img class="logo" src="images/bg/logo_2.svg" alt="Вкусита"></a>
                 <div class="footer__title">Оптово - розничный интернет<br>магазин орехов и сухофруктов</div>
                 <div class="footer__tels">
                   <div class="tels">
                     <div class="tel">
                       <div class="tel__icon">
-                        <svg class="tel__svg">
-                          <use xlink:href="images/icons/sprite.svg#phone"></use>
-                        </svg>
+                                    <svg class="tel__svg">
+                                      <use xlink:href="images/icons/sprite.svg#phone"></use>
+                                    </svg>
                       </div><a class="tel__link" href="+7(495)797-38-66">+7 (495)&nbsp;<span class="tel__link_bold">797-38-66</span></a>
                     </div>
                     <div class="tel">
                       <div class="tel__icon">
-                        <svg class="tel__svg">
-                          <use xlink:href="images/icons/sprite.svg#phone"></use>
-                        </svg>
+                                    <svg class="tel__svg">
+                                      <use xlink:href="images/icons/sprite.svg#phone"></use>
+                                    </svg>
                       </div><a class="tel__link" href="+7(926)180-32-98">+7 (926)&nbsp;<span class="tel__link_bold">180-32-98</span></a>
                     </div>
                   </div>
                 </div>
                 <div class="footer__email">
                   <email>
-                    <svg class="email__svg">
-                      <use xlink:href="images/icons/sprite.svg#mail"></use>
-                    </svg><a class="email__link" href="mailto:info@vkusita.ru">info@vkusita.ru</a>
+                                <svg class="email__svg">
+                                  <use xlink:href="images/icons/sprite.svg#mail"></use>
+                                </svg><a class="email__link" href="mailto:info@vkusita.ru">info@vkusita.ru</a>
                   </email>
                 </div>
               </div>
@@ -247,16 +2327,16 @@
               <div class="footer__right">
                 <div class="footer__addr">
                   <div class="addr">
-                    <svg class="addr__svg">
-                      <use xlink:href="images/icons/sprite.svg#pin"></use>
-                    </svg><a class="addr__link" href="/" target="_blank">г. Москва,<br>Нижегородская улица,<br>д. 29-33</a>
+                                <svg class="addr__svg">
+                                  <use xlink:href="images/icons/sprite.svg#pin"></use>
+                                </svg><a class="addr__link" href="/" target="_blank">г. Москва,<br>Нижегородская улица,<br>д. 29-33</a>
                   </div>
                 </div>
                 <div class="footer__work">
                   <div class="work">
-                    <svg class="work__svg">
-                      <use xlink:href="images/icons/sprite.svg#clock"></use>
-                    </svg>
+                                <svg class="work__svg">
+                                  <use xlink:href="images/icons/sprite.svg#clock"></use>
+                                </svg>
                     <div class="work__list">
                       <div class="work__item">
                         <div class="work__time">пн-пт:&nbsp<span class="work__time_time">с 09:00 до 18:00</span></div>
@@ -276,7 +2356,7 @@
             <div class="footer__copy">
               <div class="copy">© 2019 Все права защищены. ООО «Вкусита»</div>
             </div>
-            <div class="footer__vendor"><a class="vendor" href="https://web-comp.ru/" target="_blank"><span class="vendor__title">Разработано:</span><img class="vendor__img" src="images/bg/vendor.png" alt="Web-comp"/></a></div>
+            <div class="footer__vendor"><a class="vendor" href="https://web-comp.ru/" target="_blank"><span class="vendor__title">Разработано:</span><img class="vendor__img" src="images/bg/vendor.png" alt="Web-comp"></a></div>
           </div>
         </div>
       </footer>

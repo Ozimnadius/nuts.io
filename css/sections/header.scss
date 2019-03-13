@@ -356,7 +356,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    &:hover {
+    &:hover,&.active {
       .menu__svg{
         fill: $orange;
       }
@@ -479,6 +479,7 @@
   &__ajax {
     display: none;
     position: absolute;
+    z-index: 100;
     top: calc(100% + 20px);
     left: 0;
 
@@ -538,37 +539,5 @@
       align-items: center;
       justify-content: space-between;
     }
-  }
-}
-
-.price {
-  color: $orange;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  position: relative;
-
-  &_old {
-    color: rgba($grey,.6);
-    font-size: rem(14px);
-
-    &:after {
-      content: '';
-      display: block;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      background: rgba($grey,.6);
-    }
-  }
-
-  &__val {
-    font-weight: bold;
-    margin-right: rem(5px);
-  }
-  &__type {
-    font-size: em(15px);
   }
 }

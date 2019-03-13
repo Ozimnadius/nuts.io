@@ -5,13 +5,13 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
     img(src=`images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-mixin price (value)
-    .price
+mixin price (value, dopClass)
+    div(class=dopClass).price
         span.price__val= value
         span.price__type руб.
 
-mixin oldPrice (value)
-    .price.price_old
+mixin oldPrice (value, dopClass)
+    div(class=dopClass).price.price_old
         span.price__val= value
         span.price__type руб.
 

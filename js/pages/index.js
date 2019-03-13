@@ -52,6 +52,7 @@ $(function () {
             sw: '.ispecs__sw',
             line: '.ispecs__subline',
             tab: '.ispecs__tab',
+            tabs: '.ispecs__tabs',
             autoWidth: true
         }).init();
     }

@@ -4,4 +4,207 @@ block variables
     - var title = 'Товар'
 
 block content
-    main.product
+    main.pr
+        //- main
+        section(data-id='1').pr__main.buyItem
+            .container
+                //- bread
+                .pr__bread
+                    .bread.bread_pr
+                        a(href='/').bread__item
+                            .bread__item-title Главная
+                        a(href='catalog.html').bread__item
+                            .bread__item-title Каталог
+                        a(href='catalog.html').bread__item
+                            .bread__item-title Орехи
+                        span.bread__item
+                            .bread__item-title Бразильский орех
+
+                .row
+                    //- left
+                    .pr__left
+                        //- title
+                        .pr__title Бразильский орех очищенный
+
+                        form(action='#' method='post').pr__form
+                            //- sub
+                            .pr__sub
+                                .pr__code Код товара: 100009
+                                .pr__rating
+                                    .rating
+                                        .rating__wrapper
+                                            each i in [5,4,3,2,1]
+                                                input(type='radio' name='rating' value=i id='rating-' + i checked=i == 3 ? true : false).rating__input
+                                                label(for='rating-' + i).rating__star
+                                                    +icon('star', 'rating__star-svg')
+
+
+                            //- pricing
+                            .pr__pricing
+                                //- price
+                                .pr__price
+                                    .pr__price-title Цена за 500 гр.
+                                    .pr__price-block
+                                        .pr__price-item
+                                            +price('1 250', 'price_pr')
+                                        .pr__price-item
+                                            +oldPrice('1 400', 'price_pr')
+
+                                //- count
+                                .pr__count
+                                    .pr__count-title Количество:
+                                    .pr__count-count
+                                        .count.count_pr
+                                            button(type='button').count__down
+                                            input(type='text' name='count' value='1' readonly=true).count__input
+                                            button(type='button').count__up
+
+                            //- explore
+                            .pr__explore
+                                .pr__explore-title *На крупный опт от 100 кг, цена уточняется у менеджера
+                                button(type='button').pr__explore-button
+                                    .button.button_pr Узнать цену
+
+                            //- buy
+                            .pr__buy
+                                .row
+                                    .pr__buy-button
+                                        button(type='button').btn.buy
+                                            +icon('basket', 'btn__svg')
+                                            .btn__title В корзину
+
+                                    .pr__buy-download
+                                        a(href='#' download=true).btn2.btn2_pr
+                                            +icon('pdf', 'btn2__svg')
+                                            .btn2__title Скачать прайс-лист
+
+
+                            //- controls
+                            .pr__controls
+                                .row
+                                    button(type='button').pr__one
+                                        +icon('one', 'pr__one-svg')
+                                        .pr__one-title Купить в один клик
+
+                                    button(type='button').pr__compare
+                                        +icon('compare', 'pr__compare-svg')
+                                        .pr__compare-title Сравнить
+
+                    //- right
+                    .pr__right
+                        .row
+                            .pr__image
+                                .proportion.proportion_376x462
+                                .pr__discount
+                                    .pr__discount-wrap
+                                        .pr__discount-val -15%
+                                .pr__image-wrap
+                                    img(src='images/content/products/0.png').pr__image-img.buyImg
+
+                            .pr__imgs
+                                .pr__imgs-av
+                                    .pr__av
+                                        +icon('check', 'pr__av-svg')
+                                        .pr__av-title Есть на складе
+                                .pr__imgs-list
+                                    each i in [0,1,2]
+                                        button(type='button' class= i == 0 ? 'active' : '').pr__img
+                                            img(src='images/content/products/' + i + '.png').pr__img-img
+
+        //- tabs
+        section.pr__desc
+            .container
+                //- switches
+                .pr__sws
+                    .pr__sws-list
+                        each i,x in productDesc
+                            button(type='button' class=i.active data-id=x + 1).pr__sw= i.title
+                    .pr__line
+                        .pr__subline
+
+                //- tabs
+                .pr__tabs
+                    div(data-id=1 class='active').pr__tab
+                        .pr__content
+                            include ../common/blocks/content
+
+                    div(data-id=2 ).pr__tab
+                        .pr__revs
+                            .container
+                                .revs
+                                    .row
+                                        //- left
+                                        .revs__left
+                                            //- list
+                                            .revs__list
+                                                each i in [1,2,3,4]
+                                                    .revs__item
+                                                        .rev
+                                                            //- top
+                                                            .rev__top
+                                                                .rev__user
+                                                                    +icon('cabinet', 'rev__user-svg')
+                                                                    .rev__user-name Денис Еманов
+
+                                                                .rev__time denis_zz, 01 августа 2018
+
+                                                            //- middle
+                                                            .rev__middle
+                                                                .rev__desc Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).
+
+                                                            //- bottom
+                                                            .rev__bottom
+                                                                .rev__rating
+                                                                    .rating
+                                                                        .rating__wrapper
+                                                                            each k in [5,4,3,2,1]
+                                                                                input(type='radio' name='rating' + i value=k checked=k == 3 ? true : false id=i + '-rating-' + k).rating__input
+                                                                                label(for=i + '-rating-' + k).rating__star
+                                                                                    +icon('star', 'rating__star-svg')
+
+                                                                .rev__likes
+                                                                    .rev__likes-title Отзыв полезен?
+                                                                    .rev__likes-list
+                                                                        .rev__like
+                                                                            .rev__like-count 1
+                                                                            +icon('like','rev__like-svg')
+                                                                        .rev__dislike
+                                                                            .rev__dislike-count 0
+                                                                            +icon('dislike','rev__dislike-svg')
+
+                                            //- pag
+                                            .revs__pag
+                                                include ../common/blocks/pagination
+
+
+                                        //- right
+                                        .revs__right
+                                            form(action='#' method='post').revs__form
+                                                .revs__from-wrap
+                                                    .revs__form-title Оставить отзыв
+                                                    .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
+                                                    .revs__form-fields
+                                                        .revs__form-field
+                                                            input(type='text' name='name' placeholder='Ваши имя').input
+                                                        .revs__form-field
+                                                            input(type='email' name='email' placeholder='E-mail').input
+                                                        .revs__form-field
+                                                            textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
+                                                    .revs__form-rating
+                                                        .rating.rating_green
+                                                            .rating__wrapper
+                                                                each i in [5,4,3,2,1]
+                                                                    input(type='radio' name='rating' value=i id='form-rating-' + i checked=i == 3 ? true : false).rating__input
+                                                                    label(for='form-rating-' + i).rating__star
+                                                                        +icon('star', 'rating__star-svg')
+                                                    .revs__form-button
+                                                        button.btn
+                                                            .btn__title Отправить
+
+
+
+
+
+        //- recently
+        section.pr__recently
+            include ../common/blocks/recently

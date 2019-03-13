@@ -120,8 +120,8 @@ html(lang="ru")
                         //- menu
                         .header__menu
                             .menu
-                                each i in menu
-                                    a(href=i.link).menu__item
+                                each i,x in menu
+                                    a(href=i.link class=x==1?'active':'').menu__item
                                         +icon(i.svg,'menu__svg')
                                         .menu__title= i.title
 

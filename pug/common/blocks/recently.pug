@@ -1,0 +1,23 @@
+include ../_mixins
+include ../_settings
+
+.recently
+    .container
+        //- title
+        .recently__title.title.title_gold Недавно смотрели
+
+        //- swiper
+        .recently__swiper
+            .swiper-container.recently__container
+                - var n = 0;
+                .swiper-wrapper.recently__wrapper
+                    while n < 12
+                        .swiper-slide
+                            +item(n++)
+
+            .recently__prev
+                button.arrow
+                    +icon('arrw3', 'arrow__svg')
+            .recently__next
+                button.arrow.arrow_next
+                    +icon('arrw3', 'arrow__svg')
