@@ -403,6 +403,11 @@
     }
   }
 
+  &_big {
+    font-size: rem(24px);
+    line-height: 1;
+  }
+
   &__val {
     font-weight: bold;
     margin-right: rem(5px);
@@ -421,18 +426,42 @@
   &_pr {
     .count{
       &__up,&__down {
-        width: rem(16px);
-        height: rem(16px);
         &:before, &:after {
           background-color: $white;
         }
       }
 
       &__input {
-        width: rem(30px);
-        height: rem(30px);
         border: 1px solid rgba($bg, 1);
         color: $bg;
+      }
+    }
+  }
+
+  &_big {
+    .count{
+      &__up,&__down {
+        width: rem(16px);
+        height: rem(16px);
+      }
+
+      &__input {
+        width: rem(30px);
+        height: rem(30px);
+      }
+    }
+  }
+
+  &_bigest {
+    .count{
+      &__up,&__down {
+        width: rem(20px);
+        height: rem(20px);
+      }
+
+      &__input {
+        width: rem(37px);
+        height: rem(37px);
       }
     }
   }

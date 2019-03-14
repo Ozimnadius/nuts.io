@@ -1,0 +1,60 @@
+extends ../main
+
+block variables
+    - var title = 'Корзина'
+    - var header = 'header_2'
+
+block content
+    main.cart
+        //- bread
+        section.cart__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Корзина
+
+
+        //-main
+        section.cart__main
+            .container
+                form(action='#' method='post').cart__form
+                    .cart__title.title.title_left Корзина
+                    .cart__list
+                        each i in [1,2,3,,4]
+                            div(data-id=i).cart__item
+                                input(type='hidden' name='id' value=i)
+                                .row
+                                    a(href='product.html').cart__item-1
+                                        .cart__item-img
+                                            img(src='images/content/products/product.png').cart__item-pic
+                                        .cart__item-title Миндаль голд сырой
+                                    .cart__item-2
+                                        .cart__item-weight 500 гр.
+                                    .cart__item-3
+                                        .cart__item-count
+                                            .count.count_bigest
+                                                button(type='button').count__down
+                                                input(type='text' name='count' value='1' readonly=true).count__input
+                                                button(type='button').count__up
+                                    .cart__item-4
+                                        .cart__item-price
+                                            +price('105.00')
+                                    .cart__item-5
+                                        button(type='button').cart__item-del
+                                            +icon('delete','cart__item-svg')
+
+
+                    .cart__bottom
+                        .cart__price
+                            span.cart__price-title Итого:&nbsp;
+                            span.cart__price-price
+                                +price('420.00','price_big')
+                        .cart__button
+                            button(type='submit').btn
+                                .btn__title Оформить заказ
+
+        //- recently
+        section.cart__recently
+            include ../common/blocks/recently
