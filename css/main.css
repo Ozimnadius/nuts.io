@@ -2468,7 +2468,7 @@ input, textarea {
   left: 0;
   right: 0;
   height: 1px;
-  background: url("/images/bg/line3.png") 0 0;
+  background: url("../images/bg/line3.png") 0 0;
   opacity: 1;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -2480,7 +2480,7 @@ input, textarea {
 }
 
 .item__fast:hover:after {
-  background: url("/images/bg/line.png") 0 0;
+  background: url("../images/bg/line.png") 0 0;
 }
 
 .item__hidden {
