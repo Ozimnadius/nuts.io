@@ -15,8 +15,8 @@ mixin oldPrice (value, dopClass)
         span.price__val= value
         span.price__type руб.
 
-mixin item(id)
-    a(href='product.html' data-id=id).item.buyItem
+mixin item(id, dopClass)
+    a(href='product.html' data-id=id class=dopClass).item.buyItem
         .item__wrap
 
             //- top

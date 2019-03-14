@@ -32,4 +32,16 @@ $(function () {
             prevEl: '.recently__prev .arrow',
         }
     });
+
+    let catalogSlider = new Swiper ('.catalog__banner-container', {
+        loop: true,
+        speed: 1000,
+        pagination: {
+            el: '.catalog__banner-pag',
+            clickable: true
+        },
+        autoplay: {
+            delay: 3000,
+        }
+    });
 });

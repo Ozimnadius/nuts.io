@@ -1,0 +1,97 @@
+extends ../main
+
+block variables
+    - var title = 'Акции'
+    - var header = 'header_2'
+
+block content
+    main.catalog
+        //- bread
+        section.catalog__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    a(href='catalog.html').bread__item
+                        .bread__item-title Каталог
+                    span.bread__item
+                        .bread__item-title Акции
+
+
+        //-main
+        section.catalog__main
+            .container
+                .catalog__title.title.title_left Акции
+                .catalog__banner
+                    .swiper-container.catalog__banner-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .catalog__banner-slide
+                                    img(src='images/content/catalog/banner1.jpg').catalog__banner-img
+                            .swiper-slide
+                                .catalog__banner-slide
+                                    img(src='images/content/catalog/banner1.jpg').catalog__banner-img
+
+                        .swiper-pagination.catalog__banner-pag
+                .row
+                    //- left
+                    .catalog__left
+                        .catalog__cats
+                            .cats
+                                .cats__title Категории
+                                .cats__list
+                                    a(href='catalog.html').cats__item.active Орехи
+                                    a(href='catalog.html').cats__item Сухофрукты
+                                    a(href='catalog.html').cats__item Глазурь
+
+                        a(href='#' download=true).catalog__download
+                            .catalog__download-wrap
+                                .catalog_-download-img
+                                    img(src='images/content/catalog/download.png').catalog__download-pic
+                                +icon('download', 'catalog__download-svg')
+                                .catalog__download-title Скачать прайс-лист
+
+
+
+
+
+
+                    //- right
+                    .catalog__right
+                        form(action='#' method='post').catalog__main
+                            input(type='hidden' name='action' value='catalogAjax')
+                            //- controls
+                            .catalog__controls
+                                //- select
+                                .catalog__select
+                                    .catalog__select-title Показать:
+                                    .catalog__select-select
+                                        select(data-placeholder='Выберите вариант').select
+                                            option(selected=true)
+                                            option(value='Все') Все
+                                            option(value='Вариант1') Вариант1
+                                            option(value='Вариант2') Вариант2
+                                            option(value='Вариант3') Вариант3
+                                //- types
+                                .catalog__types
+                                    .types
+                                        input(type='hidden' name='type' value='tile')
+                                        button(type='button' data-type='tile').type.active
+                                            +icon('tile','type__svg')
+                                        button(type='button' data-type='list').type
+                                            +icon('list','type__svg')
+
+
+
+                            //- items
+                            .catalog__items
+                                .row
+                                    each i in [1,2,3,4,5,6,7,8,9]
+                                        .catalog__item
+                                            +item(i)
+                                //- pagination
+                                .catalog__pag
+                                    include ../common/blocks/pagination
+        //- recently
+        section.catalog__recently
+            include ../common/blocks/recently

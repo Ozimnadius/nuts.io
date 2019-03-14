@@ -8,6 +8,12 @@
   z-index: 1;
   transition: .5s;
 
+  &_white {
+    .item__hidden {
+      border: 1px solid rgba($white, .2);
+    }
+  }
+
 
 
   &__block {
@@ -445,6 +451,7 @@
     display: flex;
     margin-bottom: 10px;
     font-size: 14px;
+
 
     &:last-child {
       margin-bottom: 0;
