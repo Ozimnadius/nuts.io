@@ -1,0 +1,92 @@
+extends ../main
+
+block variables
+    - var title = 'Контакты'
+    - var header = 'header_2'
+
+block content
+    main.contacts
+        //- bread
+        section.contacts__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Контакты
+
+
+        //-main
+        section.contacts__main
+            .container
+                //- title
+                .contacts__title.title.title_left Контакты
+
+                //- logo
+                .contacts__logo
+                    img(src='images/content/main/about/logo.svg').contacts__logo-img
+
+                .row
+                    //- left
+                    .contacts__left
+                        //- list
+                        .contacts__list
+                            each i in contactsList
+                                .contacts__item
+                                    .contacts__item-icon
+                                        +icon(i.svg, 'contacts__item-svg')
+                                    .contacts__item-desc!= i.content
+
+                        //- points
+                        .contacts__points
+                            .contacts__points-title Пункты выдачи в Москве:
+                            .contacts__points-subtitle На Нижегородской улице 29-33 (c 9 до 18 , пн-пт)
+                            .contacts__points-list
+                                .contacts__point
+                                    +icon('metro', 'contacts__point-svg')
+                                    .contacts__point-title Станция метро «Марксистская». Выйдя из метро, на улицу Таганская, далее автобус Т63 до остановки "Станция Обслуживания автомобилей"
+                                .contacts__point
+                                    +icon('metro', 'contacts__point-svg')
+                                    .contacts__point-title Станция МЦК «Нижегородская». Выйдя со станции до бизнес центра "Нижегородский"
+
+                        //- note
+                        .contacts__note
+                            |* Выдача заказов производится с 9 до 18 часов
+                            br
+                            |с понедельника по пятницу
+
+
+
+                    //- right
+                    .contacts__right
+                        .contacts__feed
+                            form(action='#' method='post').feed.form
+                                .form__wrap
+                                    .form__title Обратная связь
+                                    .form__sub Оставте заявку и наш менеджер свяжеться с вами в ближайшее время
+                                    .form__fields
+                                        .form__field
+                                            input(type='text' name='name' placeholder='Ваши имя').input
+                                        .form__field
+                                            input(type='email' name='email' placeholder='E-mail').input
+                                    .form__button
+                                        button(type='submit').btn
+                                            .btn__title Отправить
+                                    .form__fz
+                                        .fz
+                                            label.fz__label
+                                                input(type='checkbox' name='fz' checked=true).fz__input
+                                                .fz__fake
+                                                    +icon('check', 'fz__svg')
+                                                .fz__title
+                                                    |Я даю согласие на обработку
+                                                    br
+                                                    |персональных данных
+
+
+
+
+
+        //- recently
+        section.contacts__map
+            #map.map
