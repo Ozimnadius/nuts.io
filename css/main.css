@@ -248,6 +248,24 @@ body {
   margin-bottom: 0;
 }
 
+.content blockquote {
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 1.875rem;
+}
+
+.content blockquote:after {
+  content: '';
+  display: block;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #f34d19;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -3673,6 +3691,114 @@ input, textarea {
 .pr__tab.active {
   visibility: visible;
   opacity: 1;
+}
+
+.pr__cont {
+  color: #105946;
+}
+
+.pr__cont-left, .pr__cont-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50% - 20px);
+}
+
+.pr__cont-right {
+  padding-left: 30px;
+}
+
+.pr__list {
+  margin-bottom: 20px;
+}
+
+.pr__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.pr__item:last-child {
+  margin-bottom: 0;
+}
+
+.pr__item-title {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pr__item-line {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-bottom: 1px dotted #105946;
+  margin-bottom: 2px;
+}
+
+.pr__item-val {
+  line-height: 1;
+}
+
+.pr__icons {
+  margin-top: 60px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.pr__icon {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 20px 20px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.pr__icon:last-child {
+  border-right: none;
+}
+
+.pr__icon-circle {
+  width: 79px;
+  height: 79px;
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f27a55;
+  background-color: #eacba9;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.pr__icon-svg {
+  max-width: 100%;
+  max-height: 100%;
+  fill: #f34d19;
+}
+
+.pr__icon-title {
+  color: #105946;
+  font-weight: 700;
+  text-align: center;
 }
 
 .rating_green .rating__title {
