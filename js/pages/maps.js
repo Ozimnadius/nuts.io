@@ -14,7 +14,7 @@ $(function ()   {
 
             myMap = new ymaps.Map("map", {
                 center: center,
-                zoom: 18,
+                zoom: 17,
                 controls: []
             });
 
@@ -37,14 +37,14 @@ $(function ()   {
 
 
             myPlacemark1 = new ymaps.Placemark([55.734299088188656, 37.71238182540895], {
-                    balloonContentHeader: "СТРОЙ-М",
-                    balloonContentBody: "На данный момент мы представляем собой крупную компанию, владеющую интернет–магазином и имеющую в своей сети единый call-центр, который регулирует всю деятельность магазина, отдел продаж, службу доставки, широкий штат квалифицированных сборщиков, собственный склад c постоянным наличием необходимого запаса товаров.",
-                    balloonContentFooter: "Россия, 125040, г. Москва, Ленинский проспект, дом 1, стр. 3",
-                    hintContent: "stroym.ru"
+                    balloonContentHeader: "Вкусита",
+                    balloonContentBody: "Оптово - розничный интернет магазин орехов и сухофруктов",
+                    balloonContentFooter: "Россия, 125040, г. Москва, улица Нижегородская, 29-33",
+                    hintContent: "vkusita.ru"
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/icons/pinY.svg',
+                    iconImageHref: 'images/icons/pinY.svg',
                     iconImageSize: [75, 90],
                     iconImageOffset: [-45, -75]
                     // preset: 'islands#redGlyphIcon'
