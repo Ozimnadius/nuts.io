@@ -4676,6 +4676,21 @@ input, textarea {
   color: #f34d19;
 }
 
+/*-----------------SECTION-REVIEWS--------------------*/
+.reviews {
+  background: url("../images/bg/ispecsBg.png") 0 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.reviews__bread {
+  margin-bottom: 25px;
+}
+
+.reviews__title {
+  margin-bottom: 30px;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   background-color: #000000;

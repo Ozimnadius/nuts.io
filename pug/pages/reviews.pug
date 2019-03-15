@@ -1,0 +1,100 @@
+extends ../main
+
+block variables
+    - var title = 'Отзывы'
+    - var header = 'header_2'
+
+block content
+    main.reviews
+        //- bread
+        section.reviews__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Отзывы
+
+
+        //-main
+        section.reviews__main
+            .container
+                .reviews__title.title.title_left Отзывы
+                .reviews__revs
+                    .revs
+                        .row
+                            //- left
+                            .revs__left
+                                //- list
+                                .revs__list
+                                    each i in [1,2,3,4]
+                                        .revs__item
+                                            .rev
+                                                //- top
+                                                .rev__top
+                                                    .rev__user
+                                                        +icon('cabinet', 'rev__user-svg')
+                                                        .rev__user-name Денис Еманов
+
+                                                    .rev__time denis_zz, 01 августа 2018
+
+                                                //- middle
+                                                .rev__middle
+                                                    .rev__desc Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).
+
+                                                //- bottom
+                                                .rev__bottom
+                                                    .rev__rating
+                                                        .rating
+                                                            .rating__wrapper
+                                                                each k in [5,4,3,2,1]
+                                                                    input(type='radio' name='rating' + i value=k checked=k == 3 ? true : false id=i + '-rating-' + k).rating__input
+                                                                    label(for=i + '-rating-' + k).rating__star
+                                                                        +icon('star', 'rating__star-svg')
+
+                                                    .rev__likes
+                                                        .rev__likes-title Отзыв полезен?
+                                                        .rev__likes-list
+                                                            .rev__like
+                                                                .rev__like-count 1
+                                                                +icon('like','rev__like-svg')
+                                                            .rev__dislike
+                                                                .rev__dislike-count 0
+                                                                +icon('dislike','rev__dislike-svg')
+
+                                //- pag
+                                .revs__pag
+                                    include ../common/blocks/pagination
+
+
+                            //- right
+                            .revs__right
+                                form(action='#' method='post').revs__form
+                                    .revs__form-wrap
+                                        .revs__form-title Оставить отзыв
+                                        .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
+                                        .revs__form-fields
+                                            .revs__form-field
+                                                input(type='text' name='name' placeholder='Ваши имя').input
+                                            .revs__form-field
+                                                input(type='email' name='email' placeholder='E-mail').input
+                                            .revs__form-field
+                                                textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
+                                        .revs__form-rating
+                                            .rating.rating_green
+                                                .rating__title Ваша оценка
+                                                .rating__wrapper
+                                                    each i in [5,4,3,2,1]
+                                                        input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
+                                                        label(for='form-rating-' + i).rating__star
+                                                            +icon('star', 'rating__star-svg')
+                                        .revs__form-button
+                                            button(type='submit').btn
+                                                .btn__title Отправить
+
+
+
+
+
+
+
