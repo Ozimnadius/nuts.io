@@ -1,4 +1,4 @@
-$(function () {
+window.onload = function () {
     let row = $('.arts__row_bottom'),
         items = row.find('.arts__item'),
         imgs = $('.arts__row_bottom .arts__item-image'),
@@ -16,4 +16,4 @@ $(function () {
 
 
     imgs.css('height', maH);
-});
+};

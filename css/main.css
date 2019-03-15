@@ -4578,8 +4578,6 @@ input, textarea {
 
 .arts__item {
   width: 100%;
-  display: block;
-  padding: 0;
   overflow: hidden;
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
