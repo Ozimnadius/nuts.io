@@ -1,0 +1,62 @@
+extends ../main
+
+block variables
+    - var title = 'О компании'
+    - var header = 'header_2'
+
+block content
+    main.comp
+        //- bread
+        section.comp__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title О компании
+
+
+        //-main
+        section.comp__main
+            .container
+                //- title
+                .comp__title.title.title_left О компании
+
+                //- about
+                .comp__about
+                    .cabout
+                        .row
+                            .cabout__left
+                                .cabout__wrap
+                                    .cabout__img
+                                        img(src='images/content/company/aboutImg.png').cabout__img-img
+                                    .cabout__list
+                                        each i,x in caboutList
+                                            .cabout__item
+                                                .cabout__item-num= '0'+(x+1)
+                                                .cabout__item-desc= i
+
+                            .cabout__right
+                                .cabout__title Что нужно знать о нас
+                                .cabout__desc Компания ООО «Трансфрут» - современное российское предприятие, предлагающее потребителю широкую линейку орехов, сухофруктов, сладостей под собственной маркой «ВКУСИТА».
+                                .cabout__button
+                                    a(href='#' download=true).cabout__link
+                                        +icon('pdf', 'cabout__link-svg')
+                                        .cabout__link-title Скачать прайс-лист
+
+                //- video
+                .comp__video
+
+                //- advantages
+                .comp__advs
+
+                //- certs
+                .comp__certs
+
+
+
+
+
+
+
+

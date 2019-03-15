@@ -80,7 +80,7 @@
   }
 
   &__time {
-    font-size: 18px;
+    font-size: rem(18px);
     color: $white;
     &_time {
       color: $bg;
@@ -100,7 +100,7 @@
   align-items: center;
   justify-content: center;
   color: $white;
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 500;
   transition: .3s;
   cursor: pointer;
@@ -119,7 +119,7 @@
   }
 
   &__title {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 500;
     transition: .3s;
   }
@@ -157,7 +157,7 @@
 
   &__title {
     color: $bg;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 500;
     transition: .3s;
   }
@@ -186,7 +186,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: rem(18px);
   transition: .3s;
   color: $text;
 

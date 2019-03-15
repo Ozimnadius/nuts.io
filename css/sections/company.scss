@@ -1,0 +1,136 @@
+.comp {
+  padding-top: 50px;
+
+  &__bread {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__about {
+    margin-bottom: 180px;
+  }
+
+}
+
+.cabout {
+  &__left,&__right {
+    @include col;
+    @include size(12);
+  }
+
+  &__wrap {
+    border-radius: 6px;
+    border: 1px solid rgba($text,.2);
+    padding: 10px;
+    position: relative;
+  }
+
+  &__img {
+    width: 130%;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    max-width: 765px;
+    transform: translate(-30%,-50%);
+  }
+
+  &__list {
+    background: url("../images/bg/ispecsBg.png") 0 0;
+    padding: 50px 35px 50px 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-num {
+      text-shadow:0px 1px 0 rgb(236,175,137),0px -1px 0 rgb(236,175,137),1px 0px 0 rgb(236,175,137),-1px 0px 0 rgb(236,175,137),1px 1px 0 rgb(236,175,137),1px -1px 0 rgb(236,175,137),-1px 1px 0 rgb(236,175,137),-1px -1px 0 rgb(236,175,137);
+      -webkit-text-shadow:0px 1px 0 rgb(236,175,137),0px -1px 0 rgb(236,175,137),1px 0px 0 rgb(236,175,137),-1px 0px 0 rgb(236,175,137),1px 1px 0 rgb(236,175,137),1px -1px 0 rgb(236,175,137),-1px 1px 0 rgb(236,175,137),-1px -1px 0 rgb(236,175,137);
+      -moz-text-shadow:0px 1px 0 rgb(236,175,137),0px -1px 0 rgb(236,175,137),1px 0px 0 rgb(236,175,137),-1px 0px 0 rgb(236,175,137),1px 1px 0 rgb(236,175,137),1px -1px 0 rgb(236,175,137),-1px 1px 0 rgb(236,175,137),-1px -1px 0 rgb(236,175,137);
+      color: $bg;
+      font-family: "PT Serif";
+      font-size: 110px;
+      font-weight: 700;
+      position: relative;
+      left: rem(-28px);
+      line-height: 1;
+    }
+
+    &-desc {
+      color: rgba($green,.8);
+      position: relative;
+      padding-bottom: 12px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: rem(82px);
+        background-color: $lightGreen;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "PT Serif";
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    color: $orange;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 54px;
+    border: 1px solid $green;
+    border-radius: 4px;
+    transition: .3s;
+
+    &:hover {
+      border: 1px solid $orange;
+      .cabout__link {
+
+        &-svg {
+          fill: $orange;
+        }
+        &-title {
+          color: $orange;
+        }
+      }
+    }
+
+    &-svg {
+      width: rem(22px);
+      height: rem(19px);
+      fill: $green;
+      margin-right: rem(10px);
+      transition: .3s;
+    }
+
+    &-title {
+      font-size: rem(18px);
+      font-weight: 500;
+      color: $green;
+      transition: .3s;
+    }
+  }
+}

@@ -388,7 +388,7 @@ input, textarea {
 }
 
 .work__time {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #ffffff;
 }
 
@@ -418,7 +418,7 @@ input, textarea {
   -ms-flex-pack: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -446,7 +446,7 @@ input, textarea {
 }
 
 .btn__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -497,7 +497,7 @@ input, textarea {
 
 .btn2__title {
   color: #eacba9;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -534,7 +534,7 @@ input, textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -1236,7 +1236,7 @@ input, textarea {
 
 .basket-link__price-num {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -2362,7 +2362,7 @@ input, textarea {
 
 .item__title {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 13px;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -2943,7 +2943,7 @@ input, textarea {
 
 .catalog__download-title {
   color: #f34d19;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   position: relative;
 }
@@ -3017,7 +3017,7 @@ input, textarea {
 }
 
 .cats__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(12, 68, 53, 0.3);
@@ -3168,7 +3168,7 @@ input, textarea {
   justify-content: center;
   margin-right: 20px;
   color: #0c4435;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -4183,7 +4183,7 @@ input, textarea {
 .cart__item-weight {
   opacity: 0.8;
   color: rgba(12, 68, 53, 0.8);
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
 }
 
@@ -4318,7 +4318,7 @@ input, textarea {
 }
 
 .contacts__item-desc {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .contacts__points {
@@ -4329,13 +4329,13 @@ input, textarea {
 
 .contacts__points-title {
   color: #105946;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .contacts__points-subtitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
@@ -4362,12 +4362,12 @@ input, textarea {
 }
 
 .contacts__point-title {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .contacts__note {
   color: #f34d19;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .contacts__map {
@@ -4689,6 +4689,162 @@ input, textarea {
 
 .reviews__title {
   margin-bottom: 30px;
+}
+
+/*-----------------SECTION-COMPANY--------------------*/
+.comp {
+  padding-top: 50px;
+}
+
+.comp__bread {
+  margin-bottom: 25px;
+}
+
+.comp__title {
+  margin-bottom: 30px;
+}
+
+.comp__about {
+  margin-bottom: 180px;
+}
+
+.cabout__left, .cabout__right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50% - 20px);
+}
+
+.cabout__wrap {
+  border-radius: 6px;
+  border: 1px solid rgba(12, 68, 53, 0.2);
+  padding: 10px;
+  position: relative;
+}
+
+.cabout__img {
+  width: 130%;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  max-width: 765px;
+  -webkit-transform: translate(-30%, -50%);
+  -ms-transform: translate(-30%, -50%);
+  transform: translate(-30%, -50%);
+}
+
+.cabout__list {
+  background: url("../images/bg/ispecsBg.png") 0 0;
+  padding: 50px 35px 50px 0;
+  overflow: hidden;
+}
+
+.cabout__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cabout__item:last-child {
+  margin-bottom: 0;
+}
+
+.cabout__item-num {
+  text-shadow: 0px 1px 0 #ecaf89, 0px -1px 0 #ecaf89, 1px 0px 0 #ecaf89, -1px 0px 0 #ecaf89, 1px 1px 0 #ecaf89, 1px -1px 0 #ecaf89, -1px 1px 0 #ecaf89, -1px -1px 0 #ecaf89;
+  -webkit-text-shadow: 0px 1px 0 #ecaf89, 0px -1px 0 #ecaf89, 1px 0px 0 #ecaf89, -1px 0px 0 #ecaf89, 1px 1px 0 #ecaf89, 1px -1px 0 #ecaf89, -1px 1px 0 #ecaf89, -1px -1px 0 #ecaf89;
+  -moz-text-shadow: 0px 1px 0 #ecaf89, 0px -1px 0 #ecaf89, 1px 0px 0 #ecaf89, -1px 0px 0 #ecaf89, 1px 1px 0 #ecaf89, 1px -1px 0 #ecaf89, -1px 1px 0 #ecaf89, -1px -1px 0 #ecaf89;
+  color: #eacba9;
+  font-family: "PT Serif";
+  font-size: 110px;
+  font-weight: 700;
+  position: relative;
+  left: -1.75rem;
+  line-height: 1;
+}
+
+.cabout__item-desc {
+  color: rgba(16, 89, 70, 0.8);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.cabout__item-desc:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  width: 5.125rem;
+  background-color: #17ae5e;
+}
+
+.cabout__title {
+  font-family: "PT Serif";
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cabout__desc {
+  color: #f34d19;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.cabout__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 264px;
+  height: 54px;
+  border: 1px solid #105946;
+  border-radius: 4px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.cabout__link:hover {
+  border: 1px solid #f34d19;
+}
+
+.cabout__link:hover .cabout__link-svg {
+  fill: #f34d19;
+}
+
+.cabout__link:hover .cabout__link-title {
+  color: #f34d19;
+}
+
+.cabout__link-svg {
+  width: 1.375rem;
+  height: 1.1875rem;
+  fill: #105946;
+  margin-right: 0.625rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.cabout__link-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #105946;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

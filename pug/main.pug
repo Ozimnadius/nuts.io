@@ -210,7 +210,7 @@ html(lang="ru")
                                 .row
                                     each col in footerMenu
                                         .footer__col
-                                            a(href='about.html').footer__title= col.title
+                                            a(href=col.href).footer__title= col.title
                                             .footer__list
                                                 each i in col.list
                                                     a(href=i.href).footer__item= i.name
