@@ -1,0 +1,38 @@
+extends ../main
+
+block variables
+    - var title = 'Статьи'
+    - var header = 'header_2'
+
+block content
+    main.arts
+        //- bread
+        section.arts__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Статьи
+
+
+        //-main
+        section.arts__main
+            .container
+                .arts__title.title.title_left Статьи
+                .arts__list
+                    each row in artsList
+                        div(class=row.dopClass).row.arts__row
+                            each i,x in row.list
+                                a(href='article.html' class=i.dopClass+' arts__item_'+i.cols).arts__item
+                                    .arts__item-image
+                                        img(src=i.src).arts__item-img
+                                    .arts__item-title= i.title
+                                    .arts__item-desc= i.desc
+                                    .arts__item-link
+                                        +icon('eye', 'arts__item-svg')
+                                        .arts__item-art Читать статью
+                .arts__pag
+                    include ../common/blocks/pagination
+
+

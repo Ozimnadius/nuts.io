@@ -4553,6 +4553,131 @@ input, textarea {
   color: #0c4435;
 }
 
+/*-----------------SECTION-ARTICLES--------------------*/
+.arts {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.arts__bread {
+  margin-bottom: 20px;
+}
+
+.arts__title {
+  margin-bottom: 20px;
+}
+
+.arts__list {
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.arts__row_bottom {
+  margin-top: -140px;
+}
+
+.arts__item {
+  width: 100%;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.arts__item:hover .arts__item-link:after {
+  opacity: 0;
+}
+
+.arts__item_6 {
+  width: calc(25% - 20px);
+}
+
+.arts__item_8 {
+  width: calc(33.33333% - 20px);
+}
+
+.arts__item_10 {
+  width: calc(41.66667% - 20px);
+}
+
+.arts__item-image {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.arts__item-img {
+  width: 100%;
+}
+
+.arts__item-title {
+  color: #105946;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.arts__item-desc {
+  color: rgba(16, 89, 70, 0.8);
+  margin-bottom: 15px;
+}
+
+.arts__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.arts__item-link:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: url("../images/bg/line.png");
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.arts__item-svg {
+  width: 1.1875rem;
+  height: 0.75rem;
+  fill: #f34d19;
+  margin-right: 0.4375rem;
+}
+
+.arts__item-art {
+  color: #f34d19;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   background-color: #000000;
