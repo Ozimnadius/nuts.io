@@ -1,0 +1,63 @@
+extends ../main
+
+block variables
+    - var title = 'Партнерам'
+    - var header = 'header_2'
+
+block content
+    main.partners
+        //- bread
+        section.partners__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Партнерам
+
+
+        //-main
+        section.partners__main
+            .container
+                //- title
+                .comp__title.title.title_left Партнерам
+
+                //- desc
+                .partners__desc
+                    .row
+                        .partners__left
+                            .partners__content
+                                .content
+                                    p Орехи и сухофрукты наполняют нашу жизнь особым вкусом и обеспечивают полезными веществами. Они употребляются в пищу в сыром, сушенном и вяленом виде, используются в качестве добавок в кулинарных и кондитерских изделиях, являются основным ингредиентом во многих видах сладостей.
+                                    p Наш ассортимент постоянно пополняется новой продукцией, что позволяет выбрать товар разной категории и фасовки
+                                    p ООО «Трансфрут» современная и развивающая компания, которая работает со многими партнерами, которые также придерживаются аналогичных принципов ведения бизнеса. Но самое главное для нас то, что мы действительно любим свое дело и стараемся заниматься им в высшей степени профессионально!
+
+                            .partners__button
+                                a(href='#').btn
+                                    +icon('pdf', 'btn__svg')
+                                    .btn__title Скачать коммерческое предложение
+
+
+                        .partners__right
+                            .partners__list
+                                .partners__list-title Сотрудничество предусматривает:
+                                .partners__list-wrap
+                                    each i in ['Дипломированное качество продукции','Мелкий и крупный опт', 'Доставка по всей России и в страны СНГ, не зависимо от их удаленности','Оперативность и постоянство поставок', 'Информационная поддержка и помощь при выборе товара']
+                                        .partners__item
+                                            .partners__item-icon
+                                                +icon('check', 'partners__item-svg')
+                                            .partners__item-title= i
+
+            //- advantages
+            .partners__advs
+                .container
+                    +advantages('advantages_green')
+
+
+
+
+
+
+
+
+

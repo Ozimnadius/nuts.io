@@ -62,22 +62,8 @@ block content
 
             //- advantages
             .comp__advs
-                .cadvs
-                    .container
-                        .row
-                            .cadvs__title.title.title_left Воспользуйтесь преимуществами работы с нами:
-                            .cadvs__descs
-                                .row
-                                    .cadvs__desc Мы тщательно следим за качеством продукции, проводя различные проверки в новейших лабораториях с помощью современного оборудования.
-                                    .cadvs__desc Специальные условия хранения и соблюдение температурного режима лишь поддерживает безупречное качество наших орехов и сухофруктов
-                        .cadvs__list
-                            .row
-                                each i in cadvsLIst
-                                    .cadvs__item
-                                        .cadvs__item-icon
-                                            +icon(i.svg, 'cadvs__item-svg')
-                                        .cadvs__item-title= i.title
-
+                .container
+                    +advantages()
             //- certs
             .comp__certs
                 .ccerts

@@ -158,3 +158,19 @@ mixin item(id, dopClass)
                     .item__compare-button
                         +icon('compare', 'item__compare-svg')
                         .item__compare-title Сравнить
+
+mixin advantages(dopClass)
+    div(class=dopClass).advantages
+        .row
+            .advantages__title.title.title_left Воспользуйтесь преимуществами работы с нами:
+            .advantages__descs
+                .row
+                    .advantages__desc Мы тщательно следим за качеством продукции, проводя различные проверки в новейших лабораториях с помощью современного оборудования.
+                    .advantages__desc Специальные условия хранения и соблюдение температурного режима лишь поддерживает безупречное качество наших орехов и сухофруктов
+        .advantages__list
+            .row
+                each i in cadvsLIst
+                    .advantages__item
+                        .advantages__item-icon
+                            +icon(i.svg, 'advantages__item-svg')
+                        .advantages__item-title= i.title

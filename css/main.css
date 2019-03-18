@@ -4708,6 +4708,11 @@ input, textarea {
   margin-bottom: 180px;
 }
 
+.comp__advs {
+  padding: 60px 0;
+  background: url("../images/bg/ispecsBg.png") 0 0;
+}
+
 .cabout__left, .cabout__right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -4931,12 +4936,38 @@ input, textarea {
   margin-top: -0.71875rem;
 }
 
-.cadvs {
-  padding: 60px 0;
-  background: url("/images/bg/ispecsBg.png") 0 0;
+.ccerts {
+  background-color: #0c4435;
+  background-image: url("/images/bg/ifeedBg.png");
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  padding-top: 60px;
+  padding-bottom: 180px;
 }
 
-.cadvs__title {
+.ccerts__title {
+  margin-bottom: 20px;
+}
+
+.ccerts__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+}
+
+/*-----------------SECTION-ADVANTAGES--------------------*/
+.advantages_green .title {
+  color: #eacba9;
+}
+
+.advantages_green .advantages__desc {
+  color: rgba(234, 203, 169, 0.8);
+}
+
+.advantages__title {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -4946,7 +4977,7 @@ input, textarea {
   line-height: 3.375rem;
 }
 
-.cadvs__descs {
+.advantages__descs {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -4955,7 +4986,7 @@ input, textarea {
   width: calc(58.33333% - 20px);
 }
 
-.cadvs__desc {
+.advantages__desc {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -4968,7 +4999,7 @@ input, textarea {
   padding-bottom: 23px;
 }
 
-.cadvs__desc:after {
+.advantages__desc:after {
   content: '';
   display: block;
   position: absolute;
@@ -4979,11 +5010,11 @@ input, textarea {
   background-color: #17ae5e;
 }
 
-.cadvs__list {
-  margin-top: 30px;
+.advantages__list {
+  margin-top: 40px;
 }
 
-.cadvs__item {
+.advantages__item {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -5008,7 +5039,7 @@ input, textarea {
   align-items: center;
 }
 
-.cadvs__item-icon {
+.advantages__item-icon {
   width: 4.9375rem;
   height: 4.9375rem;
   border: 1px solid #f27a55;
@@ -5026,34 +5057,114 @@ input, textarea {
   margin-bottom: 18px;
 }
 
-.cadvs__item-svg {
+.advantages__item-svg {
   max-width: 100%;
   max-height: 100%;
   fill: #f34d19;
 }
 
-.cadvs__item-title {
+.advantages__item-title {
   color: #105946;
   font-weight: 700;
   text-align: center;
 }
 
-.ccerts {
-  background-color: #0c4435;
-  background-image: url("/images/bg/ifeedBg.png");
-  background-repeat: repeat-x;
-  background-position: 0 bottom;
-  padding-top: 60px;
-  padding-bottom: 180px;
+/*-----------------SECTION-PARTNERS--------------------*/
+.partners {
+  padding-top: 50px;
 }
 
-.ccerts__item {
+.partners__bread {
+  margin-bottom: 20px;
+}
+
+.partners__desc {
+  margin-bottom: 80px;
+}
+
+.partners__title {
+  margin-bottom: 10px;
+}
+
+.partners__left {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(66.66667% - 20px);
+}
+
+.partners__right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 10px;
   margin-right: 10px;
   width: calc(33.33333% - 20px);
+}
+
+.partners__content {
+  margin-bottom: 30px;
+}
+
+.partners__button {
+  display: inline-block;
+}
+
+.partners__button .btn {
+  width: auto;
+  height: auto;
+  padding: 15px 25px;
+}
+
+.partners__list-title {
+  font-family: "PT Serif";
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.partners__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.partners__item:last-child {
+  margin-bottom: 0;
+}
+
+.partners__item-icon {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  border: 1px solid #f27a55;
+  background-color: #eacba9;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 9px;
+  margin-right: 15px;
+}
+
+.partners__item-svg {
+  fill: #f34d19;
+}
+
+.partners__advs {
+  padding: 60px 0;
+  background-color: #0c4536;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/
