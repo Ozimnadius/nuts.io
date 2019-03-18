@@ -44,14 +44,51 @@ block content
                                         +icon('pdf', 'cabout__link-svg')
                                         .cabout__link-title Скачать прайс-лист
 
-                //- video
-                .comp__video
 
-                //- advantages
-                .comp__advs
+            //- video
+            .comp__video
+                .cvideo
+                    .container
+                        .cvideo__title.title.title_gold Видео презентация компании
+                        .row
+                            .cvideo__video
+                                img(src='images/bg/companyVideoImg.png').cvideo__img
+                                .cvideo__wrap
+                                    a(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").cvideo__link
+                                        img(src='images/content/company/video.jpg').cvideo__link-img
+                                        button(type='button').cvideo__button
 
-                //- certs
-                .comp__certs
+
+
+            //- advantages
+            .comp__advs
+                .cadvs
+                    .container
+                        .row
+                            .cadvs__title.title.title_left Воспользуйтесь преимуществами работы с нами:
+                            .cadvs__descs
+                                .row
+                                    .cadvs__desc Мы тщательно следим за качеством продукции, проводя различные проверки в новейших лабораториях с помощью современного оборудования.
+                                    .cadvs__desc Специальные условия хранения и соблюдение температурного режима лишь поддерживает безупречное качество наших орехов и сухофруктов
+                        .cadvs__list
+                            .row
+                                each i in cadvsLIst
+                                    .cadvs__item
+                                        .cadvs__item-icon
+                                            +icon(i.svg, 'cadvs__item-svg')
+                                        .cadvs__item-title= i.title
+
+            //- certs
+            .comp__certs
+                .ccerts
+                    .container
+                        .ccerts__title.title.title_gold Документы и сертификаты
+                        .ccerts__list
+                            .row
+                                each i in [1,2,3]
+                                    a(href='images/content/company/cert'+i+'.jpg' data-fancybox="images" data-caption="My caption").ccerts__item
+                                        img(src='images/content/company/cert'+i+'.jpg').ccerts__item-img
+
 
 
 

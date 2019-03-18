@@ -4847,6 +4847,215 @@ input, textarea {
   transition: .3s;
 }
 
+.cvideo {
+  background-color: #0c4435;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.cvideo__title {
+  margin-bottom: 20px;
+}
+
+.cvideo__video {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(83.33333% - 20px);
+  margin-left: calc(8.33333% + 10px);
+  margin-right: calc(8.33333% + 10px);
+  position: relative;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #eacba9;
+}
+
+.cvideo__wrap {
+  position: absolute;
+  top: 32px;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cvideo__link {
+  position: relative;
+  display: block;
+}
+
+.cvideo__link:hover .cvideo__button {
+  border: 1px solid #f34d19;
+}
+
+.cvideo__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -3.4375rem;
+  margin-left: -3.4375rem;
+  width: 6.875rem;
+  height: 6.875rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 0.25rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.cvideo__button:before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.cvideo__button:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.71875rem 0 0.71875rem 1.25rem;
+  border-color: transparent transparent transparent #f34d19;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.625rem;
+  margin-top: -0.71875rem;
+}
+
+.cadvs {
+  padding: 60px 0;
+  background: url("/images/bg/ispecsBg.png") 0 0;
+}
+
+.cadvs__title {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(37.5% - 20px);
+  line-height: 3.375rem;
+}
+
+.cadvs__descs {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(58.33333% - 20px);
+}
+
+.cadvs__desc {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50% - 20px);
+  color: rgba(16, 89, 70, 0.8);
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 23px;
+}
+
+.cadvs__desc:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 5.125rem;
+  height: 2px;
+  background-color: #17ae5e;
+}
+
+.cadvs__list {
+  margin-top: 30px;
+}
+
+.cadvs__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: #eed5ba;
+  margin-bottom: 20px;
+  padding: 50px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cadvs__item-icon {
+  width: 4.9375rem;
+  height: 4.9375rem;
+  border: 1px solid #f27a55;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.cadvs__item-svg {
+  max-width: 100%;
+  max-height: 100%;
+  fill: #f34d19;
+}
+
+.cadvs__item-title {
+  color: #105946;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ccerts {
+  background-color: #0c4435;
+  background-image: url("/images/bg/ifeedBg.png");
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  padding-top: 60px;
+  padding-bottom: 180px;
+}
+
+.ccerts__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   background-color: #000000;
