@@ -44,4 +44,12 @@ $(function () {
             delay: 3000,
         }
     });
+    let compareSwiper = new Swiper ('.compare__container', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        scrollbar: {
+            el: '.compare__scrollbar',
+            hide: false,
+        },
+    });
 });

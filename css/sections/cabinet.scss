@@ -1,0 +1,228 @@
+.cab{
+  padding-top: 55px;
+  padding-bottom: 110px;
+
+  &__bread {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__sws {
+    position: relative;
+    margin-bottom: 40px;
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__sw {
+    color: $green;
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 25px 10px 25px;
+
+
+    &.active {
+      color: $orange;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    background-color: rgba($text, .2);
+  }
+
+  &__subline {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: $orange;
+    transition: .4s;
+  }
+
+  &__tabs {
+    width: 100%;
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.compare {
+
+  &__container {
+    padding-bottom: 40px;
+  }
+
+  &__left {
+    @include col;
+    @include size(6);
+  }
+
+  &__right {
+    @include col;
+    @include size(18);
+  }
+
+  &__header {
+    color: $green;
+    font-weight: 700;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba($text,.2);
+  }
+
+
+
+  &__item {
+    border-radius: 6px;
+    border: 1px solid rgba($text,.2);
+    padding: 10px;
+
+    &-wrap {
+      background-color: $white;
+      border-radius: 6px;
+    }
+
+
+    &-row {
+      padding: 25px 20px;
+      border-bottom: 1px solid rgba($text,.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 18px;
+      margin-bottom: 17px;
+      text-align: center;
+    }
+
+    &-img {
+      width: 105px;
+      height: 127px;
+    }
+    &-pic {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &-discount {
+      display: flex;
+      align-items: center;
+    }
+    &-percent {
+      color: $lightGreen;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+
+    &-country {
+      color: $green;
+    }
+
+    &-avaible {
+      color: $lightGreen;
+      &_not {
+        color: $orange;
+      }
+    }
+
+    &-rating {
+      margin-bottom: 10px;
+    }
+    &-text {
+      color: rgba($green,.8);
+    }
+
+    &-weight {
+      color: $green;
+    }
+
+    &-buttons {
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-buy {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    &-del {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:hover {
+        &:after {
+          opacity: 0;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: url("/images/bg/line.png")0 0;
+        transition: .3s;
+      }
+    }
+    &-svg {
+      width: 11px;
+      height: 13px;
+      fill: $orange;
+      margin-right: 5px;
+    }
+    &-delname {
+      color: $orange;
+    }
+  }
+
+
+  .swiper-scrollbar {
+    border-radius: 3px;
+    background: rgba(#eed5ba,1);
+  }
+
+  .swiper-container-horizontal>.swiper-scrollbar {
+    left: 0;
+    bottom: 0px;
+    height: 6px;
+    width: 100%;
+  }
+
+  .swiper-scrollbar-drag {
+    background: $text;
+    border-radius: 3px;
+  }
+}

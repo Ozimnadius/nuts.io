@@ -1,0 +1,113 @@
+extends ../main
+
+block variables
+    - var title = 'Личный кабинет'
+    - var header = 'header_2'
+
+block content
+    main.cab
+        //- bread
+        section.cab__bread
+            .container
+                .bread
+                    a(href='/').bread__item
+                        .bread__item-title Главная
+                    span.bread__item
+                        .bread__item-title Личный кабинет
+
+
+        //-main
+        section.cab__main
+            .container
+                //- title
+                .cab__title.title.title_left Личный кабинет
+
+                //- sws
+                .cab__sws
+                    .cab__sws-list
+                        each i,x in cabSws
+                            button(type='button' class=i.active data-id=x + 1).cab__sw= i.title
+                    .cab__line
+                        .cab__subline
+
+                //- tabs
+                .cab__tabs
+                    div(data-id='1').cab__tab.active
+
+                    div(data-id='2').cab__tab
+                        .cab__swiper
+                            .compare
+                                .row
+                                    //- left
+                                    .compare__left
+                                        .compare__headers
+                                            each i in ['Наименование:', 'Цена:','Скидка:','Страна:','Доступность:','Рейтинг:','Вес:']
+                                                .compare__header= i
+
+                                    //- right
+                                    .compare__right
+                                        .swiper-container.compare__container
+                                            .swiper-wrapper.compare__wrapper
+                                                each i in [1,2,3,4,5,6,7]
+                                                    .swiper-slide
+                                                        .compare__item
+                                                            .compare__item-wrap
+                                                                .compare__item-list
+                                                                    .compare__item-row
+                                                                        //- title
+                                                                        .compare__item-title Арахис очищенный, жареный, соленый
+
+                                                                        //- img
+                                                                        .compare__item-img
+                                                                            img(src='images/content/products/0.png').compare__item-pic
+                                                                    .compare__item-row
+                                                                        .compare__item-price
+                                                                            +price('105.00')
+                                                                    .compare__item-row
+                                                                        .compare__item-discount
+                                                                            .compare__item-percent 15% -
+                                                                            .compare__item-oldprice
+                                                                                +oldPrice('120.00')
+                                                                    .compare__item-row
+                                                                        .compare__item-country Россия
+                                                                    .compare__item-row
+                                                                        div(class=i == 2 ? 'compare__item-avaible_not':'').compare__item-avaible=i == 2 ? 'Нет в наличии' : 'В наличии'
+                                                                    .compare__item-row
+                                                                        //- rating
+                                                                        .compare__item-rating
+                                                                            .rating
+                                                                                .rating__wrapper
+                                                                                    each k in [5,4,3,2,1]
+                                                                                        input(type='radio' name='rating' + i value=k checked=k == 3 ? true : false id=i + '-rating-' + k).rating__input
+                                                                                        label(for=i + '-rating-' + k).rating__star
+                                                                                            +icon('star', 'rating__star-svg')
+                                                                        //- text
+                                                                        .compare__item-text На основании 8 отзыва(ов)
+                                                                    .compare__item-row
+                                                                        .compare__item-weight 500 гр.
+                                                                .compare__item-buttons
+                                                                    .compare__item-buy
+                                                                        button(type='button').btn.buy
+                                                                            +icon('basket', 'btn__svg')
+                                                                            .btn__title В корзину
+                                                                    button(type='button').compare__item-del
+                                                                        +icon('delete', 'compare__item-svg')
+                                                                        .compare__item-delname Удалить
+
+
+                                            .swiper-scrollbar.compare__scrollbar
+
+
+
+
+                    div(data-id='3').cab__tab skldafhjlkdjghldfkj gdlfh df jjhdlffjhdlfkjhkdjfghsdkf
+
+
+
+
+
+
+
+
+
+
