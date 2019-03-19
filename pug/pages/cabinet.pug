@@ -10,7 +10,7 @@ block content
         section.cab__bread
             .container
                 .bread
-                    a(href='/').bread__item
+                    a(href='./').bread__item
                         .bread__item-title Главная
                     span.bread__item
                         .bread__item-title Личный кабинет
@@ -33,6 +33,31 @@ block content
                 //- tabs
                 .cab__tabs
                     div(data-id='1').cab__tab.active
+                        .pers
+                            .pers__wrap
+                                .row
+                                    .pers__left
+                                        .pers__logo
+                                            .pers__name РА
+                                        a(href='./').pers__exit Выйти из аккаунта
+                                        a(href='./').pers__del Удалить
+
+
+                                    .pers__right
+                                        form.pers__form
+                                            .pers__fields
+                                                .row
+                                                    each i in persFields
+                                                        div(class=i.dopClass).pers__field
+                                                            .pers__field-name= i.title
+                                                            input(type=i.type name=i.name value=i.val placeholder=i.placeholder class=i.inputClass).input
+
+
+                                            .pers__buttons
+                                                button.pers__submit
+                                                    .btn
+                                                        .btn__title Сохранить изменения
+
 
                     div(data-id='2').cab__tab
                         .cab__swiper
@@ -53,7 +78,7 @@ block content
                                                         .compare__item
                                                             .compare__item-wrap
                                                                 .compare__item-list
-                                                                    .compare__item-row
+                                                                    a(href='product.html').compare__item-row
                                                                         //- title
                                                                         .compare__item-title Арахис очищенный, жареный, соленый
 
@@ -100,7 +125,31 @@ block content
 
 
 
-                    div(data-id='3').cab__tab skldafhjlkdjghldfkj gdlfh df jjhdlffjhdlfkjhkdjfghsdkf
+
+                    div(data-id='3').cab__tab
+                        .pass
+                            .pass__wrap
+                                form.pass__form
+                                    .row
+                                        .pass__fields
+                                            .row
+                                                .pass__field
+                                                    .pass__field-title *Введите новый пароль
+                                                    .pass__field-input
+                                                        input(type='password' name='password' id="password" placeholder='Введите новый пароль' value='123456789').input
+                                                        button(type='button').pass__field-show
+                                                            +icon('eye', 'pass__field-svg')
+                                                .pass__field
+                                                    .pass__field-title *Повторите пароль
+                                                    .pass__field-input
+                                                        input(type='password' name='confirmPassword' placeholder='Повторите пароль' value='123456789').input
+                                                        button(type='button').pass__field-show
+                                                            +icon('eye', 'pass__field-svg')
+                                        .pass__buttons
+                                            button.pass__submit
+                                                .btn
+                                                    .btn__title Сохранить пароль
+
 
 
 

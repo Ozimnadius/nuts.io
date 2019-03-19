@@ -58,6 +58,18 @@
     height: 166px;
   }
 
+  &_500 {
+    font-weight: 500;
+  }
+
+  &.error {
+    border: 1px solid $orange;
+
+    &:hover {
+      border: 1px solid $orange;
+    }
+  }
+
   &:active,&:focus,&:hover{
     border: 1px solid rgba(12, 68, 53, 0.6);
   }
@@ -75,6 +87,15 @@
       color: rgba($white,.5);
     }
   }
+}
+
+label.error{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px 20px;
+  color: $orange;
 }
 
 .fz {

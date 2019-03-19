@@ -50,6 +50,8 @@ $(function () {
         scrollbar: {
             el: '.compare__scrollbar',
             hide: false,
+            draggable: true
         },
+        mousewheel: {},
     });
 });

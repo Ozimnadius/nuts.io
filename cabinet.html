@@ -23,12 +23,12 @@
               <nav class="nav">
                 <div class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="company.html">О компании</a>
                   <div class="nav__sub">
-                    <div class="subnav"><a class="subnav__item" href="company.html">О нас</a><a class="subnav__item" href="reviews.html">Отзывы</a><a class="subnav__item" href="/">Сертификаты</a><a class="subnav__item" href="partners.html">Партнерам</a>
+                    <div class="subnav"><a class="subnav__item" href="company.html">О нас</a><a class="subnav__item" href="reviews.html">Отзывы</a><a class="subnav__item" href="./">Сертификаты</a><a class="subnav__item" href="partners.html">Партнерам</a>
                     </div>
                   </div>
                 </div>
-                <div class="nav__item"><a class="nav__link" href="/">Доставка и оплата</a></div>
-                <div class="nav__item"><a class="nav__link" href="/">Производители</a></div>
+                <div class="nav__item"><a class="nav__link" href="./">Доставка и оплата</a></div>
+                <div class="nav__item"><a class="nav__link" href="./">Производители</a></div>
                 <div class="nav__item"><a class="nav__link" href="stocks.html">Акции</a></div>
                 <div class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></div>
               </nav>
@@ -44,7 +44,7 @@
         </div>
         <div class="header__middle">
           <div class="container">
-            <div class="row"><a class="header__logo" href="/"><img class="logo" src="images/bg/logo.svg" alt="Вкусита"/></a>
+            <div class="row"><a class="header__logo" href="./"><img class="logo" src="images/bg/logo.svg" alt="Вкусита"/></a>
               <div class="header__title">Оптово - розничный интернет магазин орехов и сухофруктов</div>
               <div class="header__contacts">
                 <div class="tels">
@@ -197,7 +197,7 @@
         <main class="cab">
           <section class="cab__bread">
             <div class="container">
-              <div class="bread"><a class="bread__item" href="/">
+              <div class="bread"><a class="bread__item" href="./">
                   <div class="bread__item-title">Главная</div></a><span class="bread__item">
                   <div class="bread__item-title">Личный кабинет</div></span></div>
             </div>
@@ -216,7 +216,58 @@
                 </div>
               </div>
               <div class="cab__tabs">
-                <div class="cab__tab active" data-id="1"></div>
+                <div class="cab__tab active" data-id="1">
+                  <div class="pers">
+                    <div class="pers__wrap">
+                      <div class="row">
+                        <div class="pers__left">
+                          <div class="pers__logo">
+                            <div class="pers__name">РА</div>
+                          </div><a class="pers__exit" href="./">Выйти из аккаунта</a><a class="pers__del" href="./">Удалить</a>
+                        </div>
+                        <div class="pers__right">
+                          <form class="pers__form">
+                            <div class="pers__fields">
+                              <div class="row">
+                                <div class="pers__field_2 pers__field">
+                                  <div class="pers__field-name">Ф.И.О.</div>
+                                  <input class="input_500 input" type="text" name="name" value="Радионов Александр Станиславович" placeholder="Ф.И.О.">
+                                </div>
+                                <div class="pers__field">
+                                  <div class="pers__field-name">E-mail</div>
+                                  <input class="input" type="email" name="email" value="info@vkusita.ru" placeholder="E-mail">
+                                </div>
+                                <div class="pers__field">
+                                  <div class="pers__field-name">Телефон</div>
+                                  <input class="input" type="text" name="tel" value="8 (916) 144-58-88" placeholder="Телефон">
+                                </div>
+                                <div class="pers__field">
+                                  <div class="pers__field-name">Страна</div>
+                                  <input class="input" type="text" name="country" value="Россия" placeholder="Страна">
+                                </div>
+                                <div class="pers__field">
+                                  <div class="pers__field-name">Город</div>
+                                  <input class="input" type="text" name="city" value="Москва" placeholder="Город">
+                                </div>
+                                <div class="pers__field_2 pers__field">
+                                  <div class="pers__field-name">Адрес доставки</div>
+                                  <input class="input" type="text" name="addr" value="" placeholder="Введите адрес достваки">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="pers__buttons">
+                              <button class="pers__submit">
+                                <div class="btn">
+                                  <div class="btn__title">Сохранить изменения</div>
+                                </div>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="cab__tab" data-id="2">
                   <div class="cab__swiper">
                     <div class="compare">
@@ -238,11 +289,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -327,11 +376,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -416,11 +463,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -505,11 +550,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -594,11 +637,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -683,11 +724,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -772,11 +811,9 @@
                               <div class="swiper-slide">
                                 <div class="compare__item">
                                   <div class="compare__item-wrap">
-                                    <div class="compare__item-list">
-                                      <div class="compare__item-row">
+                                    <div class="compare__item-list"><a class="compare__item-row" href="product.html">
                                         <div class="compare__item-title">Арахис очищенный, жареный, соленый</div>
-                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div>
-                                      </div>
+                                        <div class="compare__item-img"><img class="compare__item-pic" src="images/content/products/0.png"></div></a>
                                       <div class="compare__item-row">
                                         <div class="compare__item-price">
                                           <div class="price"><span class="price__val">105.00</span><span class="price__type">руб.</span></div>
@@ -866,7 +903,49 @@
                     </div>
                   </div>
                 </div>
-                <div class="cab__tab" data-id="3">skldafhjlkdjghldfkj gdlfh df jjhdlffjhdlfkjhkdjfghsdkf</div>
+                <div class="cab__tab" data-id="3">
+                  <div class="pass">
+                    <div class="pass__wrap">
+                      <form class="pass__form">
+                        <div class="row">
+                          <div class="pass__fields">
+                            <div class="row">
+                              <div class="pass__field">
+                                <div class="pass__field-title">*Введите новый пароль</div>
+                                <div class="pass__field-input">
+                                  <input class="input" type="password" name="password" id="password" placeholder="Введите новый пароль" value="123456789">
+                                  <button class="pass__field-show" type="button">
+                                    <svg class="pass__field-svg">
+                                      <use xlink:href="images/icons/sprite.svg#eye"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="pass__field">
+                                <div class="pass__field-title">*Повторите пароль</div>
+                                <div class="pass__field-input">
+                                  <input class="input" type="password" name="confirmPassword" placeholder="Повторите пароль" value="123456789">
+                                  <button class="pass__field-show" type="button">
+                                    <svg class="pass__field-svg">
+                                      <use xlink:href="images/icons/sprite.svg#eye"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pass__buttons">
+                            <button class="pass__submit">
+                              <div class="btn">
+                                <div class="btn__title">Сохранить пароль</div>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -876,7 +955,7 @@
         <div class="footer__top">
           <div class="container">
             <div class="row">
-              <div class="footer__left"><a class="footer__logo" href="/"><img class="logo" src="images/bg/logo_2.svg" alt="Вкусита"/></a>
+              <div class="footer__left"><a class="footer__logo" href="./"><img class="logo" src="images/bg/logo_2.svg" alt="Вкусита"/></a>
                 <div class="footer__title">Оптово - розничный интернет<br>магазин орехов и сухофруктов</div>
                 <div class="footer__tels">
                   <div class="tels">
@@ -907,15 +986,15 @@
               <div class="footer__middle">
                 <div class="row">
                   <div class="footer__col"><a class="footer__title" href="company.html">О компании</a>
-                    <div class="footer__list"><a class="footer__item" href="company.html">О нас</a><a class="footer__item" href="/">Наша упаковка</a><a class="footer__item" href="reviews.html">Отзывы</a><a class="footer__item" href="/">Сертификат</a><a class="footer__item" href="partners.html">Партнерам</a>
+                    <div class="footer__list"><a class="footer__item" href="company.html">О нас</a><a class="footer__item" href="./">Наша упаковка</a><a class="footer__item" href="reviews.html">Отзывы</a><a class="footer__item" href="./">Сертификат</a><a class="footer__item" href="partners.html">Партнерам</a>
                     </div>
                   </div>
                   <div class="footer__col"><a class="footer__title" href="catalog.html">Каталог</a>
                     <div class="footer__list"><a class="footer__item" href="catalog.html">Ореха</a><a class="footer__item" href="catalog.html">Сухофрукты</a><a class="footer__item" href="catalog.html">Глазурь</a>
                     </div>
                   </div>
-                  <div class="footer__col"><a class="footer__title" href="/">Доставка и оплата</a>
-                    <div class="footer__list"><a class="footer__item" href="stocks.html">Акции</a><a class="footer__item" href="/">Производители</a><a class="footer__item" href="contacts.html">Контакты</a>
+                  <div class="footer__col"><a class="footer__title" href="./">Доставка и оплата</a>
+                    <div class="footer__list"><a class="footer__item" href="stocks.html">Акции</a><a class="footer__item" href="./">Производители</a><a class="footer__item" href="contacts.html">Контакты</a>
                     </div>
                   </div>
                 </div>
@@ -925,7 +1004,7 @@
                   <div class="addr">
                     <svg class="addr__svg">
                       <use xlink:href="images/icons/sprite.svg#pin"></use>
-                    </svg><a class="addr__link" href="/" target="_blank">г. Москва,<br>Нижегородская улица,<br>д. 29-33</a>
+                    </svg><a class="addr__link" href="./" target="_blank">г. Москва,<br>Нижегородская улица,<br>д. 29-33</a>
                   </div>
                 </div>
                 <div class="footer__work">

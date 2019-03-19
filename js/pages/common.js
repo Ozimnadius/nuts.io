@@ -24,7 +24,6 @@ function Switches(prop) {
     let that = this;
 
     this.init = function () {
-        debugger;
         let $this = that.swsList[0],
             percent = ($this.offsetLeft / that.width) * 100,
             id = $this.dataset.id,

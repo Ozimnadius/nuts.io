@@ -86,6 +86,10 @@
     @include size(18);
   }
 
+  &__headers {
+    padding: 10px 0;
+  }
+
   &__header {
     color: $green;
     font-weight: 700;
@@ -99,6 +103,7 @@
     border-radius: 6px;
     border: 1px solid rgba($text,.2);
     padding: 10px;
+    box-sizing: border-box;
 
     &-wrap {
       background-color: $white;
@@ -112,6 +117,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &:hover {
+        .compare__item-title{
+          text-decoration: underline;
+        }
+      }
     }
 
     &-title {
@@ -193,7 +204,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: url("/images/bg/line.png")0 0;
+        background: url("../images/bg/line.png")0 0;
         transition: .3s;
       }
     }
@@ -225,4 +236,145 @@
     background: $text;
     border-radius: 3px;
   }
+}
+
+.pers {
+  border-radius: 4px;
+  border: 1px solid rgba($text,.2);
+  padding: 10px;
+
+  &__wrap {
+    background: url("../images/bg/ispecsBg.png") 0 0;
+  }
+
+  &__left {
+    @include col;
+    @include size(6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10px;
+  }
+
+  &__right {
+    @include col;
+    @include size(16);
+    @include shift-right(2);
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  &__logo {
+    width: 132px;
+    height: 132px;
+    background-color: $text;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    color: $white;
+    font-size: 56px;
+    font-weight: 700;
+  }
+
+  &__exit {
+    color: #473535;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__del {
+    color: #d23131;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__field {
+    @include col;
+    @include size(12);
+    margin-bottom: 30px;
+
+    &_2 {
+      @include size(24);
+    }
+
+    &-name {
+      color: rgba(#473535,.8);
+      margin-bottom: 5px;
+    }
+  }
+
+  &__buttons {
+    display: flex;justify-content: center;
+  }
+}
+
+.pass {
+  border-radius: 4px;
+  border: 1px solid rgba($text,.2);
+  padding: 10px;
+
+  &__wrap {
+    background: url("../images/bg/ispecsBg.png") 0 0;
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  &__fields {
+    @include col;
+    @include size(20);
+    @include shift(2);
+    margin-bottom: 30px;
+  }
+
+  &__field {
+    @include col;
+    @include size(12);
+
+    &-title {
+      color: rgba(#473535,.8);
+      margin-bottom: 5px;
+    }
+
+    &-input {
+      position: relative;
+    }
+
+    &-show {
+      opacity: 0.5;
+      transition: .3s;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -8px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-svg {
+      width: 25px;
+      height: 16px;
+      fill: $text;
+
+    }
+  }
+
+  &__buttons {
+    @include col;
+    @include size(20);
+    @include shift(2);
+    display: flex;
+    justify-content: center;
+  }
+
 }
