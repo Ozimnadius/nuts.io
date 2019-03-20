@@ -1,3 +1,5 @@
+$('input[type=tel]').mask('+7 (999) 999-99-99');
+
 function Switches(prop) {
     this.sws = document.querySelector(prop.sws);
     this.width = this.sws.offsetWidth;
@@ -39,11 +41,11 @@ function Switches(prop) {
             let tab = that.tabs[i],
                 height = tab.offsetHeight;
             tab.classList.remove('active');
-            if (maxH<height){
-                maxH=height;
+            if (maxH < height) {
+                maxH = height;
             }
         }
-        that.tabsObj.style.height = maxH+'px';
+        that.tabsObj.style.height = maxH + 'px';
 
         tab.classList.add('active');
         $this.classList.add('active');
@@ -126,8 +128,34 @@ $('body').on('click', '.buy', function (e) {
     let $this = $(this),
         item = $this.closest('.buyItem'),
         id = item.attr('data-id'),
-        img = item.find('.buyImg');
-    animateToCart(img);
+        count = item.find('.count__input'),
+        val = count.val(),
+        img = item.find('.buyImg'),
+        data = {
+            id: id,
+            val: val,
+            action: 'buyAjax'
+        },
+        basket = $('.basket-link');
+
+    $.ajax({
+        dataType: "json",
+        type: "POST",
+        url: 'ajax.php',
+        data: data,
+        success: function (result) {
+            if (result.status) {
+                basket.replaceWith(result.html);
+                animateToCart(img);
+            } else {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        },
+        error: function (result) {
+            alert('Что-то пошло не так, попробуйте еще раз!!!');
+        }
+    });
+
 });
 
 $('body').on('click', '.count__up', function (e) {
@@ -150,10 +178,43 @@ $('body').on('click', '.count__down', function (e) {
         count = $this.closest('.count'),
         input = count.find('.count__input'),
         val = Number(input.val());
-    if (val>1) {
+    if (val > 1) {
         val--;
     }
 
     input.val(val);
+
+});
+
+$('.revRating').on('change','input', function (e) {
+    let $this = $(this),
+        val = $this.val(),
+        item = $this.closest('.rev'),
+        id = item.data('id'),
+        rating = $this.closest('.rating'),
+        data = {
+            action: 'productRating',
+            id: id,
+            val: val
+        };
+
+    $.ajax({
+        dataType: "json",
+        type: "POST",
+        url: 'ajax.php',
+        data: data,
+        success: function (result) {
+            if (result.status) {
+                rating.find('input').prop('checked', false);
+                rating.find('input[value='+result.rating+']').prop('checked', true);
+            } else {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        },
+        error: function (result) {
+            alert('Что-то пошло не так, попробуйте еще раз!!!');
+        }
+    });
+
 
 });

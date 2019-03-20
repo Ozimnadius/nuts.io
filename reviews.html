@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="header__call">
-                <button class="call-btn" type="button">Заказать звонок</button>
+                <button class="call-btn callorderOpen" type="button">Заказать звонок</button>
                 <div class="time">пн-пт: с 09:00 до 18:00</div>
               </div>
               <div class="header__basket"><a class="compare-link" href="cabinet.html">
@@ -70,7 +70,7 @@
                       <svg class="basket-link__svg">
                         <use xlink:href="images/icons/sprite.svg#basket"></use>
                       </svg>
-                      <div class="compare-link__num">99</div>
+                      <div class="compare-link__num">10</div>
                     </div>
                   </div>
                   <div class="basket-link__price">
@@ -211,7 +211,7 @@
                     <div class="revs__left">
                       <div class="revs__list">
                         <div class="revs__item">
-                          <div class="rev">
+                          <div class="rev" data-id="1">
                             <div class="rev__top">
                               <div class="rev__user">
                                 <svg class="rev__user-svg">
@@ -225,7 +225,7 @@
                               <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
                             </div>
                             <div class="rev__bottom">
-                              <div class="rev__rating">
+                              <div class="rev__rating revRating">
                                 <div class="rating">
                                   <div class="rating__wrapper">
                                     <input class="rating__input" type="radio" name="rating1" value="5" id="1-rating-5">
@@ -282,7 +282,7 @@
                           </div>
                         </div>
                         <div class="revs__item">
-                          <div class="rev">
+                          <div class="rev" data-id="2">
                             <div class="rev__top">
                               <div class="rev__user">
                                 <svg class="rev__user-svg">
@@ -296,7 +296,7 @@
                               <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
                             </div>
                             <div class="rev__bottom">
-                              <div class="rev__rating">
+                              <div class="rev__rating revRating">
                                 <div class="rating">
                                   <div class="rating__wrapper">
                                     <input class="rating__input" type="radio" name="rating2" value="5" id="2-rating-5">
@@ -353,7 +353,7 @@
                           </div>
                         </div>
                         <div class="revs__item">
-                          <div class="rev">
+                          <div class="rev" data-id="3">
                             <div class="rev__top">
                               <div class="rev__user">
                                 <svg class="rev__user-svg">
@@ -367,7 +367,7 @@
                               <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
                             </div>
                             <div class="rev__bottom">
-                              <div class="rev__rating">
+                              <div class="rev__rating revRating">
                                 <div class="rating">
                                   <div class="rating__wrapper">
                                     <input class="rating__input" type="radio" name="rating3" value="5" id="3-rating-5">
@@ -424,7 +424,7 @@
                           </div>
                         </div>
                         <div class="revs__item">
-                          <div class="rev">
+                          <div class="rev" data-id="4">
                             <div class="rev__top">
                               <div class="rev__user">
                                 <svg class="rev__user-svg">
@@ -438,7 +438,7 @@
                               <div class="rev__desc">Заказывала миндаль, мелкий фундук, кешью, финики, карри и кориандр. Понравился миндаль, кешью, финики и карри Спасибо вам за них, но огорчил фундук (без запаха и вкуса и очень мелкий, как горошинки) и кориандр (сорный).</div>
                             </div>
                             <div class="rev__bottom">
-                              <div class="rev__rating">
+                              <div class="rev__rating revRating">
                                 <div class="rating">
                                   <div class="rating__wrapper">
                                     <input class="rating__input" type="radio" name="rating4" value="5" id="4-rating-5">
@@ -679,6 +679,9 @@
         <div></div>
       </div>
     </div>
+  </div>
+  <div class="popup">
+    <div class="popup__wrapper"></div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

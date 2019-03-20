@@ -29,7 +29,7 @@ block content
                                 .revs__list
                                     each i in [1,2,3,4]
                                         .revs__item
-                                            .rev
+                                            div(data-id=i).rev
                                                 //- top
                                                 .rev__top
                                                     .rev__user
@@ -44,7 +44,7 @@ block content
 
                                                 //- bottom
                                                 .rev__bottom
-                                                    .rev__rating
+                                                    .rev__rating.revRating
                                                         .rating
                                                             .rating__wrapper
                                                                 each k in [5,4,3,2,1]

@@ -62,7 +62,7 @@ block content
                             //- explore
                             .pr__explore
                                 .pr__explore-title *На крупный опт от 100 кг, цена уточняется у менеджера
-                                button(type='button').pr__explore-button
+                                button(type='button').pr__explore-button.callorderOpen
                                     .button.button_pr Узнать цену
 
                             //- buy
@@ -82,7 +82,7 @@ block content
                             //- controls
                             .pr__controls
                                 .row
-                                    button(type='button').pr__one
+                                    button(type='button').pr__one.fastOrder
                                         +icon('one', 'pr__one-svg')
                                         .pr__one-title Купить в один клик
 
@@ -203,7 +203,7 @@ block content
                                             .revs__list
                                                 each i in [1,2,3,4]
                                                     .revs__item
-                                                        .rev
+                                                        div(data-id=i).rev
                                                             //- top
                                                             .rev__top
                                                                 .rev__user

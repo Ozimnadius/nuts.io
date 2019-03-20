@@ -89,7 +89,7 @@ html(lang="ru")
 
                             //- call
                             .header__call
-                                button(type='button').call-btn Заказать звонок
+                                button(type='button').call-btn.callorderOpen Заказать звонок
                                 .time пн-пт: с 09:00 до 18:00
 
 
@@ -104,7 +104,7 @@ html(lang="ru")
                                     .basket-link__icon
                                         .basket-link__icon-wrap
                                             +icon('basket', 'basket-link__svg')
-                                            .compare-link__num 99
+                                            .compare-link__num 10
                                     .basket-link__price
                                         +icon('rubl', 'basket-link__price-type')
                                         .basket-link__price-num 213 990
@@ -280,6 +280,10 @@ html(lang="ru")
                 div
                 div
 
+
+
+    .popup
+        .popup__wrapper
 
     script(src='js/vendor.min.js')
     script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
