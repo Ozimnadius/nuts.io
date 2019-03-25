@@ -109,6 +109,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'contacts':
+        echo json_encode(array(
+            'status' => true,
+            'html' => contactsSuccess()
+        ));
+        exit();
+        break;
     case 'revForm':
         echo json_encode(array(
             'status' => true,
@@ -447,7 +454,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -589,7 +597,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -731,7 +740,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -873,7 +883,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1015,7 +1026,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1157,7 +1169,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1299,7 +1312,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1441,7 +1455,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1583,7 +1598,8 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -1917,7 +1933,12 @@ function enterForm()
                     </div>
                     <div class="enter__socials">
                         <div class="enter__socials-title">Войти с помощью:</div>
-                        <div class="enter__socials-list"><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/facebook.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/vk.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/ok.svg"></a></div>
+                        <div class="enter__socials-list"><a class="enter__social" href="/"><img
+                                        class="enter__social-img" src="images/icons/facebook.svg"></a><a
+                                    class="enter__social" href="/"><img class="enter__social-img"
+                                                                        src="images/icons/vk.svg"></a><a
+                                    class="enter__social" href="/"><img class="enter__social-img"
+                                                                        src="images/icons/ok.svg"></a></div>
                     </div>
                     <div class="enter__recovery">
                         <button class="enter__recovery-button recoveryForm" type="button">Забыли пароль?</button>
@@ -1954,10 +1975,12 @@ function enterFormError()
                 <div class="form__title enter__title">Вход в личный кабинет</div>
                 <div class="form__fields enter__fields">
                     <div class="form__field">
-                        <input class="input" type="email" name="email" value=" <?=$_POST['email'] ?>" placeholder="*E-mail">
+                        <input class="input" type="email" name="email" value=" <?= $_POST['email'] ?>"
+                               placeholder="*E-mail">
                     </div>
                     <div class="form__field">
-                        <input class="input error" type="password" name="password" value=" <?=$_POST['password'] ?>" placeholder="*Пароль">
+                        <input class="input error" type="password" name="password" value=" <?= $_POST['password'] ?>"
+                               placeholder="*Пароль">
                         <label id="email-error" class="error" for="password">Неверный пароль</label>
                     </div>
                     <div class="form__button">
@@ -1967,7 +1990,12 @@ function enterFormError()
                     </div>
                     <div class="enter__socials">
                         <div class="enter__socials-title">Войти с помощью:</div>
-                        <div class="enter__socials-list"><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/facebook.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/vk.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/ok.svg"></a></div>
+                        <div class="enter__socials-list"><a class="enter__social" href="/"><img
+                                        class="enter__social-img" src="images/icons/facebook.svg"></a><a
+                                    class="enter__social" href="/"><img class="enter__social-img"
+                                                                        src="images/icons/vk.svg"></a><a
+                                    class="enter__social" href="/"><img class="enter__social-img"
+                                                                        src="images/icons/ok.svg"></a></div>
                     </div>
                     <div class="enter__recovery">
                         <button class="enter__recovery-button recoveryForm" type="button">Забыли пароль?</button>
@@ -2053,7 +2081,8 @@ function regForm()
     return $html;
 }
 
-function regSuccess(){
+function regSuccess()
+{
     ob_start();
     ?>
     <div class="reg">
@@ -2091,20 +2120,23 @@ function regFormError()
                 <div class="form__sub">Все поля обязательны к заполнению</div>
                 <div class="form__fields reg__fields">
                     <div class="form__field">
-                        <input class="input" type="text" name="name" value="<?=$_POST['name'] ?>" placeholder="*Имя">
+                        <input class="input" type="text" name="name" value="<?= $_POST['name'] ?>" placeholder="*Имя">
                     </div>
                     <div class="form__field">
                         <div class="form__error">E-mail уже зарегестрирован</div>
-                        <input class="input" type="email" name="email" value="<?=$_POST['email'] ?>" placeholder="*E-mail">
+                        <input class="input" type="email" name="email" value="<?= $_POST['email'] ?>"
+                               placeholder="*E-mail">
                     </div>
                 </div>
                 <div class="form__sub">Пароль должен быть не менее 6 символов длиной</div>
                 <div class="form__fields reg__fields">
                     <div class="form__field">
-                        <input class="input" type="password" name="password" id="passwordReg" value="<?=$_POST['password'] ?>" placeholder="*Пароль">
+                        <input class="input" type="password" name="password" id="passwordReg"
+                               value="<?= $_POST['password'] ?>" placeholder="*Пароль">
                     </div>
                     <div class="form__field">
-                        <input class="input" type="password" name="confirmPassword" value="<?=$_POST['confirmPassword'] ?>" placeholder="*Подтверждение пароля">
+                        <input class="input" type="password" name="confirmPassword"
+                               value="<?= $_POST['confirmPassword'] ?>" placeholder="*Подтверждение пароля">
                     </div>
                 </div>
                 <div class="form__button">
@@ -2174,7 +2206,8 @@ function recoveryForm()
     return $html;
 }
 
-function recoverySuccess(){
+function recoverySuccess()
+{
     ob_start();
     ?>
     <div class="recovery">
@@ -2213,7 +2246,8 @@ function recoveryFormError()
                 <div class="form__fields reg__fields">
                     <div class="form__field">
                         <div class="form__error">E-mail уже зарегестрирован</div>
-                        <input class="input" type="email" name="email" value="<?=$_POST['email'] ?>" placeholder="*E-mail">
+                        <input class="input" type="email" name="email" value="<?= $_POST['email'] ?>"
+                               placeholder="*E-mail">
                     </div>
                 </div>
                 <div class="form__button">
@@ -2236,7 +2270,8 @@ function recoveryFormError()
     return $html;
 }
 
-function ifeedSuccess(){
+function ifeedSuccess()
+{
     ob_start();
     ?>
     <div class="enter">
@@ -2255,6 +2290,26 @@ function ifeedSuccess(){
                 </button>
             </div>
         </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function contactsSuccess()
+{
+    ob_start();
+    ?>
+    <div class="feed__success">
+        <button class="feed__close" type="button">
+            <svg class="feed__close-svg">
+                <use xlink:href="images/icons/sprite.svg#cancel"></use>
+            </svg>
+        </button>
+        <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+        <div class="form__title">Спасибо за заявку!</div>
+        <div class="form__sub">Мы скоро с вами свяжемся.</div>
     </div>
     <?
     $html = ob_get_contents();
