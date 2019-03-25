@@ -115,7 +115,6 @@ $(function () {
        popup.removeClass('active');
     });
 
-
     function sendAjax(form) {
         let data = $(form).serialize();
 
@@ -137,7 +136,6 @@ $(function () {
             }
         });
     }
-
 
     $('.auth').on('click', function (e) {
         e.preventDefault();
@@ -417,5 +415,40 @@ $(function () {
             }
         });
     }
+
+    $('.ifeed__form').validate(
+        {
+            rules: {
+                name: "required",
+                tel: "required",
+            },
+            messages: {
+                name: "Введите Имя",
+                tel: "Введите Телефон",
+            },
+
+            submitHandler: function (form) {
+                let data = $(form).serialize();
+
+                $.ajax({
+                    dataType: "json",
+                    type: "POST",
+                    url: 'ajax.php',
+                    data: data,
+                    success: function (result) {
+                        if (result.status) {
+                            popupWrap.html(result.html);
+                            popup.addClass('active');
+                        } else {
+                            alert('Что-то пошло не так, попробуйте еще раз!!!');
+                        }
+                    },
+                    error: function (result) {
+                        alert('Что-то пошло не так, попробуйте еще раз!!!');
+                    }
+                });
+            }
+        }
+    );
 
 });

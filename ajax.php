@@ -109,6 +109,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'revForm':
+        echo json_encode(array(
+            'status' => true,
+            'html' => revFormSuccess()
+        ));
+        exit();
+        break;
     case 'compare':
         echo json_encode(array(
             'status' => true,
@@ -155,6 +162,13 @@ switch ($action) {
         echo json_encode(array(
             'status' => true, // Передавать false, если пользователь уже есть, пример в функции recoveryFormError
             'html' => recoverySuccess()
+        ));
+        exit();
+        break;
+    case 'ifeed':
+        echo json_encode(array(
+            'status' => true,
+            'html' => ifeedSuccess()
         ));
         exit();
         break;
@@ -1845,6 +1859,26 @@ function feedSuccess()
     return $html;
 }
 
+function revFormSuccess()
+{
+    ob_start();
+    ?>
+    <div class="feed__success">
+        <button class="feed__close" type="button">
+            <svg class="feed__close-svg">
+                <use xlink:href="images/icons/sprite.svg#cancel"></use>
+            </svg>
+        </button>
+        <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+        <div class="form__title">Спасибо за отзыв!</div>
+        <div class="form__sub">Скоро он появится на сайте.</div>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
 function compareLink()
 {
     ob_start();
@@ -2194,6 +2228,32 @@ function recoveryFormError()
                 </button>
             </div>
             <input type="hidden" name="action" value="recoveryAjax">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function ifeedSuccess(){
+    ob_start();
+    ?>
+    <div class="enter">
+        <form class="enter__form form form_pop form_suc">
+            <div class="form__wrap">
+                <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+                <div class="form__title">Спасибо за заявку!</div>
+                <div class="form__sub">
+                    Мы скоро с Вами свяжемся.
+                </div>
+                <div class="form__image"><img class="form__image-img" src="images/bg/formImg.png"></div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
         </form>
     </div>
     <?

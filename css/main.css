@@ -2763,6 +2763,7 @@ input, textarea {
   margin-left: 10px;
   margin-right: 10px;
   width: calc(50% - 20px);
+  position: relative;
 }
 
 .ifeed__submit {

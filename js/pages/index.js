@@ -1,7 +1,9 @@
 $(function () {
 
     $('.search__input').on('input', $.debounce(sendAjax, 300));
+
     $('.search__input').closest();
+
     function sendAjax(){
         let $this = $('.search__input'),
             val = $this.val(),
