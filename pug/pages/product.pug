@@ -86,9 +86,9 @@ block content
                                         +icon('one', 'pr__one-svg')
                                         .pr__one-title Купить в один клик
 
-                                    button(type='button').pr__compare
+                                    button(type='button').pr__compare.compareProduct
                                         +icon('compare', 'pr__compare-svg')
-                                        .pr__compare-title Сравнить
+                                        .pr__compare-title.compareProduct__title Сравнить
 
                     //- right
                     .pr__right
@@ -229,10 +229,10 @@ block content
                                                                 .rev__likes
                                                                     .rev__likes-title Отзыв полезен?
                                                                     .rev__likes-list
-                                                                        .rev__like
+                                                                        .rev__like.prRevLike
                                                                             .rev__like-count 1
                                                                             +icon('like','rev__like-svg')
-                                                                        .rev__dislike
+                                                                        .rev__dislike.prRevDislike
                                                                             .rev__dislike-count 0
                                                                             +icon('dislike','rev__dislike-svg')
 
@@ -243,8 +243,9 @@ block content
 
                                         //- right
                                         .revs__right
-                                            form(action='#' method='post').revs__form
-                                                .revs__form-wrap
+                                            form(action='#' method='post').revs__form.feed
+                                                .revs__form-wrap.feed__wrap
+                                                    input(type='hidden' name='action' value='feed')
                                                     .revs__form-title Оставить отзыв
                                                     .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
                                                     .revs__form-fields

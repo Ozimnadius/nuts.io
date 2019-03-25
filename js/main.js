@@ -8,3 +8,6 @@
 //@prepros-append pages/product.js
 //@prepros-append pages/articles.js
 //@prepros-append pages/cabinet.js
+//@prepros-append pages/reviews.js
+//@prepros-append pages/feed.js
+//@prepros-append pages/compare.js

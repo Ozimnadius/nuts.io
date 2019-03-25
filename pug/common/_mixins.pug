@@ -155,9 +155,9 @@ mixin item(id, dopClass)
 
                 //- hidden
                 .item__compare
-                    .item__compare-button
+                    button(type='button').item__compare-button.compareProduct
                         +icon('compare', 'item__compare-svg')
-                        .item__compare-title Сравнить
+                        .item__compare-title.compareProduct__title Сравнить
 
 mixin advantages(dopClass)
     div(class=dopClass).advantages

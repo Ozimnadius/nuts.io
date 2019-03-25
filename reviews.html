@@ -37,7 +37,7 @@
               <div class="cabinet-link">
                 <svg class="cabinet-link__svg">
                   <use xlink:href="images/icons/sprite.svg#cabinet"></use>
-                </svg><a class="cabinet-link__title" href="cabinet.html">Личный кабинет</a>
+                </svg><a class="cabinet-link__title auth" href="cabinet.html">Личный кабинет</a>
               </div>
             </div>
           </div>
@@ -264,13 +264,13 @@
                               <div class="rev__likes">
                                 <div class="rev__likes-title">Отзыв полезен?</div>
                                 <div class="rev__likes-list">
-                                  <div class="rev__like">
+                                  <div class="rev__like revLike">
                                     <div class="rev__like-count">1</div>
                                     <svg class="rev__like-svg">
                                       <use xlink:href="images/icons/sprite.svg#like"></use>
                                     </svg>
                                   </div>
-                                  <div class="rev__dislike">
+                                  <div class="rev__dislike revDislike">
                                     <div class="rev__dislike-count">0</div>
                                     <svg class="rev__dislike-svg">
                                       <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -335,13 +335,13 @@
                               <div class="rev__likes">
                                 <div class="rev__likes-title">Отзыв полезен?</div>
                                 <div class="rev__likes-list">
-                                  <div class="rev__like">
+                                  <div class="rev__like revLike">
                                     <div class="rev__like-count">1</div>
                                     <svg class="rev__like-svg">
                                       <use xlink:href="images/icons/sprite.svg#like"></use>
                                     </svg>
                                   </div>
-                                  <div class="rev__dislike">
+                                  <div class="rev__dislike revDislike">
                                     <div class="rev__dislike-count">0</div>
                                     <svg class="rev__dislike-svg">
                                       <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -406,13 +406,13 @@
                               <div class="rev__likes">
                                 <div class="rev__likes-title">Отзыв полезен?</div>
                                 <div class="rev__likes-list">
-                                  <div class="rev__like">
+                                  <div class="rev__like revLike">
                                     <div class="rev__like-count">1</div>
                                     <svg class="rev__like-svg">
                                       <use xlink:href="images/icons/sprite.svg#like"></use>
                                     </svg>
                                   </div>
-                                  <div class="rev__dislike">
+                                  <div class="rev__dislike revDislike">
                                     <div class="rev__dislike-count">0</div>
                                     <svg class="rev__dislike-svg">
                                       <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -477,13 +477,13 @@
                               <div class="rev__likes">
                                 <div class="rev__likes-title">Отзыв полезен?</div>
                                 <div class="rev__likes-list">
-                                  <div class="rev__like">
+                                  <div class="rev__like revLike">
                                     <div class="rev__like-count">1</div>
                                     <svg class="rev__like-svg">
                                       <use xlink:href="images/icons/sprite.svg#like"></use>
                                     </svg>
                                   </div>
-                                  <div class="rev__dislike">
+                                  <div class="rev__dislike revDislike">
                                     <div class="rev__dislike-count">0</div>
                                     <svg class="rev__dislike-svg">
                                       <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -501,8 +501,9 @@
                       </div>
                     </div>
                     <div class="revs__right">
-                      <form class="revs__form" action="#" method="post">
-                        <div class="revs__form-wrap">
+                      <form class="revs__form feed" action="#" method="post">
+                        <div class="revs__form-wrap feed__wrap">
+                          <input type="hidden" name="action" value="feed">
                           <div class="revs__form-title">Оставить отзыв</div>
                           <div class="revs__form-subtitle">Все отзывы проходят модерацию, во избежания спама</div>
                           <div class="revs__form-fields">

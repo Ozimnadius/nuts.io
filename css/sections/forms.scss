@@ -89,6 +89,17 @@
     margin-top: 20px;
     padding: 0 40px;
   }
+
+  &__error {
+    color: $orange;
+    text-align: right;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 98%;
+    left: 0;
+    right: 0;
+    line-height: 1;
+  }
 }
 
 .input {
@@ -218,3 +229,142 @@ label.error{
 .callorder {
   width: 384px;
 }
+
+.feed {
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__success{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eed5ba;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    &-svg {
+      width: 16px;
+      height: 16px;
+      fill: #0c4536;
+    }
+  }
+
+}
+
+.enter {
+  width: 484px;
+
+  &__wrap {
+    padding-bottom: 0;
+  }
+
+  &__fields {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    &-title {
+      opacity: .8;
+      margin-right: 12px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__social {
+    width: 31px;
+    height: 31px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__recovery {
+    text-align: center;
+
+    &-button {
+      opacity: 0.8;
+      color: #0c4536;
+      position: relative;
+      margin-bottom: 30px;
+      &:hover {
+        &:after {
+          opacity: 0;
+        }
+      }
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: url("/images/bg/line3.png") 0 0;
+        transition: .3s;
+      }
+    }
+  }
+
+  &__registration {
+    width: calc(100% + 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba($text,.5);
+    padding: 20px 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+    background-color: #eae0d1;
+    border-radius: 0 0 6px 6px;
+    transition: .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &-svg {
+      width: 10px;
+      height: 14px;
+      fill: rgba($text,0.8);
+      margin-right: 10px;
+    }
+
+    &-title {
+      color: rgba($text,.8);
+    }
+  }
+}
+
+.reg, .recovery {
+  width: 484px;
+}
+

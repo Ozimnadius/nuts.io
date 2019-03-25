@@ -55,10 +55,10 @@ block content
                                                     .rev__likes
                                                         .rev__likes-title Отзыв полезен?
                                                         .rev__likes-list
-                                                            .rev__like
+                                                            .rev__like.revLike
                                                                 .rev__like-count 1
                                                                 +icon('like','rev__like-svg')
-                                                            .rev__dislike
+                                                            .rev__dislike.revDislike
                                                                 .rev__dislike-count 0
                                                                 +icon('dislike','rev__dislike-svg')
 
@@ -69,8 +69,9 @@ block content
 
                             //- right
                             .revs__right
-                                form(action='#' method='post').revs__form
-                                    .revs__form-wrap
+                                form(action='#' method='post').revs__form.feed
+                                    .revs__form-wrap.feed__wrap
+                                        input(type='hidden' name='action' value='feed')
                                         .revs__form-title Оставить отзыв
                                         .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
                                         .revs__form-fields

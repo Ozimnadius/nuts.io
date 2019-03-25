@@ -186,35 +186,5 @@ $('body').on('click', '.count__down', function (e) {
 
 });
 
-$('.revRating').on('change','input', function (e) {
-    let $this = $(this),
-        val = $this.val(),
-        item = $this.closest('.rev'),
-        id = item.data('id'),
-        rating = $this.closest('.rating'),
-        data = {
-            action: 'productRating',
-            id: id,
-            val: val
-        };
-
-    $.ajax({
-        dataType: "json",
-        type: "POST",
-        url: 'ajax.php',
-        data: data,
-        success: function (result) {
-            if (result.status) {
-                rating.find('input').prop('checked', false);
-                rating.find('input[value='+result.rating+']').prop('checked', true);
-            } else {
-                alert('Что-то пошло не так, попробуйте еще раз!!!');
-            }
-        },
-        error: function (result) {
-            alert('Что-то пошло не так, попробуйте еще раз!!!');
-        }
-    });
 
 
-});

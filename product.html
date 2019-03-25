@@ -37,7 +37,7 @@
               <div class="cabinet-link">
                 <svg class="cabinet-link__svg">
                   <use xlink:href="images/icons/sprite.svg#cabinet"></use>
-                </svg><a class="cabinet-link__title" href="cabinet.html">Личный кабинет</a>
+                </svg><a class="cabinet-link__title auth" href="cabinet.html">Личный кабинет</a>
               </div>
             </div>
           </div>
@@ -301,11 +301,11 @@
                           </svg>
                           <div class="pr__one-title">Купить в один клик</div>
                         </button>
-                        <button class="pr__compare" type="button">
+                        <button class="pr__compare compareProduct" type="button">
                           <svg class="pr__compare-svg">
                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                           </svg>
-                          <div class="pr__compare-title">Сравнить</div>
+                          <div class="pr__compare-title compareProduct__title">Сравнить</div>
                         </button>
                       </div>
                     </div>
@@ -499,13 +499,13 @@
                                     <div class="rev__likes">
                                       <div class="rev__likes-title">Отзыв полезен?</div>
                                       <div class="rev__likes-list">
-                                        <div class="rev__like">
+                                        <div class="rev__like prRevLike">
                                           <div class="rev__like-count">1</div>
                                           <svg class="rev__like-svg">
                                             <use xlink:href="images/icons/sprite.svg#like"></use>
                                           </svg>
                                         </div>
-                                        <div class="rev__dislike">
+                                        <div class="rev__dislike prRevDislike">
                                           <div class="rev__dislike-count">0</div>
                                           <svg class="rev__dislike-svg">
                                             <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -570,13 +570,13 @@
                                     <div class="rev__likes">
                                       <div class="rev__likes-title">Отзыв полезен?</div>
                                       <div class="rev__likes-list">
-                                        <div class="rev__like">
+                                        <div class="rev__like prRevLike">
                                           <div class="rev__like-count">1</div>
                                           <svg class="rev__like-svg">
                                             <use xlink:href="images/icons/sprite.svg#like"></use>
                                           </svg>
                                         </div>
-                                        <div class="rev__dislike">
+                                        <div class="rev__dislike prRevDislike">
                                           <div class="rev__dislike-count">0</div>
                                           <svg class="rev__dislike-svg">
                                             <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -641,13 +641,13 @@
                                     <div class="rev__likes">
                                       <div class="rev__likes-title">Отзыв полезен?</div>
                                       <div class="rev__likes-list">
-                                        <div class="rev__like">
+                                        <div class="rev__like prRevLike">
                                           <div class="rev__like-count">1</div>
                                           <svg class="rev__like-svg">
                                             <use xlink:href="images/icons/sprite.svg#like"></use>
                                           </svg>
                                         </div>
-                                        <div class="rev__dislike">
+                                        <div class="rev__dislike prRevDislike">
                                           <div class="rev__dislike-count">0</div>
                                           <svg class="rev__dislike-svg">
                                             <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -712,13 +712,13 @@
                                     <div class="rev__likes">
                                       <div class="rev__likes-title">Отзыв полезен?</div>
                                       <div class="rev__likes-list">
-                                        <div class="rev__like">
+                                        <div class="rev__like prRevLike">
                                           <div class="rev__like-count">1</div>
                                           <svg class="rev__like-svg">
                                             <use xlink:href="images/icons/sprite.svg#like"></use>
                                           </svg>
                                         </div>
-                                        <div class="rev__dislike">
+                                        <div class="rev__dislike prRevDislike">
                                           <div class="rev__dislike-count">0</div>
                                           <svg class="rev__dislike-svg">
                                             <use xlink:href="images/icons/sprite.svg#dislike"></use>
@@ -736,8 +736,9 @@
                             </div>
                           </div>
                           <div class="revs__right">
-                            <form class="revs__form" action="#" method="post">
-                              <div class="revs__form-wrap">
+                            <form class="revs__form feed" action="#" method="post">
+                              <div class="revs__form-wrap feed__wrap">
+                                <input type="hidden" name="action" value="feed">
                                 <div class="revs__form-title">Оставить отзыв</div>
                                 <div class="revs__form-subtitle">Все отзывы проходят модерацию, во избежания спама</div>
                                 <div class="revs__form-fields">
@@ -927,12 +928,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1053,12 +1054,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1179,12 +1180,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1305,12 +1306,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1431,12 +1432,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1557,12 +1558,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1683,12 +1684,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1809,12 +1810,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -1935,12 +1936,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -2061,12 +2062,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -2187,12 +2188,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>
@@ -2313,12 +2314,12 @@
                                             </div>
                                           </div>
                                           <div class="item__compare">
-                                            <div class="item__compare-button">
+                                            <button class="item__compare-button compareProduct" type="button">
                                                           <svg class="item__compare-svg">
                                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                                           </svg>
-                                              <div class="item__compare-title">Сравнить</div>
-                                            </div>
+                                              <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                            </button>
                                           </div>
                                         </div>
                                       </div></a>

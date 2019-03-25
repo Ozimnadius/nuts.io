@@ -60,6 +60,104 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'productRevRating':
+        echo json_encode(array(
+            'status' => true,
+            'rating' => 5
+        ));
+        exit();
+        break;
+    case 'reviewRating':
+        echo json_encode(array(
+            'status' => true,
+            'rating' => 2
+        ));
+        exit();
+        break;
+    case 'productRevLike':
+        echo json_encode(array(
+            'status' => true,
+            'value' => 5
+        ));
+        exit();
+        break;
+    case 'productRevDislike':
+        echo json_encode(array(
+            'status' => true,
+            'value' => 3
+        ));
+        exit();
+        break;
+    case 'revLike':
+        echo json_encode(array(
+            'status' => true,
+            'value' => 5
+        ));
+        exit();
+        break;
+    case 'revDislike':
+        echo json_encode(array(
+            'status' => true,
+            'value' => 3
+        ));
+        exit();
+        break;
+    case 'feed':
+        echo json_encode(array(
+            'status' => true,
+            'html' => feedSuccess()
+        ));
+        exit();
+        break;
+    case 'compare':
+        echo json_encode(array(
+            'status' => true,
+            'html' => compareLink()
+        ));
+        exit();
+        break;
+    case 'enter':
+        echo json_encode(array(
+            'status' => true,
+            'html' => enterForm()
+        ));
+        exit();
+        break;
+    case 'auth':
+        echo json_encode(array(
+            'status' => true, // Передавать false, если пользователь уже есть, пример в функции enterFormError
+            'html' => enterFormError()
+        ));
+        exit();
+        break;
+    case 'reg':
+        echo json_encode(array(
+            'status' => true,
+            'html' => regForm()
+        ));
+        exit();
+        break;
+    case 'regAjax':
+        echo json_encode(array(
+            'status' => true, // Передавать false, если пользователь уже есть, пример в функции regFormError
+            'html' => regSuccess()
+        ));
+        exit();
+        break;
+    case 'recovery':
+        echo json_encode(array(
+            'status' => true,
+            'html' => recoveryForm()
+        ));
+        exit();
+        break;
+    case 'recoveryAjax':
+        echo json_encode(array(
+            'status' => true, // Передавать false, если пользователь уже есть, пример в функции recoveryFormError
+            'html' => recoverySuccess()
+        ));
+        exit();
+        break;
     default:
         echo json_encode(array(
             'status' => false,
@@ -255,7 +353,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -335,17 +433,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +495,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -477,17 +575,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -539,7 +637,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -619,17 +717,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -681,7 +779,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -761,17 +859,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -823,7 +921,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -903,17 +1001,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -965,7 +1063,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -1045,17 +1143,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1107,7 +1205,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -1187,17 +1285,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1249,7 +1347,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -1329,17 +1427,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1391,7 +1489,7 @@ function getCatalogResult()
                                             <div class="btn__title">В корзину</div>
                                         </button>
                                     </div>
-                                    <button class="item__fast" type="button">Купить в один клик</button>
+                                    <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                 </div>
                             </div>
                         </div>
@@ -1471,17 +1569,17 @@ function getCatalogResult()
                                                     <div class="btn__title">В корзину</div>
                                                 </button>
                                             </div>
-                                            <button class="item__fast" type="button">Купить в один клик</button>
+                                            <button class="item__fast fastOrder" type="button">Купить в один клик</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item__compare">
-                                    <div class="item__compare-button">
+                                    <button type="button" class="item__compare-button compareProduct">
                                         <svg class="item__compare-svg">
                                             <use xlink:href="images/icons/sprite.svg#compare"></use>
                                         </svg>
-                                        <div class="item__compare-title">Сравнить</div>
-                                    </div>
+                                        <div class="item__compare-title compareProduct__title">Сравнить</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1589,7 +1687,8 @@ function fastOrderForm()
                 <div class="form__sub">
                     Оставте Ваш номер телефона <br>
                     и мы свяжемся с Вами для <br>
-                    подтверждения заказа</div>
+                    подтверждения заказа
+                </div>
                 <div class="form__fields">
                     <div class="form__field">
                         <input class="input" type="text" name="name" placeholder="*Ваши имя">
@@ -1719,6 +1818,383 @@ function ratingHtml()
                 </svg>
             </label>
         </div>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function feedSuccess()
+{
+    ob_start();
+    ?>
+    <div class="feed__success">
+        <button class="feed__close" type="button">
+            <svg class="feed__close-svg">
+                <use xlink:href="images/icons/sprite.svg#cancel"></use>
+            </svg>
+        </button>
+        <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+        <div class="form__title">Спасибо за покупку!</div>
+        <div class="form__sub">Мы скоро с вами свяжемся.</div>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function compareLink()
+{
+    ob_start();
+    ?>
+    <a class="compare-link" href="cabinet.html">
+        <svg class="compare-link__svg">
+            <use xlink:href="images/icons/sprite.svg#compare"></use>
+        </svg>
+        <div class="compare-link__num">10</div>
+    </a>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function enterForm()
+{
+    ob_start();
+    ?>
+    <div class="enter">
+        <form class="form enter__form form_pop" action="#" method="post">
+            <div class="form__wrap enter__wrap">
+                <div class="form__title enter__title">Вход в личный кабинет</div>
+                <div class="form__fields enter__fields">
+                    <div class="form__field">
+                        <input class="input" type="email" name="email" placeholder="*E-mail">
+                    </div>
+                    <div class="form__field">
+                        <input class="input" type="password" name="password" placeholder="*Пароль">
+                    </div>
+                    <div class="form__button">
+                        <button class="btn" type="submit">
+                            <div class="btn__title">Войти</div>
+                        </button>
+                    </div>
+                    <div class="enter__socials">
+                        <div class="enter__socials-title">Войти с помощью:</div>
+                        <div class="enter__socials-list"><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/facebook.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/vk.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/ok.svg"></a></div>
+                    </div>
+                    <div class="enter__recovery">
+                        <button class="enter__recovery-button recoveryForm" type="button">Забыли пароль?</button>
+                    </div>
+                    <button class="enter__registration regForm" type="button">
+                        <svg class="enter__registration-svg">
+                            <use xlink:href="images/icons/sprite.svg#user"></use>
+                        </svg>
+                        <div class="enter__registration-title">Регистрация нового пользователя</div>
+                    </button>
+                    <button class="form__close" type="button">
+                        <svg class="form__close-svg">
+                            <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <input type="hidden" name="action" value="auth">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function enterFormError()
+{
+    ob_start();
+    ?>
+    <div class="enter">
+        <form class="form enter__form form_pop" action="#" method="post">
+            <div class="form__wrap enter__wrap">
+                <div class="form__title enter__title">Вход в личный кабинет</div>
+                <div class="form__fields enter__fields">
+                    <div class="form__field">
+                        <input class="input" type="email" name="email" value=" <?=$_POST['email'] ?>" placeholder="*E-mail">
+                    </div>
+                    <div class="form__field">
+                        <input class="input error" type="password" name="password" value=" <?=$_POST['password'] ?>" placeholder="*Пароль">
+                        <label id="email-error" class="error" for="password">Неверный пароль</label>
+                    </div>
+                    <div class="form__button">
+                        <button class="btn" type="submit">
+                            <div class="btn__title">Войти</div>
+                        </button>
+                    </div>
+                    <div class="enter__socials">
+                        <div class="enter__socials-title">Войти с помощью:</div>
+                        <div class="enter__socials-list"><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/facebook.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/vk.svg"></a><a class="enter__social" href="/"><img class="enter__social-img" src="images/icons/ok.svg"></a></div>
+                    </div>
+                    <div class="enter__recovery">
+                        <button class="enter__recovery-button recoveryForm" type="button">Забыли пароль?</button>
+                    </div>
+                    <button class="enter__registration regForm" type="button">
+                        <svg class="enter__registration-svg">
+                            <use xlink:href="images/icons/sprite.svg#user"></use>
+                        </svg>
+                        <div class="enter__registration-title">Регистрация нового пользователя</div>
+                    </button>
+                    <button class="form__close" type="button">
+                        <svg class="form__close-svg">
+                            <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <input type="hidden" name="action" value="auth">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function regForm()
+{
+    ob_start();
+    ?>
+    <div class="reg">
+        <form class="form reg__form form_pop" action="#" method="post">
+            <div class="form__wrap reg__wrap">
+                <div class="form__title reg__title">Регистрация</div>
+                <div class="form__sub">Все поля обязательны к заполнению</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <input class="input" type="text" name="name" placeholder="*Имя">
+                    </div>
+                    <div class="form__field">
+                        <input class="input" type="email" name="email" placeholder="*E-mail">
+                    </div>
+                </div>
+                <div class="form__sub">Пароль должен быть не менее 6 символов длиной</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <input class="input" type="password" id="passwordReg" name="password" placeholder="*Пароль">
+                    </div>
+                    <div class="form__field">
+                        <input class="input" type="password" name="confirmPassword" placeholder="*Подтверждение пароля">
+                    </div>
+                </div>
+                <div class="form__button">
+                    <button class="btn" type="submit">
+                        <div class="btn__title">Регистрация</div>
+                    </button>
+                </div>
+                <div class="form__fz">
+                    <div class="fz">
+                        <label class="fz__label">
+                            <input class="fz__input" type="checkbox" name="fz" checked>
+                            <div class="fz__fake">
+                                <svg class="fz__svg">
+                                    <use xlink:href="images/icons/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="fz__title">Я даю согласие на обработку<br>персональных данных</div>
+                        </label>
+                    </div>
+                </div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+            <input type="hidden" name="action" value="regAjax">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function regSuccess(){
+    ob_start();
+    ?>
+    <div class="reg">
+        <form class="reg__form form form_pop form_suc">
+            <div class="form__wrap">
+                <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+                <div class="form__title">Спасибо за регистрацию!</div>
+                <div class="form__sub">
+                    На указанный Вами e-mail выслано письмо
+                    с подтверждением аккаунта
+                </div>
+                <div class="form__image"><img class="form__image-img" src="images/bg/formImg.png"></div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function regFormError()
+{
+    ob_start();
+    ?>
+    <div class="reg">
+        <form class="form reg__form form_pop" action="#" method="post">
+            <div class="form__wrap reg__wrap">
+                <div class="form__title reg__title">Регистрация</div>
+                <div class="form__sub">Все поля обязательны к заполнению</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <input class="input" type="text" name="name" value="<?=$_POST['name'] ?>" placeholder="*Имя">
+                    </div>
+                    <div class="form__field">
+                        <div class="form__error">E-mail уже зарегестрирован</div>
+                        <input class="input" type="email" name="email" value="<?=$_POST['email'] ?>" placeholder="*E-mail">
+                    </div>
+                </div>
+                <div class="form__sub">Пароль должен быть не менее 6 символов длиной</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <input class="input" type="password" name="password" id="passwordReg" value="<?=$_POST['password'] ?>" placeholder="*Пароль">
+                    </div>
+                    <div class="form__field">
+                        <input class="input" type="password" name="confirmPassword" value="<?=$_POST['confirmPassword'] ?>" placeholder="*Подтверждение пароля">
+                    </div>
+                </div>
+                <div class="form__button">
+                    <button class="btn" type="submit">
+                        <div class="btn__title">Регистрация</div>
+                    </button>
+                </div>
+                <div class="form__fz">
+                    <div class="fz">
+                        <label class="fz__label">
+                            <input class="fz__input" type="checkbox" name="fz" checked>
+                            <div class="fz__fake">
+                                <svg class="fz__svg">
+                                    <use xlink:href="images/icons/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="fz__title">Я даю согласие на обработку<br>персональных данных</div>
+                        </label>
+                    </div>
+                </div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+            <input type="hidden" name="action" value="regAjax">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function recoveryForm()
+{
+    ob_start();
+    ?>
+    <div class="recovery">
+        <form class="form recovery__form form_pop" action="#" method="post">
+            <div class="form__wrap recovery__wrap">
+                <div class="form__title recovery__title">Восстановление пароля</div>
+                <div class="form__sub">Введите свой e-mail и мы вышлем Вам регистрационные данные</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <input class="input" type="email" name="email" placeholder="*E-mail">
+                    </div>
+                </div>
+                <div class="form__button">
+                    <button class="btn" type="submit">
+                        <div class="btn__title">Отправить</div>
+                    </button>
+                </div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+            <input type="hidden" name="action" value="recoveryAjax">
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function recoverySuccess(){
+    ob_start();
+    ?>
+    <div class="recovery">
+        <form class="recovery__form form form_pop form_suc">
+            <div class="form__wrap">
+                <div class="form__logo"><img class="form__logo-img" src="images/bg/logo_2.svg"></div>
+                <div class="form__title">Восстановление пароля</div>
+                <div class="form__sub">
+                    На указанный Вами e-mail выслано письмо
+                    с данными для востановления
+                </div>
+                <div class="form__image"><img class="form__image-img" src="images/bg/formImg.png"></div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function recoveryFormError()
+{
+    ob_start();
+    ?>
+    <div class="recovery">
+        <form class="form recovery__form form_pop" action="#" method="post">
+            <div class="form__wrap recovery__wrap">
+                <div class="form__title recovery__title">Восстановление пароля</div>
+                <div class="form__sub">Введите свой e-mail и мы вышлем Вам регистрационные данные</div>
+                <div class="form__fields reg__fields">
+                    <div class="form__field">
+                        <div class="form__error">E-mail уже зарегестрирован</div>
+                        <input class="input" type="email" name="email" value="<?=$_POST['email'] ?>" placeholder="*E-mail">
+                    </div>
+                </div>
+                <div class="form__button">
+                    <button class="btn" type="submit">
+                        <div class="btn__title">Отправить</div>
+                    </button>
+                </div>
+                <button class="form__close" type="button">
+                    <svg class="form__close-svg">
+                        <use xlink:href="images/icons/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+            </div>
+            <input type="hidden" name="action" value="recoveryAjax">
+        </form>
     </div>
     <?
     $html = ob_get_contents();
