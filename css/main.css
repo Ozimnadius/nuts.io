@@ -5209,7 +5209,7 @@ label.error {
 
 .ccerts {
   background-color: #0c4435;
-  background-image: url("/images/bg/ifeedBg.png");
+  background-image: url("../images/bg/ifeedBg.png");
   background-repeat: repeat-x;
   background-position: 0 bottom;
   padding-top: 60px;

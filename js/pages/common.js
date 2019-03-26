@@ -186,5 +186,11 @@ $('body').on('click', '.count__down', function (e) {
 
 });
 
+$('body').on('change', '.fz__input', function (e) {
+    let $this = $(this),
+        form = $this.closest('form'),
+        submit = form.find('[type=submit]');
 
+    submit.toggleClass('disabled');
+});
 
