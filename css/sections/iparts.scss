@@ -1,6 +1,8 @@
 .iparts {
   padding-top: 150px;
   padding-bottom: 80px;
+  position: relative;
+  z-index: 20;
 
   &__left {
     @include col;

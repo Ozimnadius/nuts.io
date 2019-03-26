@@ -143,8 +143,8 @@
   &:after{
     padding-top: calc((582 / 2082) * 100%);
     content: '';
-    background: url("../images/bg/composition.png") center 0 no-repeat;
-    background-size: cover;
+    background: url("../images/bg/composition.png") right 0 no-repeat;
+    background-size: auto 100%;
     display: block;
     position: absolute;
     bottom: 0;
