@@ -139,8 +139,8 @@
     }
 
     &-svg {
-      width: rem(15px);
-      height: rem(18px);
+      width: 15px;
+      height: 18px;
       fill: $white;
       margin-right: 15px;
       transition: .3s;
@@ -169,8 +169,8 @@
     }
 
     &-svg {
-      width: rem(15px);
-      height: rem(15px);
+      width: 15px;
+      height: 15px;
       fill: $white;
       margin-right: 15px;
       transition: .3s;
@@ -254,10 +254,10 @@
     display: flex;
     align-items: center;
     &-svg {
-      width: rem(18px);
-      height: rem(13px);
+      width: 18px;
+      height: 13px;
       fill: $bg;
-      margin-right: rem(9px);
+      margin-right: 9px;
     }
     &-title {
       color: $bg;
@@ -647,8 +647,8 @@
     display: flex;
     align-items: center;
     &-svg {
-      width: rem(19px);
-      height: rem(19px);
+      width: 19px;
+      height: 19px;
       fill: $text;
       margin-right: 15px;
     }
@@ -712,10 +712,10 @@
       margin-right: 7px;
     }
     &-svg {
-      width: rem(16px);
-      height: rem(15px);
+      width: 16px;
+      height: 15px;
       fill: rgba(#333333,.3);
-      margin-bottom: rem(5px);
+      margin-bottom:5px;
       transition: .3s;
     }
   }
@@ -738,10 +738,10 @@
       margin-right: 7px;
     }
     &-svg {
-      width: rem(16px);
-      height: rem(15px);
+      width: 16px;
+      height: 15px;
       fill: rgba(#333333,.3);
-      margin-bottom: rem(-4px);
+      margin-bottom: -4px;
     }
   }
 }

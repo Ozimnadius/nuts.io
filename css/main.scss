@@ -12,9 +12,6 @@ $grey: #6b6b6b;
 $green: #105946;
 $lightGreen: #17ae5e;
 
-//another
-$font-size: 16px;
-
 
 //layout
 /*-----------------SECTION-MIXINS--------------------*/
@@ -27,6 +24,10 @@ $btnH: 54px;
 @import "layout/fonts";
 /*------------------------SECTION-SMART-GRID----------------*/
 @import "layout/smart-grid";
+
+//another
+$font-size: 16px;
+
 /*------------------------SECTION-ADJUSTMENT----------------*/
 @import "layout/adjustment";
 /*------------------------SECTION-COMMON----------------*/
@@ -77,6 +78,8 @@ $btnH: 54px;
 @import "sections/partners";
 /*-----------------SECTION-CABINET--------------------*/
 @import "sections/cabinet";
+/*-----------------SECTION-DROP--------------------*/
+@import "sections/drop";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

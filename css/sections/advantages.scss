@@ -15,7 +15,7 @@
   &__title {
     @include col;
     @include size(9);
-    line-height: rem(54px);
+    line-height: 54px;
   }
 
   &__descs{
@@ -37,7 +37,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      width: rem(82px);
+      width: 82px;
       height: 2px;
       background-color: $lightGreen;
     }
@@ -61,8 +61,8 @@
     align-items: center;
 
     &-icon {
-      width: rem(79px);
-      height: rem(79px);
+      width: 79px;
+      height: 79px;
       border: 1px solid #f27a55;
       border-radius: 50%;
       display: flex;

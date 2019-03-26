@@ -2,6 +2,10 @@
   background: url("../images/bg/ispecsBg.png") 0 0;
   padding: 60px 0 280px 0;
   position: relative;
+  @include lg-block{
+    padding-top: 40px;
+    padding-bottom: 120px;
+  };
 
   .container {
     display: flex;
@@ -11,11 +15,17 @@
 
   &__title {
     margin-bottom: 45px;
+    @include lg-block{
+      margin-bottom: 30px;
+    };
   }
 
   &__sws {
     position: relative;
     margin-bottom: 40px;
+    @include lg-block{
+      margin-bottom: 30px;
+    };
   }
 
   &__sw {
@@ -61,6 +71,11 @@
     visibility: hidden;
     opacity: 0;
     transition: .5s;
+    @include lg-block{
+      left: 65px;
+      right: 65px;
+      width: auto;
+    };
 
     &.active {
       visibility: visible;
@@ -114,6 +129,9 @@
     position: absolute;
     top: 50%;
     margin-top: -70px;
+    @include lg-block{
+      display: none;
+    };
   }
   &__prev {
     right: calc(100% + 30px);

@@ -1,0 +1,80 @@
+.drop-btn {
+  background-color: rgba($white,.1);
+  padding: 20px 20px;
+
+
+  &__svg {
+    max-width: 39px;
+    max-height: 39px;
+    fill: #eed5ba;
+  }
+}
+
+.drop {
+  display: none;
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 10px;
+  width: 495px;
+  border-radius: 4px;
+  background: $bg url("/images/bg/ispecsBg.png") 0 0;
+  padding: 20px;
+
+  &.active {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    &-svg{
+      width: 23px;
+      height: 23px;
+      fill: #0c4536;
+      opacity: 0.7;
+    }
+  }
+
+  &__cabinet {
+    margin-bottom: 40px;
+  }
+
+  &__nav {
+    border-bottom: 1px solid rgba($text,.15);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__menu {
+    border-bottom: 1px solid rgba($text,.15);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__addr {
+    margin-bottom: 15px;
+  }
+
+  &__work {
+    border-bottom: 1px solid rgba($text,.15);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__bottom {
+    .row{
+      align-items: center;
+    }
+  }
+
+  &__left,&__right {
+    @include col;
+    @include size(12);
+  }
+
+  &__email {
+    margin-top: 10px;
+  }
+}

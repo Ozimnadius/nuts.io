@@ -5,6 +5,10 @@
   padding-top: 400px;
   padding-bottom: 180px;
   background-attachment: fixed;
+  @include lg-block{
+    padding-top: 250px;
+    padding-bottom: 80px;
+  };
 
   .container{
     display: flex;
@@ -19,6 +23,9 @@
     text-align: center;
     line-height: lh(64,68);
     margin-bottom: 20px;
+    @include lg-block{
+      font-size: 40px;
+    };
   }
 
   &__sub {
@@ -26,6 +33,9 @@
     font-size: 26px;
     text-align: center;
     margin-bottom: 80px;
+    @include lg-block{
+      font-size: 20px;
+    };
   }
 
   &__buttons {

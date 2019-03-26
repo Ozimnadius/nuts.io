@@ -15,6 +15,9 @@
 
   &__top {
     background: $bg;
+    @include lg-block{
+      display: none;
+    };
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -26,6 +29,9 @@
   &__middle {
     background-color: $text;
     padding: 20px 0;
+    @include lg-block {
+      padding: 0;
+    };
 
     .row  {
       align-items: center;
@@ -35,11 +41,15 @@
   &__logo {
     @include col;
     @include size(4);
+    @include size-lg(4.5);
   }
 
   &__title {
     @include col;
     @include size(6);
+    @include lg-block{
+      display: none;
+    };
 
     color: rgba($white,.6);
   }
@@ -47,18 +57,30 @@
   &__contacts {
     @include col;
     @include size(5);
+    @include size-lg(6);
   }
 
   &__call{
     @include col;
     @include size(4);
+    @include size-lg(6);
   }
 
   &__basket {
     @include col;
     @include size(5);
+    @include size-lg(4.5);
     display: flex;
     align-items: center;
+  }
+
+  &__drop-btn {
+    display: none;
+    @include lg-block{
+      display: block;
+    };
+    @include col;
+    @include size-lg(3);
   }
 
   &__bottom {
@@ -74,16 +96,27 @@
     }
   }
 
+  &__drop {
+    position: relative;
+  }
+
 }
 
 .nav {
   display: flex;
+  @include lg-block {
+    flex-direction: column;
+    align-items: flex-start;
+  };
 
   &__item {
     margin-right: 50px;
     padding: 15px 0;
     position: relative;
     cursor: pointer;
+    @include lg-block{
+      padding: 7px 0;
+    };
 
     &:hover {
       .nav__sub {
@@ -92,6 +125,9 @@
       .nav__link{
         &:before {
           opacity: 0.2;
+          @include lg-block{
+            opacity: 0;
+          };
         }
       }
     }
@@ -103,6 +139,10 @@
     align-items: center;
     transition: .3s;
     position: relative;
+    font-size: 16px;
+    @include lg-block{
+      color: $text;
+    };
 
 
     &:before {
@@ -138,6 +178,10 @@
     z-index: 20;
     left: -3000px;
     top: calc(100% + 7px);
+    @include lg-block {
+      position: static;
+      display: none;
+    };
     &:before {
       content: '';
       display: block;
@@ -146,6 +190,9 @@
       left: 0;
       right: 0;
       height: 30px;
+      @include lg-block{
+        display: none;
+      };
     }
   }
 
@@ -158,6 +205,12 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  @include lg-block{
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    padding-left: 40px;
+  };
 
   &__item {
     color: rgba($text,.8);
@@ -165,10 +218,15 @@
     border-radius: 4px;
     background-color: transparent;
     transition: .3s;
+    font-size: 16px;
 
     &:hover {
       color: $orange;
       background-color: #eed5ba;
+      @include lg-block{
+        color: rgba($text,.8);
+        background-color: transparent;
+      };
     }
   }
 }
@@ -177,9 +235,26 @@
   display: flex;
   align-items: center;
 
+  &_green {
+    .cabinet-link {
+
+      &__svg {
+        fill: $text;
+      }
+
+      &__title {
+        color: $text;
+
+        &:after {
+          background: url("../images/bg/line3.png") 0 0;
+        }
+      }
+    }
+  }
+
   &__svg {
-    width: rem(19px);
-    height: rem(19px);
+    width: 19px;
+    height: 19px;
     fill: $orange;
     margin-right: 9px;
   }
@@ -187,6 +262,7 @@
   &__title {
     color: $orange;
     position: relative;
+    font-size: 16px;
 
     &:after {
       content: '';
@@ -209,7 +285,6 @@
   }
 }
 
-
 .call-btn {
   color: $white;
   border-radius: 4px;
@@ -218,6 +293,11 @@
   margin-bottom: 10px;
   transition: .3s;
   cursor: pointer;
+  @include lg-block{
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 14px;
+  };
   &:hover {
     border: 1px solid rgba($orange,1);
     color: $orange;
@@ -228,11 +308,14 @@
   opacity: 0.6;
   color: rgba($white,.6);
   font-size: 14px;
+  @include lg-block {
+    display: none;
+  };
 }
 
 .compare-link {
-  width: rem(50px);
-  height: rem(50px);
+  width: 50px;
+  height: 50px;
   border: 1px solid rgba($white,.5);
   border-radius: 50%;
   padding: 12px;
@@ -307,10 +390,13 @@
     margin-right: 15px;
     position: relative;
     transition: .3s;
+    @include lg-block{
+      margin-right: 0;
+    };
 
     &-wrap {
-      width: rem(44px);
-      height: rem(44px);
+      width: 44px;
+      height: 44px;
       background-color: $orange;
       border-radius: 50%;
       padding: 10px;
@@ -327,6 +413,9 @@
   &__price {
     display: flex;
     align-items: center;
+    @include lg-block{
+      display: none;
+    };
 
     &-type {
       width: 11px;
@@ -338,7 +427,7 @@
 
     &-num {
       color: $white;
-      font-size: rem(18px);
+      font-size: 18px;
       font-weight: 500;
       transition: .3s;
     }
@@ -350,12 +439,44 @@
   display: flex;
   align-items: center;
 
+  &_drop{
+    .menu{
+      &__item {
+        flex-direction: column;
+        margin-right: 0;
+        padding-right: 0;
+        flex-grow: 1;
+
+        &:after {
+          background: rgba($text,.15);
+          top: 6px;
+          bottom: 6px;
+        }
+      }
+
+      &__svg {
+        fill: $orange;
+        margin-bottom: 7px;
+      }
+      
+      &__title {
+        color: $orange;
+      }
+    }
+  }
+
   &__item {
     margin-right: 50px;
     padding-right: 50px;
     display: flex;
     align-items: center;
     position: relative;
+    @include lg-block{
+      margin-right: 30px;
+      padding-right: 30px;
+    };
+
+
     &:hover,&.active {
       .menu__svg{
         fill: $orange;
@@ -386,8 +507,8 @@
   }
 
   &__svg {
-    width: rem(25px);
-    height: rem(25px);
+    width: 25px;
+    height: 25px;
     margin-right: 5px;
     fill: $bg;
     transition: .3s;
@@ -424,8 +545,8 @@
     }
 
     &-svg {
-      width: rem(18px);
-      height: rem(18px);
+      width: 18px;
+      height: 18px;
       fill: rgba($white,.3);
       transition: .3s;
     }
@@ -441,6 +562,9 @@
     padding-right: 40px;
     border: 1px solid transparent;
     transition: .3s;
+    @include lg-block{
+      width: 217px;
+    };
 
 
     &::placeholder {
@@ -453,8 +577,8 @@
   }
 
   &__submit {
-    width: rem(39px);
-    height: rem(39px);
+    width: 39px;
+    height: 39px;
     border-radius: 3px;
     border: 1px solid rgba($white,.5);
     transition: .3s;
@@ -487,6 +611,10 @@
     border-radius: 6px;
     background-color: $white;
     padding: 3px 5px 3px 20px;
+    @include lg-block {
+      width: 270px;
+      padding-left: 10px;
+    };
 
     &.active {
       display: block;

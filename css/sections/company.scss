@@ -66,7 +66,7 @@
       font-size: 110px;
       font-weight: 700;
       position: relative;
-      left: rem(-28px);
+      left: -28px;
       line-height: 1;
     }
 
@@ -82,7 +82,7 @@
         top: 100%;
         left: 0;
         height: 2px;
-        width: rem(82px);
+        width: 82px;
         background-color: $lightGreen;
       }
     }
@@ -124,15 +124,15 @@
     }
 
     &-svg {
-      width: rem(22px);
-      height: rem(19px);
+      width: 22px;
+      height: 19px;
       fill: $green;
-      margin-right: rem(10px);
+      margin-right: 10px;
       transition: .3s;
     }
 
     &-title {
-      font-size: rem(18px);
+      font-size: 18px;
       font-weight: 500;
       color: $green;
       transition: .3s;
@@ -183,13 +183,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: rem(-55px);
-    margin-left: rem(-55px);
-    width: rem(110px);
-    height: rem(110px);
+    margin-top: -55px;
+    margin-left: -55px;
+    width: 110px;
+    height: 110px;
     border: 1px solid $white;
     border-radius: 50%;
-    padding: rem(4px);
+    padding: 4px;
     transition: .3s;
 
 
@@ -209,13 +209,13 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: rem(11.5px) 0 rem(11.5px) rem(20px);
+      border-width: 11.5px 0 11.5px 20px;
       border-color: transparent transparent transparent $orange;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: rem(-10px);
-      margin-top: rem(-11.5px);
+      margin-left: -10px;
+      margin-top: -11.5px;
     }
   }
 }

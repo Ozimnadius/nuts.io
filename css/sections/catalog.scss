@@ -85,7 +85,7 @@
 
     &-title {
       color: $orange;
-      font-size: rem(18px);
+      font-size: 18px;
       font-weight: 500;
       position: relative;
 
@@ -147,7 +147,7 @@
   padding: 20px;
 
   &__title {
-    font-size: rem(18px);
+    font-size: 18px;
     font-weight: 500;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba($text,.3);
@@ -167,8 +167,8 @@
     &:after{
       display: none;
       content: '';
-      width: rem(8px);
-      height: rem(8px);
+      width: 8px;
+      height: 8px;
       background-color: $orange;
       border-radius: 50%;
     }
@@ -284,7 +284,7 @@
     justify-content: center;
     margin-right: 20px;
     color: $text;
-    font-size: rem(18px);
+    font-size: 18px;
     font-weight: 500;
     transition: .3s;
 
