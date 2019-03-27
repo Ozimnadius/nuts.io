@@ -46,4 +46,10 @@ $(function () {
         });
     }
 
+    if ($(window).width() < 1200) {
+        $('.cats__title').on('click', function (e) {
+            $('.cats__list').slideToggle(300);
+        });
+    }
+
 });

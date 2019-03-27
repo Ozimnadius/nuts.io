@@ -35,10 +35,11 @@ block content
 
                         a(href='#' download=true).catalog__download
                             .catalog__download-wrap
-                                .catalog_-download-img
+                                .catalog__download-img
                                     img(src='images/content/catalog/download.png').catalog__download-pic
-                                +icon('download', 'catalog__download-svg')
-                                .catalog__download-title Скачать прайс-лист
+                                .catalog__download-bottom
+                                    +icon('download', 'catalog__download-svg')
+                                    .catalog__download-title Скачать прайс-лист
 
 
 
@@ -49,26 +50,39 @@ block content
                     .catalog__right
                         form(action='#' method='post').catalog__main
                             input(type='hidden' name='action' value='catalogAjax')
-                            //- controls
-                            .catalog__controls
-                                //- select
-                                .catalog__select
-                                    .catalog__select-title Показать:
-                                    .catalog__select-select
-                                        select(data-placeholder='Выберите вариант').select
-                                            option(selected=true)
-                                            option(value='Все') Все
-                                            option(value='Вариант1') Вариант1
-                                            option(value='Вариант2') Вариант2
-                                            option(value='Вариант3') Вариант3
-                                //- types
-                                .catalog__types
-                                    .types
-                                        input(type='hidden' name='type' value='tile')
-                                        button(type='button' data-type='tile').type.active
-                                            +icon('tile','type__svg')
-                                        button(type='button' data-type='list').type
-                                            +icon('list','type__svg')
+
+                            .row
+                                //cats
+                                .catalog__cats.catalog__cats_lg
+                                    .cats
+                                        .cats__title
+                                            .cats__title-title Категории
+                                            +icon('filter', 'cats__title-svg')
+                                        .cats__list
+                                            a(href='catalog.html').cats__item.active Орехи
+                                            a(href='catalog.html').cats__item Сухофрукты
+                                            a(href='catalog.html').cats__item Глазурь
+
+                                //- controls
+                                .catalog__controls
+                                    //- select
+                                    .catalog__select
+                                        .catalog__select-title Показать:
+                                        .catalog__select-select
+                                            select(data-placeholder='Выберите вариант').select
+                                                option(selected=true)
+                                                option(value='Все') Все
+                                                option(value='Вариант1') Вариант1
+                                                option(value='Вариант2') Вариант2
+                                                option(value='Вариант3') Вариант3
+                                    //- types
+                                    .catalog__types
+                                        .types
+                                            input(type='hidden' name='type' value='tile')
+                                            button(type='button' data-type='tile').type.active
+                                                +icon('tile','type__svg')
+                                            button(type='button' data-type='list').type
+                                                +icon('list','type__svg')
 
 
 

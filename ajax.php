@@ -297,32 +297,46 @@ function getCatalogResult()
     ?>
     <form class="catalog__main" action="#" method="post">
         <input type="hidden" name="action" value="catalogAjax">
-        <div class="catalog__controls">
-            <div class="catalog__select">
-                <div class="catalog__select-title">Показать:</div>
-                <div class="catalog__select-select">
-                    <select class="select" data-placeholder="Выберите вариант">
-                        <option></option>
-                        <option value="Все">Все</option>
-                        <option value="Вариант1">Вариант1</option>
-                        <option value="Вариант2" selected>Вариант2</option>
-                        <option value="Вариант3">Вариант3</option>
-                    </select>
+        <div class="row">
+            <!--cats-->
+            <div class="catalog__cats catalog__cats_lg">
+                <div class="cats">
+                    <div class="cats__title">
+                        <div class="cats__title-title">Категории</div>
+                        <svg class="cats__title-svg">
+                            <use xlink:href="images/icons/sprite.svg#filter"></use>
+                        </svg>
+                    </div>
+                    <div class="cats__list"><a class="cats__item active" href="catalog.html">Орехи</a><a class="cats__item" href="catalog.html">Сухофрукты</a><a class="cats__item" href="catalog.html">Глазурь</a></div>
                 </div>
             </div>
-            <div class="catalog__types">
-                <div class="types">
-                    <input type="hidden" name="type" value="list">
-                    <button class="type" type="button" data-type="tile">
-                        <svg class="type__svg">
-                            <use xlink:href="images/icons/sprite.svg#tile"></use>
-                        </svg>
-                    </button>
-                    <button class="type  active" type="button" data-type="list">
-                        <svg class="type__svg">
-                            <use xlink:href="images/icons/sprite.svg#list"></use>
-                        </svg>
-                    </button>
+            <div class="catalog__controls">
+                <div class="catalog__select">
+                    <div class="catalog__select-title">Показать:</div>
+                    <div class="catalog__select-select">
+                        <select class="select" data-placeholder="Выберите вариант">
+                            <option selected></option>
+                            <option value="Все">Все</option>
+                            <option value="Вариант1">Вариант1</option>
+                            <option value="Вариант2">Вариант2</option>
+                            <option value="Вариант3">Вариант3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="catalog__types">
+                    <div class="types">
+                        <input type="hidden" name="type" value="tile">
+                        <button class="type" type="button" data-type="tile">
+                            <svg class="type__svg">
+                                <use xlink:href="images/icons/sprite.svg#tile"></use>
+                            </svg>
+                        </button>
+                        <button class="type active" type="button" data-type="list">
+                            <svg class="type__svg">
+                                <use xlink:href="images/icons/sprite.svg#list"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

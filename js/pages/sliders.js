@@ -45,6 +45,16 @@ $(function () {
         navigation: {
             nextEl: '.recently__next .arrow',
             prevEl: '.recently__prev .arrow',
+        },
+        breakpoints: {
+            1199.99: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.recently__pag',
+                    clickable: true
+                },
+            }
         }
     });
 

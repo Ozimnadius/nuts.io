@@ -56,6 +56,18 @@
     .item__compare {
       height: 53px;
     }
+
+    @include lg-block{
+
+      .item__desc {
+        top: -1000px;
+      }
+
+      .item__compare {
+        height: 0;
+      }
+    };
+
   }
 
   &.list {
