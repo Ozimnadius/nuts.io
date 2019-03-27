@@ -99,6 +99,7 @@
   &__svg{
     margin-top: 5px;
     width: 17px;
+    min-width: 17px;
     height: 17px;
     fill: $bg;
     margin-right: 10px;
@@ -114,6 +115,10 @@
 
   &_drop {
     .work {
+
+      &__list {
+        display: block;
+      }
 
       &__item {
         margin-bottom: 5px;
@@ -134,12 +139,21 @@
     }
   }
 
+  &__list {
+    @include lg-block{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    };
+  }
+
   &__item {
 
   }
 
   &__svg{
     width: 19px;
+    min-width: 19px;
     height: 19px;
     fill: $bg;
     margin-right: 10px;

@@ -124,7 +124,7 @@ html(lang="ru")
                         .header__menu
                             .menu
                                 each i,x in menu
-                                    a(href=i.link class=x==1?'active':'').menu__item
+                                    a(href=i.link class=x == 1 ? 'active' : '').menu__item
                                         +icon(i.svg,'menu__svg')
                                         .menu__title= i.title
 
@@ -277,7 +277,7 @@ html(lang="ru")
                                     +image('bg/logo_2.svg', 'Вкусита', 'logo')
 
                                 //- title
-                                .footer__title
+                                .footer__tit
                                     | Оптово - розничный интернет
                                     br
                                     | магазин орехов и сухофруктов
@@ -314,6 +314,56 @@ html(lang="ru")
 
                             //- middle
                             .footer__middle
+                                .footer__middle-lg
+                                    .footer__middle-8
+                                        //- contacts
+                                        .footer__tels.footer__tels_lg
+                                            .tels
+                                                .tel
+                                                    .tel__icon
+                                                        +icon('phone', 'tel__svg')
+                                                    a(href='+7(495)797-38-66').tel__link
+                                                        | +7 (495)&nbsp;
+                                                        span.tel__link_bold
+                                                            | 797-38-66
+                                                .tel
+                                                    .tel__icon
+                                                        +icon('phone', 'tel__svg')
+                                                    a(href='+7(926)180-32-98').tel__link
+                                                        | +7 (926)&nbsp;
+                                                        span.tel__link_bold
+                                                            | 180-32-98
+
+                                        //- email
+                                        .footer__email.footer__email_lg
+                                            email
+                                                +icon('mail', 'email__svg')
+                                                a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
+
+
+                                    .footer__middle-16
+                                        //- addr
+                                        .footer__addr
+                                            .addr
+                                                +icon('pin', 'addr__svg')
+                                                a(href='./' target='_blank').addr__link г. Москва, Нижегородская улица, д. 29-33
+
+                                        //- time
+                                        .footer__work
+                                            .work
+                                                +icon('clock', 'work__svg')
+                                                .work__list
+                                                    .work__item
+                                                        .work__time
+                                                            | пн-пт:&nbsp
+                                                            span.work__time_time
+                                                                | с 09:00 до 18:00
+                                                    .work__item
+                                                        .work__time
+                                                            | сб-вс:&nbsp;
+                                                            span.work__time_time
+                                                                | выходной
+
                                 .row
                                     each col in footerMenu
                                         .footer__col

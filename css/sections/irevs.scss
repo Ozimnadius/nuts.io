@@ -2,15 +2,21 @@
   background: url("../images/bg/irevsBg.jpg") 0 bottom no-repeat;
   padding-top: 60px;
   padding-bottom: 80px;
+  @include lg-block{
+    background-size: 70%;
+    background-position: -80px bottom;
+  };
 
   &__left {
     @include col;
     @include size(6);
+    @include size-lg(9);
   }
 
   &__right {
     @include col;
     @include size(18);
+    @include size-lg(15);
   }
 
   &__title {

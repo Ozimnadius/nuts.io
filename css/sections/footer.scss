@@ -4,11 +4,20 @@
   &__top {
     padding: 60px 0;
     border-bottom: 1px solid rgba($white,.5);
+    @include lg-block{
+      padding: 40px 0;
+    };
+
   }
 
   &__left {
     @include col;
     @include size(7);
+    @include size-lg(24);
+    @include lg-block{
+      display: flex;
+      align-items: center;
+    };
   }
 
   &__middle{
@@ -16,36 +25,94 @@
     @include size(11);
     @include shift-right(0.5);
     padding-top: 25px;
+    @include size-lg(24);
+    @include shift-lg-right(0);
+
+    &-lg {
+      display: none;
+      @include lg-block{
+        @include row-flex;
+      };
+    }
+    &-8{
+      @include col;
+      @include size(8);
+    }
+    &-16{
+      @include col;
+      @include size(16);
+      padding-left: 25px;
+      padding-right: 50px;
+    }
   }
 
   &__right{
     @include col;
     @include size(5.5);
     padding-top: 25px;
+    @include lg-block{
+      display: none;
+    };
   }
 
   &__logo {
     display: block;
     max-width: 177px;
     margin-bottom: 15px;
+    @include lg-block{
+      margin-bottom: 0;
+      margin-right: 28px;
+    };
   }
 
-  &__title {
+  &__tit {
     color: rgba($white,.6);
     margin-bottom: 30px;
+    @include lg-block{
+      margin-bottom: 0;
+    };
 
-    &:hover {
-      text-decoration: underline;
-    }
+
   }
 
   &__tels {
     margin-bottom: 30px;
+    @include lg-block{
+      display: none;
+      .tel {
+        font-size: 18px;
+        margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    };
+
+    &_lg {
+      @include lg-block{
+        display: block;
+        margin-bottom: 10px;
+      };
+    }
+  }
+
+  &__email {
+    @include lg-block{
+      display: none;
+    };
+    &_lg {
+      @include lg-block{
+        display: block;
+      };
+    }
   }
 
   &__col {
     @include col;
     @include size(8);
+    @include lg-block{
+      display: none;
+    };
   }
 
   &__title {
@@ -53,6 +120,9 @@
     font-weight: 700;
     margin-bottom: 30px;
     display: block;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__item {
@@ -71,10 +141,16 @@
 
   &__addr {
     margin-bottom: 30px;
+    @include lg-block{
+      margin-bottom: 15px;
+    };
   }
 
   &__bottom {
     padding: 30px 0;
+    @include lg-block{
+      padding: 20px 0;
+    };
 
     .container{
       position: relative;
@@ -83,6 +159,9 @@
 
   &__copy {
     text-align: center;
+    @include lg-block{
+      text-align: left;
+    };
   }
 
   &__vendor {

@@ -3,31 +3,69 @@
   padding-bottom: 80px;
   position: relative;
   z-index: 20;
+  @include lg-block{
+    padding-top: 80px;
+    padding-bottom: 60px;
+  };
 
   &__left {
     @include col;
     @include size(12);
+    @include size-lg(24);
+    @include lg-block{
+      text-align: center;
+    };
   }
 
   &__right {
     @include col;
     @include size(12);
     padding-top: 30px;
+    @include size-lg(18);
+    @include shift-lg(3);
+    @include lg-block {
+      margin-bottom: 30px;
+    };
+  }
+
+  &__bottom {
+    @include col;
+    @include size(24);
+    display: flex;
+    justify-content: center;
   }
 
   &__title {
     margin-bottom: 20px;
+    &.title{
+      @include lg-block{
+        text-align: center;
+      };
+    }
   }
 
   &__desc {
     color: rgba($green,.8);
     padding-right: 50px;
     margin-bottom: 35px;
+    @include lg-block{
+      padding-right: 0;
+    };
   }
 
   &__button {
     width: 299px;
     height: 54px;
+    @include lg-block{
+      display: none;
+    };
+
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: block;
+      };
+    }
   }
 
   &__list {
