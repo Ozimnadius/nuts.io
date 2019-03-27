@@ -75,23 +75,25 @@ block content
                                         .revs__form-title Оставить отзыв
                                         .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
                                         .revs__form-fields
-                                            .revs__form-field
-                                                input(type='text' name='name' placeholder='Ваши имя').input
-                                            .revs__form-field
-                                                input(type='email' name='email' placeholder='E-mail').input
-                                            .revs__form-field
-                                                textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
-                                        .revs__form-rating
-                                            .rating.rating_green
-                                                .rating__title Ваша оценка
-                                                .rating__wrapper
-                                                    each i in [5,4,3,2,1]
-                                                        input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
-                                                        label(for='form-rating-' + i).rating__star
-                                                            +icon('star', 'rating__star-svg')
-                                        .revs__form-button
-                                            button(type='submit').btn
-                                                .btn__title Отправить
+                                            .row
+                                                .revs__form-field
+                                                    input(type='text' name='name' placeholder='Ваши имя').input
+                                                .revs__form-field
+                                                    input(type='email' name='email' placeholder='E-mail').input
+                                                .revs__form-field.revs__form-field_2
+                                                    textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
+                                        .revs__form-block
+                                            .revs__form-rating
+                                                .rating.rating_green
+                                                    .rating__title Ваша оценка
+                                                    .rating__wrapper
+                                                        each i in [5,4,3,2,1]
+                                                            input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
+                                                            label(for='form-rating-' + i).rating__star
+                                                                +icon('star', 'rating__star-svg')
+                                            .revs__form-button
+                                                button(type='submit').btn
+                                                    .btn__title Отправить
 
 
 

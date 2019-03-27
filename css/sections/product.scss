@@ -5,6 +5,11 @@
     background-size: cover;
     padding-top: 290px;
     padding-bottom: 50px;
+    @include lg-block{
+      padding-top: 170px;
+      background-position: 0 0px;
+      padding-bottom: 30px;
+    };
   }
 
   &__bread {
@@ -18,6 +23,15 @@
 
   &__left {
     padding-right: 60px;
+    @include size-lg(8);
+    @include lg-block{
+      padding-right: 0;
+    };
+
+  }
+
+  &__right {
+    @include size-lg(16);
   }
 
   &__title {
@@ -25,6 +39,16 @@
     font-family: "PT Serif";
     font-size: 36px;
     margin-bottom: 20px;
+    @include lg-block{
+      display: none;
+    };
+
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: block;
+      };
+    }
   }
 
   &__sub {
@@ -34,6 +58,11 @@
     padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: 1px solid rgba($white,.2);
+    @include lg-block{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: initial;
+    };
   }
 
   &__code {
@@ -41,14 +70,36 @@
     color: rgba($white,.6);
   }
 
+  &__rating {
+    @include lg-block{
+      display: none;
+    };
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: block;
+        margin-bottom: 30px;
+      };
+    }
+  }
+
   &__pricing {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 20px;
+    @include lg-block{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: initial;
+    };
   }
 
   &__price {
+    @include lg-block{
+      width: 100%;
+      margin-bottom: 25px;
+    };
 
     &-title {
       color: rgba($white,.6);
@@ -58,6 +109,10 @@
     &-block {
       display: flex;
       align-items: flex-end;
+      @include lg-block{
+        width: 100%;
+        justify-content: space-between;
+      };
     }
 
     &-item {
@@ -87,6 +142,17 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    @include lg-block{
+      display: none;
+    };
+
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: flex;
+        width: 100%;
+      };
+    }
 
     &-title {
       max-width: 252px;
@@ -103,14 +169,34 @@
     padding-top: 30px;
     border-top: 1px solid rgba($white,.2);
     margin-bottom: 30px;
+    @include lg-block{
+      padding-top: 10px;
+      margin-bottom: 0;
+    };
 
    &-button,&-download {
      @include col;
      @include size(12);
+     margin-bottom: 30px;
+     @include size-lg(24);
+     @include lg-block{
+       margin-bottom: 25px;
+     };
    }
     &-button {
       @include size(11);
       @include shift-right(1);
+      @include size-lg(24);
+      @include shift-lg-right(0);
+      @include lg-block{
+        order: 3;
+      };
+    }
+    &-download{
+      @include lg-block{
+        order: 1;
+        margin-bottom: 10px;
+      };
     }
   }
 
@@ -121,11 +207,18 @@
   &__one,&__compare {
     @include col;
     @include size(12);
+    @include size-lg(24);
+    @include lg-block{
+      margin-bottom: 25px;
+    };
   }
 
   &__one {
     display: flex;
     align-items: center;
+    @include lg-block{
+      order: 4;
+    };
 
     &:hover {
       .pr__one{
@@ -156,6 +249,9 @@
   &__compare {
     display: flex;
     align-items: center;
+    @include lg-block{
+      order: 2;
+    };
 
     &:hover {
       .pr__compare{
@@ -186,6 +282,9 @@
     @include col;
     @include size(16);
     position: relative;
+    @include size-lg(12);
+    @include shift-lg-right(1);
+    @include shift-lg-left(3);
 
     &-wrap {
       position: absolute;
@@ -214,6 +313,12 @@
     z-index: 20;
     top: -20px;
     left: 0;
+    @include lg-block{
+      width: 77px;
+      height: 76px;
+      top: 0;
+      left: -20px;
+    };
 
     &-wrap {
       border: 1px solid $white;
@@ -262,6 +367,17 @@
     &-title {
       color: $bg;
     }
+    @include lg-block{
+      display: none;
+    };
+
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: flex;
+        margin-bottom: 15px;
+      };
+    }
   }
 
   &__img {
@@ -273,6 +389,11 @@
     border-radius: 50%;
     padding: 23px;
     margin-bottom: 30px;
+    @include lg-block{
+      width: 78px;
+      height: 78px;
+      margin-bottom: 23px;
+    };
 
     &.active {
       background: rgba($white,.1);
@@ -285,7 +406,6 @@
       max-height: 100%;
     }
   }
-
 
   &__desc {
     background: url("../images/bg/ispecsBg.png") 0 0;
@@ -436,6 +556,12 @@
     }
   }
 
+  &__recently {
+    @include lg-block{
+      display: none;
+    };
+  }
+
 }
 
 .rating {
@@ -560,11 +686,16 @@
   &__left{
     @include col;
     @include size(16);
+    @include size-lg(24);
+    @include lg-block{
+      margin-bottom: 40px;
+    };
   }
 
   &__right {
     @include col;
     @include size(8);
+    @include size-lg(24);
   }
 
   &__item {
@@ -612,15 +743,36 @@
       &:last-child {
         margin-bottom: 0;
       }
+      @include col;
+      @include size(24);
+      @include size-lg(12);
+      &_2{
+        @include size-lg(24);
+      }
+    }
+
+    &-block {
+      @include lg-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      };
     }
 
     &-rating {
       display: flex;
       justify-content: center;
       margin-bottom: 30px;
+      @include lg-block{
+        margin-bottom: 0;
+        order: 1;
+      };
     }
 
     &-button {
+      @include lg-block{
+        width: 323px;
+      };
       .btn {
         width: 100%;
       }

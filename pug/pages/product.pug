@@ -20,6 +20,8 @@ block content
                         span.bread__item
                             .bread__item-title Бразильский орех
 
+                //- title
+                .pr__title.pr__title_lg Бразильский орех очищенный
                 .row
                     //- left
                     .pr__left
@@ -29,6 +31,9 @@ block content
                         form(action='#' method='post').pr__form
                             //- sub
                             .pr__sub
+                                .pr__av.pr__av_lg
+                                    +icon('check', 'pr__av-svg')
+                                    .pr__av-title Есть на складе
                                 .pr__code Код товара: 100009
                                 .pr__rating
                                     .rating
@@ -79,9 +84,6 @@ block content
                                             .btn2__title Скачать прайс-лист
 
 
-                            //- controls
-                            .pr__controls
-                                .row
                                     button(type='button').pr__one.fastOrder
                                         +icon('one', 'pr__one-svg')
                                         .pr__one-title Купить в один клик
@@ -103,6 +105,15 @@ block content
 
                             .pr__imgs
                                 .pr__imgs-av
+                                    .pr__rating.pr__rating_lg
+                                        .rating
+                                            .rating__wrapper
+                                                each i in [5,4,3,2,1]
+                                                    input(type='radio' name='rating' value=i id='rating-' + i checked=i == 3 ? true : false).rating__input
+                                                    label(for='rating-' + i).rating__star
+                                                        +icon('star', 'rating__star-svg')
+
+
                                     .pr__av
                                         +icon('check', 'pr__av-svg')
                                         .pr__av-title Есть на складе
@@ -110,6 +121,11 @@ block content
                                     each i in [0,1,2]
                                         button(type='button' class= i == 0 ? 'active' : '').pr__img
                                             img(src='images/content/products/' + i + '.png').pr__img-img
+
+                            .pr__explore.pr__explore_lg
+                                .pr__explore-title *На крупный опт от 100 кг, цена уточняется у менеджера
+                                button(type='button').pr__explore-button.callorderOpen
+                                    .button.button_pr Узнать цену
 
         //- tabs
         section.pr__desc
@@ -249,23 +265,25 @@ block content
                                                     .revs__form-title Оставить отзыв
                                                     .revs__form-subtitle Все отзывы проходят модерацию, во избежания спама
                                                     .revs__form-fields
-                                                        .revs__form-field
-                                                            input(type='text' name='name' placeholder='Ваши имя').input
-                                                        .revs__form-field
-                                                            input(type='email' name='email' placeholder='E-mail').input
-                                                        .revs__form-field
-                                                            textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
-                                                    .revs__form-rating
-                                                        .rating.rating_green
-                                                            .rating__title Ваша оценка
-                                                            .rating__wrapper
-                                                                each i in [5,4,3,2,1]
-                                                                    input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
-                                                                    label(for='form-rating-' + i).rating__star
-                                                                        +icon('star', 'rating__star-svg')
-                                                    .revs__form-button
-                                                        button(type='submit').btn
-                                                            .btn__title Отправить
+                                                        .row
+                                                            .revs__form-field
+                                                                input(type='text' name='name' placeholder='Ваши имя').input
+                                                            .revs__form-field
+                                                                input(type='email' name='email' placeholder='E-mail').input
+                                                            .revs__form-field.revs__form-field_2
+                                                                textarea(name='comment' placeholder='Добавьте комментарий...').input.input_area
+                                                    .revs__form-block
+                                                        .revs__form-rating
+                                                            .rating.rating_green
+                                                                .rating__title Ваша оценка
+                                                                .rating__wrapper
+                                                                    each i in [5,4,3,2,1]
+                                                                        input(type='radio' name='rating' value=i id='form-rating-' + i).rating__input
+                                                                        label(for='form-rating-' + i).rating__star
+                                                                            +icon('star', 'rating__star-svg')
+                                                        .revs__form-button
+                                                            button(type='submit').btn
+                                                                .btn__title Отправить
 
 
 
