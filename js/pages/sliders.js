@@ -79,6 +79,11 @@ $(function () {
             draggable: true
         },
         mousewheel: {},
+        breakpoints: {
+            1199.99: {
+                slidesPerView: 2
+            }
+        }
     });
 
     $('.ccerts__slider').slick({

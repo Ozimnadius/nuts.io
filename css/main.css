@@ -6982,6 +6982,13 @@ label.error {
   padding-bottom: 110px;
 }
 
+@media screen and (max-width: 1199.9px) {
+  .cab {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+
 .cab__bread {
   margin-bottom: 20px;
 }
@@ -6993,6 +7000,12 @@ label.error {
 .cab__sws {
   position: relative;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .cab__sws {
+    margin-bottom: 30px;
+  }
 }
 
 .cab__sws-list {
@@ -7175,6 +7188,12 @@ label.error {
   color: rgba(16, 89, 70, 0.8);
 }
 
+@media screen and (max-width: 1199.9px) {
+  .compare__item-text {
+    text-align: center;
+  }
+}
+
 .compare__item-weight {
   color: #105946;
 }
@@ -7287,6 +7306,18 @@ label.error {
   padding: 60px 10px;
 }
 
+@media screen and (max-width: 1199.9px) {
+  .pers__left {
+    width: calc(29.16667% - 20px);
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pers__left {
+    padding: 40px 10px;
+  }
+}
+
 .pers__right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7297,6 +7328,18 @@ label.error {
   margin-right: calc(8.33333% + 10px);
   padding-top: 80px;
   padding-bottom: 60px;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pers__right {
+    margin-right: calc(4.16667% + 10px);
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pers__right {
+    padding: 40px 0;
+  }
 }
 
 .pers__logo {
@@ -7351,6 +7394,12 @@ label.error {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1199.9px) {
+  .pers__field {
+    width: calc(100% - 20px);
+  }
+}
+
 .pers__field_2 {
   width: calc(100% - 20px);
 }
@@ -7381,6 +7430,13 @@ label.error {
   padding-bottom: 50px;
 }
 
+@media screen and (max-width: 1199.9px) {
+  .pass__wrap {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+}
+
 .pass__fields {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7391,6 +7447,24 @@ label.error {
   margin-left: calc(8.33333% + 10px);
   margin-right: calc(8.33333% + 10px);
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pass__fields {
+    width: calc(91.66667% - 20px);
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pass__fields {
+    margin-left: calc(4.16667% + 10px);
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .pass__fields {
+    margin-right: calc(4.16667% + 10px);
+  }
 }
 
 .pass__field {
