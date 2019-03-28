@@ -69,6 +69,7 @@ $(function () {
             delay: 3000,
         }
     });
+
     let compareSwiper = new Swiper ('.compare__container', {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -78,5 +79,33 @@ $(function () {
             draggable: true
         },
         mousewheel: {},
+    });
+
+    $('.ccerts__slider').slick({
+        centerMode: true,
+        centerPadding: '160px',
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+        // responsive: [
+        //     {
+        //         breakpoint: 768,
+        //         settings: {
+        //             arrows: false,
+        //             centerMode: true,
+        //             centerPadding: '40px',
+        //             slidesToShow: 3
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             arrows: false,
+        //             centerMode: true,
+        //             centerPadding: '40px',
+        //             slidesToShow: 1
+        //         }
+        //     }
+        // ]
     });
 });

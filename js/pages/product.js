@@ -60,7 +60,7 @@ $(function () {
 
     });
 
-    $('.rev__rating').on('change','input', function (e) {
+    $('.pr__revs').on('change','input', function (e) {
         let $this = $(this),
             val = $this.val(),
             item = $this.closest('.rev'),
@@ -79,6 +79,7 @@ $(function () {
             data: data,
             success: function (result) {
                 if (result.status) {
+                    debugger;
                     rating.find('input').prop('checked', false);
                     rating.find('input[value='+result.rating+']').prop('checked', true);
                 } else {

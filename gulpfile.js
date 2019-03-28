@@ -34,7 +34,8 @@ const vendorJs = [
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
-    'node_modules/jquery-validation/dist/additional-methods.js'
+    'node_modules/jquery-validation/dist/additional-methods.js',
+    'node_modules/slick-slider/slick/slick.js'
 ];
 
 
@@ -44,7 +45,9 @@ const vendorCss = [
     'node_modules/swiper/dist/css/swiper.css',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    'node_modules/slick-slider/slick/slick.css',
+    'node_modules/slick-slider/slick/slick-theme.css'
 ];
 
 

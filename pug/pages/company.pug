@@ -35,6 +35,10 @@ block content
                                             .cabout__item
                                                 .cabout__item-num= '0'+(x+1)
                                                 .cabout__item-desc= i
+                                .cabout__button.cabout__button_lg
+                                    a(href='#' download=true).cabout__link
+                                        +icon('pdf', 'cabout__link-svg')
+                                        .cabout__link-title Скачать прайс-лист
 
                             .cabout__right
                                 .cabout__title Что нужно знать о нас
@@ -74,6 +78,11 @@ block content
                                 each i in [1,2,3]
                                     a(href='images/content/company/cert'+i+'.jpg' data-fancybox="images" data-caption="My caption").ccerts__item
                                         img(src='images/content/company/cert'+i+'.jpg').ccerts__item-img
+                        .ccerts__slider.slider.center
+                            each i in [1,2,3]
+                                div
+                                    a(href='images/content/company/cert' + i + '.jpg' data-fancybox="images" data-caption="My caption").ccerts__item
+                                        img(src='images/content/company/cert' + i + '.jpg').ccerts__item-img
 
 
 

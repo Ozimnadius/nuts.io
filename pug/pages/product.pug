@@ -109,8 +109,8 @@ block content
                                         .rating
                                             .rating__wrapper
                                                 each i in [5,4,3,2,1]
-                                                    input(type='radio' name='rating' value=i id='rating-' + i checked=i == 3 ? true : false).rating__input
-                                                    label(for='rating-' + i).rating__star
+                                                    input(type='radio' name='ratingLg' value=i id='ratingLg-' + i checked=i == 3 ? true : false).rating__input
+                                                    label(for='ratingLg-' + i).rating__star
                                                         +icon('star', 'rating__star-svg')
 
 
