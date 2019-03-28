@@ -16,11 +16,11 @@ mixin oldPrice (value, dopClass)
         span.price__type руб.
 
 mixin item(id, dopClass)
-    a(href='product.html' data-id=id class=dopClass).item.buyItem
+    div(data-id=id class=dopClass).item.buyItem
         .item__wrap
 
             //- top
-            .item__top
+            a(href='product.html').item__top
 
                 //- discount
                 .item__discount 15%
@@ -38,7 +38,7 @@ mixin item(id, dopClass)
             .item__bottom
                 .item__left
                     //- title
-                    .item__title Миндаль голд сырой
+                    a(href='product.html').item__title Миндаль голд сырой
 
                     //- pricing
                     .item__pricing
@@ -103,7 +103,7 @@ mixin item(id, dopClass)
 
 
                     //- top
-                    .item__top
+                    a(href='product.html').item__top
 
                         //- discount
                         .item__discount 15%
@@ -121,7 +121,7 @@ mixin item(id, dopClass)
                     .item__bottom
                         .item__left
                             //- title
-                            .item__title Миндаль голд сырой
+                            a(href='product.html').item__title Миндаль голд сырой
 
                             //- pricing
                             .item__pricing

@@ -11,3 +11,4 @@
 //@prepros-append pages/reviews.js
 //@prepros-append pages/feed.js
 //@prepros-append pages/compare.js
+//@prepros-append pages/cart.js

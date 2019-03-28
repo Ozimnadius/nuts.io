@@ -99,11 +99,18 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+    @include lg-block{
+      flex-direction: column;
+      justify-content: initial;
+    };
   }
 
   &__price {
     display: flex;
     align-items: flex-end;
+    @include lg-block{
+      margin-bottom: 30px;
+    };
 
     &-title {
       font-size: 24px;

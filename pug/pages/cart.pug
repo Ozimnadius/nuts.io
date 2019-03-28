@@ -20,6 +20,7 @@ block content
         section.cart__main
             .container
                 form(action='#' method='post').cart__form
+                    input(type='hidden' name='action' value='cartForm')
                     .cart__title.title.title_left Корзина
                     .cart__list
                         each i in [1,2,3,,4]

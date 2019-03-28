@@ -5430,6 +5430,18 @@ input, textarea {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1199.9px) {
+  .cart__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+  }
+}
+
 .cart__price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5437,6 +5449,12 @@ input, textarea {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .cart__price {
+    margin-bottom: 30px;
+  }
 }
 
 .cart__price-title {

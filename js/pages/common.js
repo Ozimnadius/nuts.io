@@ -1,5 +1,28 @@
 $('input[type=tel]').mask('+7 (999) 999-99-99');
 
+function number_format(number, decimals, dec_point, thousands_sep) {
+    var i, j, kw, kd, km;
+    if (isNaN(decimals = Math.abs(decimals))) {
+        decimals = 2;
+    }
+    if (dec_point == undefined) {
+        dec_point = ",";
+    }
+    if (thousands_sep == undefined) {
+        thousands_sep = ".";
+    }
+    i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+    if ((j = i.length) > 3) {
+        j = j % 3;
+    } else {
+        j = 0;
+    }
+    km = (j ? i.substr(0, j) + thousands_sep : "");
+    kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+    kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+    return km + kw + kd;
+}
+
 function Switches(prop) {
     this.sws = document.querySelector(prop.sws);
     this.width = this.sws.offsetWidth;
@@ -123,7 +146,6 @@ function animateToCart(item) {
         });
 }
 
-
 function getMediaCss() {
     if ($(window).width() < 1200) {
         return 'lg'
@@ -136,6 +158,49 @@ function getMediaCss() {
     } else {
         return 'default'
     }
+}
+
+function calcPrice() {
+    let items = $('.cart__item'),
+        totalObj = $('.cart__price-price').find('.price__val'),
+        basketLink = $('.basket-link .compare-link__num'),
+        totalCount = 0,
+        total = 0;
+
+    items.each(function (indx, elem) {
+        let item = $(elem),
+            count = Number(item.find('.count__input').val()),
+            price = parseFloat(item.find('.price__val').text());
+
+        totalCount= totalCount+count;
+        total = total + (count * price);
+    });
+
+    basketLink.text(totalCount);
+    totalObj.text(number_format(total, 2, '.', ''));
+    sendCartForm();
+}
+
+function sendCartForm() {
+    let form = $('.cart__form'),
+        data = form.serialize();
+
+    $.ajax({
+        dataType: "json",
+        type: "POST",
+        url: 'ajax.php',
+        data: data,
+        success: function (result) {
+            if (result.status) {
+                console.log(result);
+            } else {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        },
+        error: function (result) {
+            alert('Что-то пошло не так, попробуйте еще раз!!!');
+        }
+    });
 }
 
 $(function (e) {
@@ -186,7 +251,7 @@ $(function (e) {
         val++;
 
         input.val(val);
-
+        calcPrice();
     });
 
     $('body').on('click', '.count__down', function (e) {
@@ -201,7 +266,7 @@ $(function (e) {
         }
 
         input.val(val);
-
+        calcPrice();
     });
 
     $('body').on('change', '.fz__input', function (e) {
@@ -228,7 +293,7 @@ $(function (e) {
 
     $('body').on('click', function (e) {
         let target = $(e.target);
-        if (target.closest('.drop').length==0  && target.closest('.drop-btn').length==0 && target.closest('.popup').length==0){
+        if (target.closest('.drop').length == 0 && target.closest('.drop-btn').length == 0 && target.closest('.popup').length == 0) {
             drop.removeClass('active');
         }
     });
