@@ -33,7 +33,7 @@ block content
                                     p ООО «Трансфрут» современная и развивающая компания, которая работает со многими партнерами, которые также придерживаются аналогичных принципов ведения бизнеса. Но самое главное для нас то, что мы действительно любим свое дело и стараемся заниматься им в высшей степени профессионально!
 
                             .partners__button
-                                a(href='#').btn
+                                a(href='#' download='true').btn
                                     +icon('pdf', 'btn__svg')
                                     .btn__title Скачать коммерческое предложение
 
@@ -47,6 +47,10 @@ block content
                                             .partners__item-icon
                                                 +icon('check', 'partners__item-svg')
                                             .partners__item-title= i
+                            .partners__button.partners__button_lg
+                                a(href='#').btn
+                                    +icon('pdf', 'btn__svg')
+                                    .btn__title Скачать коммерческое предложение
 
             //- advantages
             .partners__advs

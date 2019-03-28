@@ -16,11 +16,13 @@
   &__left {
     @include col;
     @include size(16);
+    @include size-lg(24);
   }
 
   &__right {
     @include col;
     @include size(8);
+    @include size-lg(24);
   }
 
   &__content{
@@ -29,6 +31,16 @@
 
   &__button {
     display: inline-block;
+    @include lg-block{
+      display: none;
+    };
+
+    &_lg {
+      display: none;
+      @include lg-block{
+        display: inline-block;
+      };
+    }
 
     .btn {
       width: auto;
@@ -38,6 +50,9 @@
   }
 
   &__list {
+    @include lg-block{
+      margin-bottom: 40px;
+    };
     &-title {
       font-family: "PT Serif";
       font-size: 22px;

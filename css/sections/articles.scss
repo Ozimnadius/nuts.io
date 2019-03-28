@@ -1,6 +1,10 @@
 .arts {
   padding-top: 50px;
   padding-bottom: 80px;
+  @include lg-block{
+    padding-top: 30px;
+    padding-bottom: 60px;
+  };
 
   &__bread {
     margin-bottom: 20px;
@@ -18,6 +22,9 @@
   &__row {
     &_bottom {
       margin-top: -140px;
+      @include lg-block{
+        margin-top: -70px;
+      };
     }
   }
 
