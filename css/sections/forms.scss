@@ -110,6 +110,10 @@
   border: 1px solid rgba(12, 68, 53, 0.2);
   transition: .3s;
   color: $text;
+  @include sm-block{
+    font-size: 14px;
+    padding: 13px 15px;
+  };
 
   &_area {
     height: 166px;

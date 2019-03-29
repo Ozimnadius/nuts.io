@@ -12,7 +12,12 @@ $(function () {
             clickable: true
         },
         breakpoints: {
-
+            // when window width is <= 1199.99px
+            767.99: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 20
+            },
             // when window width is <= 1199.99px
             1199.99: {
                 slidesPerView: 2,
@@ -32,6 +37,16 @@ $(function () {
             prevEl: '.irevs__prev .arrow',
         },
         breakpoints: {
+            // when window width is <= 1199.99px
+            767.99: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.irevs__pag',
+                    clickable: true
+                },
+            },
+            // when window width is <= 1199.99px
             1199.99: {
                 slidesPerView: 1,
                 spaceBetween: 10

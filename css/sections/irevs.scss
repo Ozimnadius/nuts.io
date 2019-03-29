@@ -6,46 +6,113 @@
     background-size: 70%;
     background-position: -80px bottom;
   };
+  @include sm-block{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-image: none;
+  };
 
   &__left {
     @include col;
     @include size(6);
     @include size-lg(9);
+    @include size-sm(24);
   }
 
   &__right {
     @include col;
     @include size(18);
     @include size-lg(15);
+    @include size-sm(24);
   }
 
   &__title {
     margin-bottom: 20px;
+    @include sm-block{
+      margin-bottom: 15px;
+    };
   }
 
   &__desc {
     color: rgba($green,.8);
     font-size: 20px;
     margin-bottom: 30px;
+    @include sm-block{
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 15px;
+    };
   }
 
   &__link {
     width: 229px;
     height: 54px;
     display: block;
+    @include sm-block{
+      display: none;
+      margin: 0 auto;
+    };
+
+    &_sm{
+      display: none;
+      @include sm-block{
+        display: block;
+      };
+    }
   }
 
   &__slider {
     display: flex;
     align-items: center;
+    @include sm-block{
+      margin-bottom: 30px;
+    };
+  }
+
+  &__wrapper {
+    @include sm-block{
+      margin-bottom: 20px;
+    };
   }
 
   &__nav {
     padding: 0 30px;
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__prev {
     margin-bottom: 15px;
+  }
+
+  &__pag {
+    &.swiper-pagination {
+      position: static;
+    }
+
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba($text, .4);
+      margin: 0 7px !important;
+      background: none;
+      opacity: 1;
+      padding: 2px;
+    }
+
+    .swiper-pagination-bullet-active{
+      border: 1px solid $text;
+
+      &:after {
+        content: '';
+        display: block;
+        border-radius: 50%;
+        background-color: $text;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -57,6 +124,10 @@
   &__wrapper {
     background: $white url("../images/bg/ispecsBg.png") 0 0;
     padding: 30px;
+    border-radius: 6px;
+    @include sm-block{
+      padding: 25px 15px;
+    };
   }
 
   &__top {
@@ -81,5 +152,11 @@
 
   &__city {
     color: rgba($green,.6);
+  }
+
+  &__desc {
+    @include sm-block{
+      font-size: 14px;
+    };
   }
 }

@@ -9,6 +9,11 @@
     padding-top: 250px;
     padding-bottom: 80px;
   };
+  @include sm-block{
+    padding-top: 150px;
+    padding-bottom: 40px;
+    background-attachment: initial;
+  };
 
   .container{
     display: flex;
@@ -26,6 +31,9 @@
     @include lg-block{
       font-size: 40px;
     };
+    @include sm-block{
+      font-size: 22px;
+    };
   }
 
   &__sub {
@@ -36,6 +44,10 @@
     @include lg-block{
       font-size: 20px;
     };
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 25px;
+    };
   }
 
   &__buttons {
@@ -44,9 +56,27 @@
     align-items: center;
   }
 
+  &__button {
+    @include sm-block{
+      width: 100%;
+      &:first-child{
+        margin-bottom: 22px;
+      }
+    };
+
+    .btn,.btn2 {
+      @include sm-block{
+        width: 100%;
+      };
+    }
+  }
+
   &__else {
     margin: 0 30px;
     color: rgba($white,.6);
     font-size: 14px;
+    @include sm-block{
+      display: none;
+    };
   }
 }

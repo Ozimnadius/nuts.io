@@ -35,6 +35,16 @@
 
     .row  {
       align-items: center;
+      @include sm-block{
+        justify-content: space-between;
+        margin: 0;
+      };
+    }
+
+    .container{
+      @include sm-block{
+        padding-left: 0;
+      };
     }
   }
 
@@ -42,6 +52,11 @@
     @include col;
     @include size(4);
     @include size-lg(4.5);
+    @include sm-block{
+      margin: 0;
+      order: 2;
+      width: 97px;
+    };
   }
 
   &__title {
@@ -58,12 +73,18 @@
     @include col;
     @include size(5);
     @include size-lg(6);
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__call{
     @include col;
     @include size(4);
     @include size-lg(6);
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__basket {
@@ -72,6 +93,11 @@
     @include size-lg(4.5);
     display: flex;
     align-items: center;
+    @include sm-block{
+      margin: 0;
+      order: 3;
+      width: auto;
+    };
   }
 
   &__drop-btn {
@@ -81,6 +107,11 @@
     };
     @include col;
     @include size-lg(3);
+   @include sm-block{
+     margin: 0;
+     width: auto;
+     order: 1;
+   };
   }
 
   &__bottom {
@@ -94,6 +125,19 @@
       justify-content: space-between;
       align-items: center;
     }
+  }
+
+  &__menu {
+    @include sm-block{
+      display: none;
+    };
+  }
+
+  &__search {
+    @include sm-block{
+      width: 100%;
+    };
+
   }
 
   &__drop {
@@ -322,6 +366,10 @@
   margin-right: 18px;
   transition: .3s;
   position: relative;
+  @include sm-block{
+    display: none;
+  };
+
 
   &:hover {
     border: 1px solid rgba($orange,1);
@@ -400,6 +448,11 @@
       background-color: $orange;
       border-radius: 50%;
       padding: 10px;
+      @include sm-block{
+        width: 32px;
+        height: 32px;
+        padding: 7px;
+      };
     }
   }
 
@@ -525,10 +578,16 @@
   position: relative;
   display: flex;
   align-items: center;
+  @include sm-block{
+    width: 100%;
+  };
 
   &__field {
     margin-right: 10px;
     position: relative;
+    @include sm-block{
+      flex-grow: 1;
+    };
   }
 
   &__clear{
@@ -564,6 +623,9 @@
     transition: .3s;
     @include lg-block{
       width: 217px;
+    };
+    @include sm-block{
+      width: 100%;
     };
 
 

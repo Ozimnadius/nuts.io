@@ -6,6 +6,10 @@
     padding-top: 40px;
     padding-bottom: 120px;
   };
+  @include sm-block{
+    padding-top: 30px;
+    padding-bottom: 60px;
+  };
 
   .container {
     display: flex;
@@ -17,6 +21,9 @@
     margin-bottom: 45px;
     @include lg-block{
       margin-bottom: 30px;
+    };
+    @include sm-block{
+      margin-bottom: 20px;
     };
   }
 
@@ -33,6 +40,10 @@
     cursor: pointer;
     transition: .3s;
     padding: 0 25px 10px 25px;
+    @include sm-block{
+      font-size: 12px;
+      padding: 0 10px 5px 10px;
+    };
 
 
     &.active {
@@ -75,6 +86,10 @@
       left: 65px;
       right: 65px;
       width: auto;
+    };
+    @include sm-block{
+      left: 0;
+      right: 0;
     };
 
     &.active {

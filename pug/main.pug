@@ -162,105 +162,8 @@ html(lang="ru")
 
                 //- drop
                 .container.header__drop
-                    .drop
-                        //- close
-                        button(type='button').drop__close
-                            +icon('cancel', 'drop__close-svg')
-                        //- cabinet
-                        .drop__cabinet
-                            .cabinet-link.cabinet-link_green
-                                +icon('cabinet', 'cabinet-link__svg')
-                                a(href='cabinet.html').cabinet-link__title.auth Личный кабинет
-                        //- menu
-                        .drop__menu
-                            .menu.menu_drop
-                                each i,x in menu
-                                    a(href=i.link class=x == 1 ? 'active' : '').menu__item
-                                        +icon(i.svg,'menu__svg')
-                                        .menu__title= i.title
-
-                        //- nav
-                        .drop__nav
-                            nav.nav
-                                each val in nav
-                                    if(val.sub)
-                                        .nav__item.nav__item_sub
-                                            a(href=val.link).nav__link.nav__link_sub= val.title
-                                            .nav__sub
-                                                .subnav
-                                                    each subval in val.sub
-                                                        a(href=subval.link).subnav__item= subval.title
-                                    else
-                                        div().nav__item
-                                            a(href=val.link).nav__link= val.title
-
-                        //- addr
-                        .drop__addr
-                            .addr.addr_drop
-                                +icon('pin', 'addr__svg')
-                                a(href='./' target='_blank').addr__link
-                                    | г. Москва,
-                                    | Нижегородская улица,
-                                    | д. 29-33
-
-                        //- work
-                        .drop__work
-                            .work.work_drop
-                                +icon('clock', 'work__svg')
-                                .work__list
-                                    .work__item
-                                        .work__time
-                                            | пн-пт:&nbsp
-                                            span.work__time_time
-                                                | с 09:00 до 18:00
-                                    .work__item
-                                        .work__time
-                                            | сб-вс:&nbsp;
-                                            span.work__time_time
-                                                | выходной
-
-                        //- bottom
-                        .drop__bottom
-                            .row
-                                .drop__left
-                                    .drop__contacts
-                                        .drop__tels
-                                            .tels
-                                                .tel.tel_drop
-                                                    .tel__icon
-                                                        +icon('phone', 'tel__svg')
-                                                    a(href='+7(495)797-38-66').tel__link
-                                                        | +7 (495)&nbsp;
-                                                        span.tel__link_bold
-                                                            | 797-38-66
-                                                .tel.tel_drop
-                                                    .tel__icon
-                                                        +icon('phone', 'tel__svg')
-                                                    a(href='+7(926)180-32-98').tel__link
-                                                        | +7 (926)&nbsp;
-                                                        span.tel__link_bold
-                                                            | 180-32-98
-
-                                .drop__right
-                                    .drop__callorder
-                                        button(type='button').btn
-                                            .btn__title.callorderOpen Заказать звонок
 
 
-
-
-
-
-
-
-
-
-
-                        //- email
-                        .drop__email
-                            .email.email_drop
-                                +icon('mail', 'email__svg')
-                                a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
             //- pages
             .page
                 block content
@@ -413,6 +316,98 @@ html(lang="ru")
                                 span.vendor__title Разработано:
                                 +image('bg/vendor.png', 'Web-comp', 'vendor__img')
 
+            //- drop
+            .drop
+                .container
+                    .drop__wrapper
+                        //- close
+                        button(type='button').drop__close
+                            +icon('cancel', 'drop__close-svg')
+                        //- cabinet
+                        .drop__cabinet
+                            .cabinet-link.cabinet-link_green
+                                +icon('cabinet', 'cabinet-link__svg')
+                                a(href='cabinet.html').cabinet-link__title.auth Личный кабинет
+                        //- menu
+                        .drop__menu
+                            .menu.menu_drop
+                                each i,x in menu
+                                    a(href=i.link class=x == 1 ? 'active' : '').menu__item
+                                        +icon(i.svg,'menu__svg')
+                                        .menu__title= i.title
+
+                        //- nav
+                        .drop__nav
+                            nav.nav
+                                each val in nav
+                                    if(val.sub)
+                                        .nav__item.nav__item_sub
+                                            a(href=val.link).nav__link.nav__link_sub= val.title
+                                            .nav__sub
+                                                .subnav
+                                                    each subval in val.sub
+                                                        a(href=subval.link).subnav__item= subval.title
+                                    else
+                                        div().nav__item
+                                            a(href=val.link).nav__link= val.title
+
+                        //- addr
+                        .drop__addr
+                            .addr.addr_drop
+                                +icon('pin', 'addr__svg')
+                                a(href='./' target='_blank').addr__link
+                                    | г. Москва,
+                                    | Нижегородская улица,
+                                    | д. 29-33
+
+                        //- work
+                        .drop__work
+                            .work.work_drop
+                                +icon('clock', 'work__svg')
+                                .work__list
+                                    .work__item
+                                        .work__time
+                                            | пн-пт:&nbsp
+                                            span.work__time_time
+                                                | с 09:00 до 18:00
+                                    .work__item
+                                        .work__time
+                                            | сб-вс:&nbsp;
+                                            span.work__time_time
+                                                | выходной
+
+                        //- bottom
+                        .drop__bottom
+                            .row
+                                .drop__left
+                                    .drop__contacts
+                                        .drop__tels
+                                            .tels
+                                                .tel.tel_drop
+                                                    .tel__icon
+                                                        +icon('phone', 'tel__svg')
+                                                    a(href='+7(495)797-38-66').tel__link
+                                                        | +7 (495)&nbsp;
+                                                        span.tel__link_bold
+                                                            | 797-38-66
+                                                .tel.tel_drop
+                                                    .tel__icon
+                                                        +icon('phone', 'tel__svg')
+                                                    a(href='+7(926)180-32-98').tel__link
+                                                        | +7 (926)&nbsp;
+                                                        span.tel__link_bold
+                                                            | 180-32-98
+
+                                .drop__right
+                                    .drop__callorder
+                                        button(type='button').btn
+                                            .btn__title.callorderOpen Заказать звонок
+
+                        //- email
+                        .drop__email
+                            .email.email_drop
+                                +icon('mail', 'email__svg')
+                                a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
     .debug
         div
             div

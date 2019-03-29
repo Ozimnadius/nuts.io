@@ -6,6 +6,10 @@
     padding-top: 40px;
     padding-bottom: 110px;
   };
+  @include sm-block{
+    padding: 30px 0;
+    background-image: none;
+  };
 
   &__form {
     @include col;
@@ -25,19 +29,36 @@
 
   &__title {
     margin-bottom: 10px;
+    @include sm-block{
+
+    };
   }
 
   &__subtitle {
     margin-bottom: 45px;
+    @include sm-block{
+      margin-bottom: 20px;
+    };
   }
 
   &__fields{
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 15px;
+    };
   }
 
   &__field {
     @include col;
     @include size(12);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    };
     position: relative;
   }
 

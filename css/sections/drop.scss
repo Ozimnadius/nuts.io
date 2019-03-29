@@ -1,12 +1,21 @@
 .drop-btn {
   background-color: rgba($white,.1);
   padding: 20px 20px;
+  @include sm-block{
+    padding: 17px 14px;
+  };
+
 
 
   &__svg {
     max-width: 39px;
     max-height: 39px;
     fill: #eed5ba;
+    @include sm-block{
+      width: 33px;
+      height: 25px;
+      display: block;
+    };
   }
 }
 
@@ -14,12 +23,27 @@
   display: none;
   position: absolute;
   z-index: 100;
-  top: calc(100% + 9px);
-  right: 10px;
-  width: 495px;
-  border-radius: 4px;
-  background: $bg url("/images/bg/ispecsBg.png") 0 0;
-  padding: 20px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(#000,.5);
+  padding-top: 150px;
+
+  .container{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+
+
+  &__wrapper {
+    position: relative;
+    width: 495px;
+    border-radius: 4px;
+    background: $bg url("/images/bg/ispecsBg.png") 0 0;
+    padding: 20px;
+  }
 
   &.active {
     display: block;

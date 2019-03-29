@@ -107,6 +107,9 @@
   &__link {
     color: $white;
     font-size: 18px;
+    @include sm-block{
+      font-size: 15px;
+    };
   }
 }
 
@@ -145,6 +148,9 @@
       display: flex;
       justify-content: space-between;
     };
+    @include sm-block{
+      flex-direction: column;
+    };
   }
 
   &__item {
@@ -163,6 +169,9 @@
   &__time {
     font-size: 18px;
     color: $white;
+    @include sm-block{
+      font-size: 15px;
+    };
     &_time {
       color: $bg;
     }
@@ -267,9 +276,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: rem(18px);
+  font-size: 18px;
   transition: .3s;
   color: $text;
+  @include sm-block{
+    font-size: 16px;
+  };
 
   &_pr {
     border: 1px solid rgba($bg,.4);
@@ -292,9 +304,14 @@
   @include lg-block{
     font-size: 38px;
   };
+  @include sm-block{
+    font-size: 22px;
+  };
 
   &_left {
     text-align: left;
+    @include sm-block{};
+    text-align: center;
   }
 
   &_gold {
@@ -306,6 +323,9 @@
   color: rgba($white,.6);
   font-size: 20px;
   text-align: center;
+  @include sm-block{
+    font-size: 16px;
+  };
 }
 
 .arrow {

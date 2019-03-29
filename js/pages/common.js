@@ -293,7 +293,7 @@ $(function (e) {
 
     $('body').on('click', function (e) {
         let target = $(e.target);
-        if (target.closest('.drop').length == 0 && target.closest('.drop-btn').length == 0 && target.closest('.popup').length == 0) {
+        if (target.closest('.drop__wrapper').length == 0 && target.closest('.drop-btn').length == 0 && target.closest('.popup').length == 0) {
             drop.removeClass('active');
         }
     });
