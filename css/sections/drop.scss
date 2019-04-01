@@ -29,11 +29,17 @@
   width: 100%;
   background: rgba(#000,.5);
   padding-top: 150px;
+  @include sm-block{
+    padding-top: 130px;
+  };
 
   .container{
     display: flex;
     justify-content: flex-end;
     padding-right: 0;
+    @include sm-block{
+      padding-right: $offset_sm;
+    };
   }
 
 
@@ -43,6 +49,11 @@
     border-radius: 4px;
     background: $bg url("/images/bg/ispecsBg.png") 0 0;
     padding: 20px;
+    @include sm-block{
+      width: 280px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    };
   }
 
   &.active {
@@ -64,6 +75,15 @@
 
   &__cabinet {
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 10px;
+    };
+  }
+
+  &__compare{
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba($text,.15);
   }
 
   &__nav {
@@ -76,6 +96,10 @@
     border-bottom: 1px solid rgba($text,.15);
     padding-bottom: 25px;
     margin-bottom: 25px;
+    @include sm-block {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__addr {
@@ -97,9 +121,26 @@
   &__left,&__right {
     @include col;
     @include size(12);
+    @include size-sm(24);
+  }
+
+  &__left {
+    @include sm-block{
+      margin-bottom: 20px;
+    };
   }
 
   &__email {
     margin-top: 10px;
+    @include sm-block{
+      display: none;
+    };
+
+    &_sm{
+      display: none;
+      @include sm-block{
+        display: block;
+      };
+    }
   }
 }

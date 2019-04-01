@@ -27,6 +27,9 @@
     align-items: center;
     position: relative;
     border-radius: 4px;
+    @include sm-block{
+      padding: 25px 10px;
+    };
   }
 
   &__title {
@@ -34,6 +37,9 @@
     font-size: 28px;
     text-align: center;
     margin-bottom: 5px;
+    @include sm-block{
+      font-size: 20px;
+    };
   }
 
   &__sub {
@@ -157,6 +163,9 @@ label.error{
   bottom: 0;
   padding: 16px 20px;
   color: $orange;
+  @include sm-block{
+    font-size: 14px;
+  };
 }
 
 .fz {
@@ -232,6 +241,9 @@ label.error{
 
 .callorder {
   width: 384px;
+  @include sm-block{
+    width: 280px;
+  };
 }
 
 .feed {
@@ -269,6 +281,9 @@ label.error{
 
 .enter {
   width: 484px;
+  @include sm-block{
+    width: 320px;
+  };
 
   &__wrap {
     padding-bottom: 0;
@@ -288,10 +303,16 @@ label.error{
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 10px;
+    @include sm-block{
+      flex-direction: column;
+    };
 
     &-title {
       opacity: .8;
       margin-right: 12px;
+      @include sm-block{
+        margin-bottom: 15px;
+      };
     }
 
     &-list {
@@ -350,6 +371,11 @@ label.error{
     background-color: #eae0d1;
     border-radius: 0 0 6px 6px;
     transition: .3s;
+    @include sm-block{
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 20px);
+    };
 
     &:hover {
       opacity: .8;
@@ -364,11 +390,22 @@ label.error{
 
     &-title {
       color: rgba($text,.8);
+      @include sm-block{
+        font-size: 14px;
+      };
     }
   }
 }
 
 .reg, .recovery {
   width: 484px;
+  @include sm-block{
+    width: 320px;
+  };
+}
+
+.reg {
+  height: 100%;
+  overflow-y: auto;
 }
 

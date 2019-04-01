@@ -2,6 +2,7 @@ $(function () {
     let popup = $('.popup'),
         popupWrap = popup.find('.popup__wrapper');
 
+
     $('body').on('click', '.callorderOpen', function (e) {
         e.preventDefault();
 

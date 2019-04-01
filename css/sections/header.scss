@@ -366,13 +366,31 @@
   margin-right: 18px;
   transition: .3s;
   position: relative;
+
   @include sm-block{
     display: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    border: none;
+    margin-right: 0;
+    padding: 0;
   };
+
+  &_sm {
+    display: none;
+    @include sm-block{
+      display: flex;
+      align-items: center;
+    };
+  }
 
 
   &:hover {
     border: 1px solid rgba($orange,1);
+    @include sm-block{
+      border: none;
+    };
     .compare-link__svg {
       fill: $orange;
     }
@@ -383,9 +401,64 @@
     height: 100%;
     fill: $bg;
     transition: .3s;
+    @include sm-block{
+      width: 19px;
+      height: 18px;
+      fill: $text;
+      margin-right: 9px;
+    };
+  }
+
+  &__title {
+    @include sm-block{
+      margin-right: 5px;
+    };
   }
 
   &__num {
+    width: 22px;
+    height: 18px;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text;
+    font-size: 12px;
+    border-radius: 2px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border-bottom-left-radius: 0;
+    @include sm-block{
+      position: static;
+      background-color: $orange;
+      border-radius: 2px;
+      color: $white;
+    };
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4px 0 0px;
+      border-color: $bg transparent transparent transparent;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      @include sm-block{
+        display: none;
+      };
+    }
+  }
+}
+
+.basket-link {
+  display: flex;
+  align-items: center;
+
+  .compare-link__num{
     width: 22px;
     height: 18px;
     background-color: $bg;
@@ -413,11 +486,6 @@
       left: 0;
     }
   }
-}
-
-.basket-link {
-  display: flex;
-  align-items: center;
 
   &:hover {
     .basket-link__icon {
@@ -491,6 +559,10 @@
 .menu {
   display: flex;
   align-items: center;
+  @include sm-block{
+    flex-direction: column;
+    align-items: flex-start;
+  };
 
   &_drop{
     .menu{
@@ -499,6 +571,15 @@
         margin-right: 0;
         padding-right: 0;
         flex-grow: 1;
+        @include sm-block{
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 7px;
+        };
+
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         &:after {
           background: rgba($text,.15);

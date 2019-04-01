@@ -35,7 +35,8 @@ const vendorJs = [
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
     'node_modules/jquery-validation/dist/additional-methods.js',
-    'node_modules/slick-slider/slick/slick.js'
+    'node_modules/slick-slider/slick/slick.js',
+    'node_modules/scroll-lock/dist/scroll-lock.js',
 ];
 
 

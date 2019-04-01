@@ -328,6 +328,12 @@ html(lang="ru")
                             .cabinet-link.cabinet-link_green
                                 +icon('cabinet', 'cabinet-link__svg')
                                 a(href='cabinet.html').cabinet-link__title.auth Личный кабинет
+                        //- compare
+                        .drop__compare
+                            a(href='cabinet.html').compare-link.compare-link_sm
+                                +icon('compare', 'compare-link__svg')
+                                .compare-link__title Сравнить
+                                .compare-link__num 4
                         //- menu
                         .drop__menu
                             .menu.menu_drop
@@ -398,6 +404,11 @@ html(lang="ru")
                                                         span.tel__link_bold
                                                             | 180-32-98
 
+                                        //- email
+                                        .drop__email.drop__email_sm
+                                            .email.email_drop
+                                                +icon('mail', 'email__svg')
+                                                a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
                                 .drop__right
                                     .drop__callorder
                                         button(type='button').btn
@@ -408,6 +419,12 @@ html(lang="ru")
                             .email.email_drop
                                 +icon('mail', 'email__svg')
                                 a(href='mailto:info@vkusita.ru').email__link info@vkusita.ru
+
+            //- popup
+            .popup
+                .popup__wrapper
+
+
     .debug
         div
             div
@@ -434,8 +451,6 @@ html(lang="ru")
 
 
 
-    .popup
-        .popup__wrapper
 
     script(src='js/vendor.min.js')
     script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
