@@ -91,6 +91,9 @@
   &__advs {
     padding: 60px 0;
     background-color: #0c4536;
+    @include sm-block{
+      padding: 30px 0;
+    };
   }
 
 }

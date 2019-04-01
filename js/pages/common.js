@@ -172,7 +172,7 @@ function calcPrice() {
             count = Number(item.find('.count__input').val()),
             price = parseFloat(item.find('.price__val').text());
 
-        totalCount= totalCount+count;
+        totalCount = totalCount + count;
         total = total + (count * price);
     });
 
@@ -251,10 +251,13 @@ $(function (e) {
         val++;
 
         input.val(val);
-        calcPrice();
+        if ($(this).closest('.pr').length == 0) {
+            calcPrice();
+        }
     });
 
     $('body').on('click', '.count__down', function (e) {
+
         e.preventDefault();
 
         let $this = $(this),
@@ -266,7 +269,9 @@ $(function (e) {
         }
 
         input.val(val);
-        calcPrice();
+        if ($(this).closest('.pr').length == 0) {
+            calcPrice();
+        }
     });
 
     $('body').on('change', '.fz__input', function (e) {

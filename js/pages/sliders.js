@@ -62,6 +62,14 @@ $(function () {
             prevEl: '.recently__prev .arrow',
         },
         breakpoints: {
+            767.99: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.recently__pag',
+                    clickable: true
+                },
+            },
             1199.99: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -95,6 +103,9 @@ $(function () {
         },
         mousewheel: {},
         breakpoints: {
+            767.99: {
+                slidesPerView: 1
+            },
             1199.99: {
                 slidesPerView: 2
             }
@@ -107,25 +118,16 @@ $(function () {
         slidesToShow: 1,
         arrows: false,
         dots: true,
-        // responsive: [
-        //     {
-        //         breakpoint: 768,
-        //         settings: {
-        //             arrows: false,
-        //             centerMode: true,
-        //             centerPadding: '40px',
-        //             slidesToShow: 3
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             arrows: false,
-        //             centerMode: true,
-        //             centerPadding: '40px',
-        //             slidesToShow: 1
-        //         }
-        //     }
-        // ]
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 });

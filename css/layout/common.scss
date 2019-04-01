@@ -195,6 +195,7 @@
   transition: .3s;
   cursor: pointer;
 
+
   &:hover,&:active,&:focus {
     box-shadow: 0 0 0 transparent;
     background-image: linear-gradient(to top, transparent 0%, transparent 100%);
@@ -212,6 +213,10 @@
     font-size: rem(18px);
     font-weight: 500;
     transition: .3s;
+    @include sm-block{
+      font-size: 14px;
+      text-align: center;
+    };
   }
 }
 
@@ -250,6 +255,10 @@
     font-size: rem(18px);
     font-weight: 500;
     transition: .3s;
+    @include sm-block{
+      font-size: 14px;
+      text-align: center;
+    };
   }
 
   &_pr {
@@ -310,8 +319,6 @@
 
   &_left {
     text-align: left;
-    @include sm-block{};
-    text-align: center;
   }
 
   &_gold {
@@ -384,11 +391,17 @@
     margin-right: 10px;
     display: flex;
     align-items: center;
-
+    @include sm-block{
+      margin-right: 3px;
+    };
 
     &-title {
       text-decoration: underline;
       margin-right: 10px;
+      @include sm-block{
+        font-size: 10px;
+        margin-right: 3px;
+      };
     }
 
     &:after {

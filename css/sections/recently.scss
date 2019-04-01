@@ -1,9 +1,15 @@
 .recently {
   background-color: $text;
   padding: 60px 0 0 0;
+  @include sm-block{
+    padding-top: 30px;
+  };
 
   &__title {
     margin-bottom: 30px;
+    @include sm-block{
+      margin-bottom: 15px;
+    };
   }
 
   &__container {
@@ -35,6 +41,9 @@
         background: none;
         opacity: 1;
         padding: 2px;
+        @include sm-block{
+          margin: 0 4px !important;
+        };
       }
 
       .swiper-pagination-bullet-active{

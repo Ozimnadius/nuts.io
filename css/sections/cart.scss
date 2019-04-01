@@ -24,6 +24,10 @@
     margin-bottom: 10px;
     padding: 30px 0;
     display: block;
+    @include sm-block{
+      padding: 15px 20px;
+      position: relative;
+    };
 
     &:last-child {
       margin-bottom: 0;
@@ -42,28 +46,60 @@
       padding-left: 60px;
       display: flex;
       align-items: center;
+      @include size-sm(24);
+      @include sm-block{
+        padding-left: 0;
+        padding-right: 20px;
+        margin-bottom: 15px;
+        order: 1;
+      };
     }
 
     &-2{
       @include size(4);
+      @include size-sm(24);
+      @include sm-block{
+        order: 4;
+      };
     }
 
     &-3{
       @include size(4);
+      @include size-sm(24);
+      @include sm-block{
+        order: 2;
+        margin-bottom: 15px;
+      };
     }
 
     &-4 {
       @include size(6);
+      @include size-sm(24);
+      @include sm-block{
+        order: 3;
+        margin-bottom: 15px;
+      };
     }
 
     &-5{
       @include size(2);
+      @include size-sm(24);
+      @include sm-block{
+        order: 5;
+      };
     }
 
     &-img {
       width: 66px;
+      min-width: 66px;
       height: 80px;
       margin-right: 25px;
+      @include sm-block{
+        width: 47px;
+        min-width: 47px;
+        height: 57px;
+        margin-right: 15px;
+      };
     }
     &-pic {
       max-width: 100%;
@@ -91,6 +127,15 @@
       width: 16px;
       height: 19px;
       opacity: 0.4;
+    }
+
+    &-del {
+      @include sm-block{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+      };
     }
   }
 

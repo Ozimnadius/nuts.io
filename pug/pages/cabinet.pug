@@ -58,6 +58,8 @@ block content
                                                     .btn
                                                         .btn__title Сохранить изменения
 
+                                            a(href='./').pers__exit.pers__exit_sm Выйти из аккаунта
+                                                a(href='./').pers__del.pers__del_sm Удалить
 
                     div(data-id='2').cab__tab
                         .cab__swiper
@@ -86,18 +88,23 @@ block content
                                                                         .compare__item-img
                                                                             img(src='images/content/products/0.png').compare__item-pic
                                                                     .compare__item-row
+                                                                        .compare__item-name Цена:
                                                                         .compare__item-price
                                                                             +price('105.00')
                                                                     .compare__item-row
+                                                                        .compare__item-name Скидка:
                                                                         .compare__item-discount
                                                                             .compare__item-percent 15% -
                                                                             .compare__item-oldprice
                                                                                 +oldPrice('120.00')
                                                                     .compare__item-row
+                                                                        .compare__item-name Страна:
                                                                         .compare__item-country Россия
                                                                     .compare__item-row
+                                                                        .compare__item-name Доступность:
                                                                         div(class=i == 2 ? 'compare__item-avaible_not':'').compare__item-avaible=i == 2 ? 'Нет в наличии' : 'В наличии'
                                                                     .compare__item-row
+                                                                        .compare__item-name Рейтинг:
                                                                         //- rating
                                                                         .compare__item-rating
                                                                             .rating
@@ -109,6 +116,7 @@ block content
                                                                         //- text
                                                                         .compare__item-text На основании 8 отзыва(ов)
                                                                     .compare__item-row
+                                                                        .compare__item-name Вес:
                                                                         .compare__item-weight 500 гр.
                                                                 .compare__item-buttons
                                                                     .compare__item-buy
